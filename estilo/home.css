@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif; 
+}
+
+body {
+    background-color: #F8F8F8; 
+    display: flex; 
+    background-color: #f8e1ee;
+
+}
+
+
+
+.barra-lateral {
+    width: 200px; 
+    background-color: #8C275E; 
+    color: #F5F5F5;
+    padding: 20px 0;
+    position: fixed;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+    z-index: 10;
+}
+
+
+.barra-lateral nav ul li a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #F5F5F5; 
+    font-weight: 600;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.barra-lateral nav ul li a.active {
+    font-weight: 700; 
+}
+
+.barra-lateral nav ul li .asterisco {
+    display: block;
+    padding: 15px 25px;
+    font-size: 24px;
+    line-height: 0;
+    color: #F5F5F5;
+    opacity: 0.8;
+}
+
+
+
+.conteudo-principal {
+    margin-left: 200px; 
+    flex-grow: 1; 
+    padding: 20px 40px; 
+}
+
+
+
+.topo-conteudo {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.logo-texto {
+    font-size: 30px;
+    font-weight: 700;
+    color:  #8C275E; 
+    margin-right: 190px; 
+}
+
+
+.cursos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.curso-card {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF; 
+    padding: 100px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; 
+}
+
+
+
+.card-ilustracao {
+    flex-shrink: 0; 
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #E0E0E0; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+
+
+
+.card-ilustracao img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-detalhes {
+    flex-grow: 1;
+}
+
+.card-detalhes h2 {
+    font-size: 1.5em;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+
+.barra-progresso {
+    background-color: #EFEFEF; 
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+     font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
