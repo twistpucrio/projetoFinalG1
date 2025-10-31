@@ -12,19 +12,15 @@ body {
 
 }
 
-
-
 .barra-lateral {
     width: 200px; 
     background-color: #8C275E; 
     color: #F5F5F5;
-    padding: 20px 0;
+    padding: 10px 0;
     position: fixed;
     height: 100%;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
-    z-index: 10;
 }
-
 
 .barra-lateral nav ul li a {
     display: block;
@@ -49,15 +45,33 @@ body {
     opacity: 0.8;
 }
 
-
-
-.conteudo-principal {
-    margin-left: 200px; 
-    flex-grow: 1; 
-    padding: 20px 40px; 
+.barra-lateral nav ul li a {
+    position: relative;
+    transition: all 0.3s ease;
 }
 
+.barra-lateral nav ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #F5F5F5;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+    transform-origin: top;
+}
 
+.barra-lateral nav ul li a:hover::before {
+    transform: scaleY(1);
+}
+
+.conteudo-principal {
+    flex-grow: 1; 
+    padding: 20px 40px; 
+    margin-left: 220px; /* desloca o conteúdo após a barra lateral */
+}
 
 .topo-conteudo {
     display: flex;
@@ -74,32 +88,63 @@ body {
     margin-right: 190px; 
 }
 
-
 .cursos {
     display: flex;
     flex-direction: column;
     gap: 20px; 
-    max-width: 680px;
-    margin: 0 auto;
+    align-items: center;
 }
 
 .curso-card {
     display: flex;
     align-items: center;
-    background-color: #FFFFFF; 
-    padding: 100px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease; 
+    justify-content: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 30px; /* aumenta a curvatura */
+    overflow: hidden; /* faz o conteúdo seguir o arredondamento */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 1200px;          /* aumenta a largura */
+    height: 500px;       /* aumenta a altura */
+    padding: 40px 60px;  /* aumenta o espaço interno */
+    margin: 10px auto;   /* centraliza e dá espaço entre cards */
 }
 
+.curso-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
 
+.curso-card.programacao{
+    background-color: #6D4176; 
+    border: 8px solid #4C1753;
+}
+.curso-card.ia{
+    background-color: #1B4D80; 
+    border: 8px solid #143A64;
+}
+.curso-card.dados{
+    background-color: #F4A222; 
+    border: 8px solid #C54B14;
+}
+.curso-card.hardware{
+    background-color: #5D6164; 
+    border: 8px solid #313336;
+}
+.curso-card.seguranca{
+    background-color: #638B37; 
+    border: 8px solid #44651F;
+}   
+.curso-card.webdev{
+    background-color: #FC963D; 
+    border: 8px solid #DD6700;
+}
 
-.card-ilustracao {
-    flex-shrink: 0; 
-    width: 120px;
-    height: 120px;
+.card-conteudo {
+    background-color:white;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
-    border: 3px solid #E0E0E0; 
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -107,7 +152,29 @@ body {
     margin-right: 50px;
 }
 
+.programacao .card-conteudo{
+    border: 3px solid #4C1753;
+}
 
+.ia .card-conteudo{
+    border: 3px solid #143A64;
+}
+
+.dados .card-conteudo{
+    border: 3px solid #C54B14;
+}
+
+.hardware .card-conteudo{
+    border: 3px solid #313336;
+}
+
+.seguranca .card-conteudo{
+    border: 3px solid #44651F;
+}
+
+.webdev .card-conteudo{
+    border: 3px solid #DD6700;
+}
 
 .card-ilustracao img {
     width: 100%;
@@ -120,21 +187,33 @@ body {
 }
 
 .card-detalhes h2 {
-    font-size: 1.5em;
-    color: #333333;
+    font-size: 2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* quanto menor, mais fina */
+    color: white;
     margin-bottom: 10px;
 }
 
-
-.barra-progresso {
-    background-color: #EFEFEF; 
-    height: 8px;
-    border-radius: 4px;
-    overflow: hidden;
-     font-size: 0.9em;
-    color: #666;
-    margin-top: 5px;
-    margin-bottom: 5px;
+.card-detalhes p {
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 15px;
 }
 
+.barra-progresso {
+  background-color: #bfa9c3;
+  height: 14px;
+  border-radius: 8px;
+  overflow: hidden;
+}
 
+.progresso {
+  height: 100%;
+  border-radius: 8px;
+  transition: width 0.4s ease;
+}
+
+/* aplica a cor correta para o curso de programação */
+.programacao .progresso {
+  background-color: #4C1753;
+}
