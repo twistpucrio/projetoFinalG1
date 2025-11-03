@@ -98,10 +98,15 @@ body {
 .curso-card {
     display: flex;
     align-items: center;
-    background-color: #FFFFFF; 
-    padding: 100px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease; 
+    justify-content: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 30px; /* aumenta a curvatura */
+    overflow: hidden; /* faz o conteúdo seguir o arredondamento */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 1200px;          /* aumenta a largura */
+    height: 500px;       /* aumenta a altura */
+    padding: 40px 60px;  /* aumenta o espaço interno */
+    margin: 10px auto;   /* centraliza e dá espaço entre cards */
 }
 
 .card-ilustracao {
