@@ -1,0 +1,12 @@
+#curso-container{
+    border-radius: 1rem;
+    text-align: center;
+    height: 80vh;
+    margin: 50px 100px;
+}
+
+#curso-titulo{
+    color: white;
+    font-size: 2.5rem;
+    padding: 3rem;
+}
