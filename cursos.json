@@ -1,0 +1,69 @@
+{
+  "cursos": [
+    {
+      "titulo": "Fundamentos da Programação",
+      "personagem-nome": "Lara",
+      "personagem-img": "IMG/personagens/lara.png",
+      "descricao": "blah",
+      "instrucoes": "blah",
+      "link": "jogo-fundProg.html",
+      "frase":"bleh",
+      "cor-borda":"#4C1753",
+      "cor-fundo":"#825886"
+    },
+    {
+      "titulo": "Inteligência Artificial",
+      "personagem-nome": "Ayla",
+      "personagem-img": "IMG/personagens/ayla.png",
+      "descricao": "blah",
+      "instrucoes": "blah",
+      "link": "jogo-IA.html",
+      "frase":"bleh",
+      "cor-borda":"#143A64",
+      "cor-fundo":"#4B6D97"
+    },
+    {
+      "titulo": "Segurança Cibernética",
+      "personagem-nome": "Nia",
+      "personagem-img": "IMG/personagens/nia.png",
+      "descricao": "blah",
+      "instrucoes": "blah",
+      "link": "jogo-segCiber.html",
+      "frase":"bleh",
+      "cor-borda":"#44651F",
+      "cor-fundo":"#638B37"
+    },
+    {
+      "titulo": "Ciência de Dados",
+      "personagem-nome": "Sofia",
+      "personagem-img": "IMG/personagens/sofia.png",
+      "descricao": "blah",
+      "link": "jogo-dados.html",
+      "frase":"bleh",
+      "cor-borda":"#313336",
+      "cor-fundo":"#5D6164"
+    },
+    {
+      "titulo": "Hardware",
+      "personagem-nome": "Kaori",
+      "personagem-img": "IMG/personagens/kaori.png",
+      "descricao": "blah",
+      "instrucoes": "blah",
+      "link": "jogo-hardware.html",
+      "frase":"bleh",
+      "cor-borda":"#44651F",
+      "cor-fundo":"#638B37"
+    },
+    {
+      "titulo": "Web Development",
+      "personagem-nome": "Maya",
+      "personagem-img": "IMG/personagens/maya.png",
+      "descricao": "blah",
+      "instrucoes": "blah",
+      "link": "jogo-webDev.html",
+      "frase":"bleh",
+      "cor-borda":"#DD6700",
+      "cor-fundo":"#FC963D"
+    }
+    ]
+}
