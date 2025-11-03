@@ -100,13 +100,13 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    border-radius: 30px; /* aumenta a curvatura */
-    overflow: hidden; /* faz o conteúdo seguir o arredondamento */
+    border-radius: 30px; 
+    overflow: hidden; 
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    width: 1200px;          /* aumenta a largura */
-    height: 500px;       /* aumenta a altura */
-    padding: 40px 60px;  /* aumenta o espaço interno */
-    margin: 10px auto;   /* centraliza e dá espaço entre cards */
+    width: 1000px;          
+    height: 400px;      
+    padding: 40px 60px; 
+    margin: 10px auto;  
 }
 
 .card-ilustracao {
@@ -155,9 +155,8 @@ body {
 }
 
 .card-conteudo {
-    background-color:white;
     padding: 20px;
-    width: 300px;
+    width: 280px;
     height: 300px;
     border-radius: 50%;
     overflow: hidden;
@@ -165,6 +164,11 @@ body {
     justify-content: center;
     align-items: center;
     margin-right: 50px;
+}
+
+.card-conteudo img{
+   width:350px;
+   height: 350px;
 }
 
 .programacao .card-conteudo{
@@ -199,18 +203,20 @@ body {
 
 .card-detalhes {
     flex-grow: 1;
+    max-width: 535px;
 }
 
 .card-detalhes h2 {
     font-size: 2em;
     font-family: 'Poppins', sans-serif;
-    font-weight: 400; /* quanto menor, mais fina */
+    font-weight: 400; 
     color: white;
     margin-bottom: 10px;
 }
 
 .card-detalhes p {
-    font-size: 1.2em;
+    font-size: 0.95em;
+    text-align: justify;
     color: white;
     margin-bottom: 15px;
 }
@@ -228,7 +234,6 @@ body {
   transition: width 0.4s ease;
 }
 
-/* aplica a cor correta para o curso de programação */
 .programacao .progresso {
   background-color: #4C1753;
 }
