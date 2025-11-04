@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detetives de Dados</title>
+    <link rel="stylesheet" href="estilo/cd.css">
+    <script src="cd.js"></script>
+</head>
+<body data-nivel="1">
+    <h1>Detetives de Dados</h1>
+    <h2>Nível 1:O Mistério dos Salgados da Sexta!</h2>
+    <p>Analise os dados abaixo e descubra:  </p>
+
+    <table id="tabela-dados">
+        <thead>
+            <tr>
+                <th>Dia</th>
+                <th>Temperatura (°C)</th>
+                <th>Comida mais vendida</th>
+                <th>Qtd Vendida</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Segunda</td><td>22</td><td>Pastel</td><td>25</td></tr>
+            <tr><td>Terça</td><td>24</td><td>Pão de Queijo</td><td>27</td></tr>
+            <tr><td>Quarta</td><td>25</td><td>Coxinha</td><td>30</td></tr>
+            <tr><td>Quinta</td><td>27</td><td>Pão de Queijo</td><td>33</td></tr>
+            <tr><td>Sexta</td><td>29</td><td>Pastel</td><td>50</td></tr>
+        </tbody>
+    </table>
+
+    <section id="hipoteses">
+        <h2>Por que a cantina vende mais salgados na sexta?</h2>
+        <p><strong>Qual é a explicação mais provável?</strong></p>
+        <form id="form-hipotese">
+            <label><input type="radio" name="p1" value="clima"> Está mais quente, então preferem salgados e sucos.</label><br>
+            <label><input type="radio" name="p1" value="fimdesemana"> É sexta-feira, todos estão animados e compram mais.</label><br>
+            <label><input type="radio" name="p1" value="promo"> A cantina faz promoção de pastel na sexta.</label><br><br>
+        </form>
+    </section>
+    <section id="hipoteses">
+        <h2>Em quais dias os alunos compram mais sucos?</h2>
+        <p><strong>Qual é a explicação mais provável?</strong></p>
+        <form id="form-hipotese">
+           <label><input type="radio" name="p2" value="quente"> Nos dias mais quentes, como quinta e sexta.</label><br>
+            <label><input type="radio" name="p2" value="igual"> Em todos os dias a mesma quantidade.</label><br>
+            <label><input type="radio" name="p2" value="frio"> Quando está frio, compram mais.</label>
+        </form>
+    </section>
+    <section id="hipoteses">
+        <h2>Qual comida é mais popular na semana?</h2>
+        <p><strong>Qual é a explicação mais provável?</strong></p>
+        <form id="form-hipotese">
+            <label><input type="radio" name="p3" value="pastel"> Pastel</label><br>
+            <label><input type="radio" name="p3" value="paodequeijo"> Pão de queijo</label><br>
+            <label><input type="radio" name="p3" value="coxinha"> Coxinha</label>
+        </form>
+    </section>
+    <button type="button" id="btn-analisar">Enviar resposta</button>
+    <p id="resultado"></p>
+</body>
+</html>
