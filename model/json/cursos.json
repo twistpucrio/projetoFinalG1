@@ -3,7 +3,7 @@
     {
       "titulo": "Fundamentos da Programação",
       "personagem-nome": "Lara",
-      "personagem-img": "img/lara.png",
+      "personagem-img": "../../view/img/lara.png",
       "descricao": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "instrucoes": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "link": "jogo-fundProg.html",
@@ -14,7 +14,7 @@
     {
       "titulo": "Inteligência Artificial",
       "personagem-nome": "Ayla",
-      "personagem-img": "img/ayla.png",
+      "personagem-img": "../../view/img/ayla.png",
       "descricao": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "instrucoes": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "link": "jogo-IA.html",
@@ -25,7 +25,7 @@
     {
       "titulo": "Segurança Cibernética",
       "personagem-nome": "Nia",
-      "personagem-img": "img/nia.png",
+      "personagem-img": "../../view/img/nia.png",
       "descricao": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "instrucoes": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "link": "jogo-segCiber.html",
@@ -36,10 +36,10 @@
     {
       "titulo": "Ciência de Dados",
       "personagem-nome": "Sofia",
-      "personagem-img": "img/sofia.png",
+      "personagem-img": "../../view/img/sofia.png",
       "descricao": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "instrucoes": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
-      "link": "cd.html",
+      "link": "../../view/html/cd1.html",
       "frase":"Os dados falam. Eu só traduzo.",
       "cor-borda":"#C54B14",
       "cor-fundo":"#F4A222"
@@ -47,7 +47,7 @@
     {
       "titulo": "Hardware",
       "personagem-nome": "Kaori",
-      "personagem-img": "img/kaori.png",
+      "personagem-img": "../../view/img/kaori.png",
       "descricao": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "instrucoes": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "link": "jogo-hardware.html",
@@ -58,7 +58,7 @@
     {
       "titulo": "Web Development",
       "personagem-nome": "Maya",
-      "personagem-img": "img/maya.png",
+      "personagem-img": "../../view/img/maya.png",
       "descricao": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "instrucoes": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "link": "jogo-webDev.html",

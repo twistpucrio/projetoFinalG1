@@ -1,6 +1,6 @@
 (function () {
   console.log("Status: cursos.js carregado!");
-  const DATA_URL = "cursos.json";
+  const DATA_URL = "../../model/json/cursos.json";
 
   function personagemURL() {
     const sp = new URLSearchParams(window.location.search);
