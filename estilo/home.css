@@ -126,13 +126,13 @@ body {
     height: 120px;
     justify-content: center;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    border-radius: 30px; /* aumenta a curvatura */
-    overflow: hidden; /* faz o conteúdo seguir o arredondamento */
+    border-radius: 30px;
+    overflow: hidden;  
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    width: 1200px;          /* aumenta a largura */
-    height: 500px;       /* aumenta a altura */
-    padding: 40px 60px;  /* aumenta o espaço interno */
-    margin: 10px auto;   /* centraliza e dá espaço entre cards */
+    width: 1200px;         
+    height: 500px;     
+    padding: 40px 60px;  
+    margin: 10px auto;   
 }
 
 .curso-card:hover {
