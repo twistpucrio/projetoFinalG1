@@ -231,10 +231,11 @@ body {
 }
 
 .card-detalhes p {
-    font-size: 0.95em;
-    text-align: justify;
     color: white;
     margin-bottom: 15px;
+    font-family: 'secundaria';
+    font-size: 14pt;
+    padding: 15px 0 15px 0;
 }
 
 .barra-progresso {
@@ -252,12 +253,6 @@ body {
 
 .programacao .progresso {
   background-color: #4C1753;
-}
-
-.card-detalhes p{
-    font-family: 'secundaria';
-    font-size: 13pt;
-    padding: 15px 0 15px 0;
 }
 
 .txt-descricao{
