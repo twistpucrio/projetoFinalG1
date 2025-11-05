@@ -1,12 +1,55 @@
+@font-face {
+    font-family: "principal";
+    src: url(/../fonts/Momo_Trust_Display/MomoTrustDisplay-Regular.ttf)
+    format('truetype');
+}
+@font-face {
+    font-family: 'secundaria';
+    src: url(../fonts/Momo_Trust_Sans/MomoTrustSans-Regular.ttf)
+    format('truetype');
+}
+
 #curso-container{
     border-radius: 1rem;
     text-align: center;
-    height: 80vh;
+    height: 1300px;
     margin: 50px 100px;
+    color: white; 
 }
 
-#curso-titulo{
+#curso-titulo{ 
+    font-size: 2.5rem; 
+    padding: 2.7rem; 
+    font-family: 'principal';
+}
+
+h2{
+    font-size: 2rem;
+    text-align: left;
+    margin-left: 2rem;
+    padding: 1.2rem;
+    font-family: 'principal';
+}
+
+#personagem-nome{ 
+    font-size: 1.5rem;
+    font-family: 'principal';
+}
+
+#curso-descricao, #curso-instrucoes{
+    font-family: 'secundaria';
+    line-height: 1.5;
+    font-size: 1.3rem;
+    margin: auto 100px;
+    text-align: justify;
+    padding: 45px;
+}
+
+#btn-jogar{
+    font-family: 'principal';
+    font-size: 2.1rem;
+    padding: 15px 15px 15px 15px;
+    border-radius: 10px;
     color: white;
-    font-size: 2.5rem;
-    padding: 3rem;
+    margin-top: 15px;
 }
