@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'principal';
+    src: url(../fonts/Momo_Trust_Display/MomoTrustDisplay-Regular.ttf)
+    format('truetype');
+}
+@font-face {
+    font-family: 'secundaria';
+    src: url(../fonts/Momo_Trust_Sans/MomoTrustSans-Regular.ttf)
+    format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -155,10 +166,8 @@ body {
 }
 
 .card-conteudo {
-    padding: 20px;
-    width: 280px;
+    width: 300px;
     height: 300px;
-    border-radius: 50%;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -167,10 +176,16 @@ body {
 }
 
 .card-conteudo img{
-   width:350px;
-   height: 350px;
+    width: 310px;
+    height: 300px;
 }
 
+.ia .card-conteudo img{
+    width: 280px;
+    height: 280px;
+}
+
+/*
 .programacao .card-conteudo{
     border: 3px solid #4C1753;
 }
@@ -194,6 +209,7 @@ body {
 .webdev .card-conteudo{
     border: 3px solid #DD6700;
 }
+*/
 
 .card-ilustracao img {
     width: 100%;
@@ -208,7 +224,7 @@ body {
 
 .card-detalhes h2 {
     font-size: 2em;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'principal';
     font-weight: 400; 
     color: white;
     margin-bottom: 10px;
@@ -236,4 +252,14 @@ body {
 
 .programacao .progresso {
   background-color: #4C1753;
+}
+
+.card-detalhes p{
+    font-family: 'secundaria';
+    font-size: 13pt;
+    padding: 15px 0 15px 0;
+}
+
+.txt-descricao{
+    text-align: center;
 }
