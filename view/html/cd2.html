@@ -4,97 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detetives de Dados- Nível 2</title>
-    <link rel="stylesheet" href="../estilo/cd.css">
-    <script src="../../model/js/cd.js"></script>
+    <title>Ciência de Dados</title>
 </head>
 
 <body data-nivel="2">
     <h1>Detetives de Dados </h1>
     <h2>Nível 2: O Mistério das Bicicletas do Pátio</h2>
     <p>Analise os dados e descubra: </p>
-
-    <table id="tabela-dados">
-        <thead>
-            <tr>
-                <th>Dia</th>
-                <th>Temperatura (°C)</th>
-                <th>Choveu?</th>
-                <th>Nº de Bicicletas</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Segunda</td>
-                <td>21</td>
-                <td>Sim</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>Terça</td>
-                <td>24</td>
-                <td>Não</td>
-                <td>15</td>
-            </tr>
-            <tr>
-                <td>Quarta</td>
-                <td>26</td>
-                <td>Não</td>
-                <td>20</td>
-            </tr>
-            <tr>
-                <td>Quinta</td>
-                <td>18</td>
-                <td>Sim</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td>Sexta</td>
-                <td>27</td>
-                <td>Não</td>
-                <td>25</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <section id="hipoteses">
-        <h2>Por que há mais bicicletas no pátio em dias de sol?</h2>
-        <p><strong>Qual é a explicação mais provável?</strong> </h3>
-        <form id="form-hipotese">
-            <label><input type="radio" name="p1" value="clima"> Quando faz sol, mais alunos vêm de
-                bicicleta.</label><br>
-            <label><input type="radio" name="p1" value="sexta"> Na sexta-feira todos preferem vir de
-                bicicleta.</label><br>
-            <label><input type="radio" name="p1" value="chuva"> Quando chove, as pessoas trazem mais bicicletas para se
-                proteger.</label><br><br>
-        </form>
-    </section>
-    <section id="hipoteses">
-        <h2>Por que há mais bicicletas na quinta e sexta-feira?</h2>
-        <p><strong>Qual é a explicação mais provável?</strong></p>
-        <form id="form-hipotese">
-            <label><input type="radio" name="p2" value="clima"> O clima está mais ensolarado e quente, incentivando o
-                uso de bicicleta.</label><br>
-            <label><input type="radio" name="p2" value="sexta"> É sexta, e os alunos querem sair direto da escola para
-                casa de bicicleta.</label><br>
-            <label><input type="radio" name="p2" value="chuva"> Chove mais, então os alunos preferem ir de
-                bicicleta.</label>
-        </form>
-    </section>
-    <section id="hipoteses">
-        <h2>O que aconteceria se começasse a chover na sexta?</h2>
-        <p><strong>Qual é a explicação mais provável?</strong></p>
-        <form id="form-hipotese">
-            <label><input type="radio" name="p3" value="menos"> Provavelmente haveria menos bicicletas, pois a chuva
-                desestimula o uso.</label><br>
-            <label><input type="radio" name="p3" value="mais"> Continuaria igual, pois sexta é o dia
-                favorito.</label><br>
-            <label><input type="radio" name="p3" value="nenhuma"> Nenhuma mudança, já que o clima não
-                influencia.</label>
-        </form>
-    </section>
-    <button type="button" id="btn-analisar">Enviar resposta</button>
-    <p id="resultado"></p>
+    <table id="tabela-dados"></table>
+    <script src="js/cd.js"> </script>
 </body>
 
 </html>
