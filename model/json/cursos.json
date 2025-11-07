@@ -39,7 +39,7 @@
       "personagem-img": "../../view/img/sofia.png",
       "descricao": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "instrucoes": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
-      "link": "../../view/html/cd1.html",
+      "link": "../../view/html/cd1.html?curso=cd",
       "frase":"Os dados falam. Eu só traduzo.",
       "cor-borda":"#C54B14",
       "cor-fundo":"#F4A222"

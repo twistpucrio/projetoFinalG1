@@ -1,13 +1,10 @@
 {
-  "cursos": [
-    { 
+  "cursos": {
       "cd": [
       "pergunta 1",
       "pergunta 2"
-      ]
-    },
+      ],
 
-    {
       "ia": [
         {
           "id": 1,
@@ -34,9 +31,8 @@
             ["O robô está em uma célula LIMPA adjacente a uma célula SUJA. Ele executa uma ação de busca: MOVER PARA FRENTE. Ele entra na célula SUJA, mas executa sua ação de limpeza de forma muito lenta, e a sujeira persiste. Qual regra ele executa logo após o ciclo de limpeza lento, considerando que a célula ainda está SUJA?",["Regra A (SE Célula Suja - LIMPAR CÉLULA).","Regra B (SE Poça Detectada - MOVER PARA CÉLULA ANTERIOR).","Nenhuma regra é executada."]],
             ["Como o conjunto de regras do Cenário 3 pode ser alterado para evitar esse ciclo vicioso de limpeza infinita?",["Adicionar um contador: SE Limpou 3 Vezes E Sujo - MOVER ALEATORIAMENTE.","Remover a Regra A, pois a limpeza não é importante."]],
             ["Se o robô estivesse programado com a falha clássica de oscilação: Regra A: SE Sujo - LIMPAR e Regra B: SE Limpo - SUJAR NOVAMENTE (por falha de programação), e a célula está Suja, qual seria o resultado a longo prazo?",["Ele executaria a Regra A e pararia na célula Limpa.","Ele entraria em um ciclo infinito, alternando entre Sujo e Limpo."]]
-          ]
-        }
-      ]
-    }
-  ]
+        ]
+      }
+    ]
+  }
 }
