@@ -1,4 +1,4 @@
-import { carregarCursos, personagemURL } from "../model/js/logica-pagJogo.js"; // Chama funções do model, que fornece os dados necessários para renderizar a página
+import { carregarDados, personagemURL } from "../model/js/logica-pagJogo.js"; // Chama funções do model, que fornece os dados necessários para renderizar a página
 
 const DATA_URL = "../../model/json/cursos.json";
 
@@ -47,7 +47,7 @@ async function init() {
     const personagem = personagemURL();
     if (!personagem) throw new Error("Parâmetro ?personagem não encontrado na URL.");
 
-    const data = await carregarCursos(DATA_URL);
+    const data = await carregarDados(DATA_URL);
     const lista = Array.isArray(data) ? data : (data.cursos || []);
     const curso = lista.find(c => c["personagem-nome"] === personagem);
 
