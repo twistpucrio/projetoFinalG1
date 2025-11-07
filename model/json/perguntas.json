@@ -1,38 +1,178 @@
 {
   "cursos": {
-      "cd": [
-      "pergunta 1",
-      "pergunta 2"
-      ],
-
-      "ia": [
-        {
-          "id": 1,
-          "descricao": "O robô está em uma célula que é percebida como SUJA. Regra A: SE Célula Suja - MOVER ALEATORIAMENTE, Regra B: SE Célula Suja - LIMPAR CÉLULA, Regra C: SE Célula Limpa - PARAR AGENTE",
-          "perguntas": [
-            ["Qual ação deve ser executada primeiro?",["1. O robô executa a Regra C: SE Célula Limpa - PARAR AGENTE.","2. O robô executa a Regra B: SE Célula Suja - LIMPAR CÉLULA.","3. O robô executa a Regra A: SE Célula Suja - MOVER ALEATORIAMENTE."]],
-            ["Qual ação deve ser a última avaliada pelo robô?",["1. Regra A (SE Célula Suja - MOVER ALEATORIAMENTE).","Regra C (SE Célula Limpa - PARAR AGENTE).","Regra B (SE Célula Suja - LIMPAR CÉLULA)."]],
-            ["Se a Regra B fosse a primeira na lista, qual seria o resultado correto para a situação 'Célula Suja'?",["1. O robô executa a Regra A e se move aleatoriamente.","O robô executa a Regra B e limpa a célula.","O robô para o agente."]]
+    "cd": [
+      {
+        "id": 1,
+        "descricao": [
+          { "Dia": "Segunda", "Temperatura (°C)": 22, "Comida mais vendida": "Pastel", "Quantidade vendida": 25 },
+          { "Dia": "Terça", "Temperatura (°C)": 24, "Comida mais vendida": "Pão de queijo", "Quantidade vendida": 27 },
+          { "Dia": "Quarta", "Temperatura (°C)": 25, "Comida mais vendida": "Coxinha", "Quantidade vendida": 30 },
+          { "Dia": "Quinta", "Temperatura (°C)": 27, "Comida mais vendida": "Pão de queijo", "Quantidade vendida": 33 },
+          { "Dia": "Sexta", "Temperatura (°C)": 29, "Comida mais vendida": "Pastel", "Quantidade vendida": 50 }
+        ],
+        "perguntas": [
+          [
+            "Por que a cantina vende mais salgados na sexta? Qual é a explicação mais provável?",
+            [
+              "1. Está mais quente, então preferem salgados e sucos.",
+              "2. É sexta-feira, todos estão animados e compram mais.",
+              "3. A cantina faz promoção de pastel na sexta."
+            ],
+            0
+          ],
+          [
+            "Em quais dias os alunos compram mais sucos? Qual é a explicação mais provável?",
+            [
+              "1. Nos dias mais quentes, como quinta e sexta.",
+              "2. Em todos os dias a mesma quantidade.",
+              "3. Quando está frio, compram mais."
+            ],
+            0
+          ],
+          [
+            "Qual comida é mais popular na semana? Qual é a explicação mais provável?",
+            ["1. Pastel", "2. Pão de queijo", "3. Coxinha"],
+            0
           ]
-        },
-        {
-          "id": 2,
-          "descricao": "O robô está em uma célula LIMPA. Ele tem a capacidade de perceber se encontrou a SUJEIRA MÁXIMA (uma sujeira que exige limpeza imediata).Regra A: SE Sujeira Máxima Detectada - LIMPAR AGORA, Regra B: SE Célula Suja - MOVER ALEATORIAMENTE, Regra C: SE Bateria Baixa - VOLTAR PARA BASE",
-          "perguntas": [
-            ["Assumindo que a Bateria NÃO está baixa e a célula está LIMPA, qual é a primeira regra que será executada?",["O robô executa a Regra C: SE Bateria Baixa - VOLTAR PARA BASE.","O robô executa a Regra B: SE Célula Suja - MOVER ALEATORIAMENTE.","Nenhuma regra é executada. O robô para." ]],
-            ["Se o robô detectasse apenas SUJEIRA NORMAL (que o qualifica como 'Célula Suja'), mas não 'Sujeira Máxima', qual regra ele executaria?",["O robô executa a Regra A: SE Sujeira Máxima Detectada - LIMPAR AGORA.","O robô executa a Regra B: SE Célula Suja - MOVER ALEATORIAMENTE.","O robô para."]],
-            ["Qual regra o robô precisaria para garantir que continue buscando sujeira após ter certeza de que a célula atual não tem 'Sujeira Máxima' e a bateria está OK?",["Regra de Falha de Busca: SE Limpo - PARAR AGENTE.","Regra de Busca: SE Não Sujeira Máxima E Não Bateria Baixa - MOVER PARA PRÓXIMA CÉLULA."]]
+        ]
+      },
+      {
+        "id": 2,
+        "descricao": [
+          { "Dia": "Segunda", "Temperatura (°C)": 21, "Choveu?": "Sim", "Nº de Bicicletas": 5 },
+          { "Dia": "Terça", "Temperatura (°C)": 24, "Choveu?": "Não", "Nº de Bicicletas": 15 },
+          { "Dia": "Quarta", "Temperatura (°C)": 26, "Choveu?": "Não", "Nº de Bicicletas": 20 },
+          { "Dia": "Quinta", "Temperatura (°C)": 18, "Choveu?": "Sim", "Nº de Bicicletas": 3 },
+          { "Dia": "Sexta", "Temperatura (°C)": 27, "Choveu?": "Não", "Nº de Bicicletas": 25 }
+        ],
+        "perguntas": [
+          [
+            "Por que há mais bicicletas no pátio em dias de sol? Qual é a explicação mais provável?",
+            [
+              "1. Quando faz sol, mais alunos vêm de bicicleta.",
+              "2. Na sexta-feira todos preferem vir de bicicleta.",
+              "3. Quando chove, as pessoas trazem mais bicicletas para se proteger."
+            ],
+            0
+          ],
+          [
+            "Por que há mais bicicletas na quinta e sexta-feira? Qual é a explicação mais provável?",
+            [
+              "1. O clima está mais ensolarado e quente, incentivando o uso de bicicleta.",
+              "2. É sexta, e os alunos querem sair direto da escola para casa de bicicleta.",
+              "3. Chove mais, então os alunos preferem ir de bicicleta."
+            ],
+            0
+          ],
+          [
+            "O que aconteceria se começasse a chover na sexta? Qual é a explicação mais provável?",
+            [
+              "1. Provavelmente haveria menos bicicletas, pois a chuva desestimula o uso.",
+              "2. Continuaria igual, pois sexta é o dia favorito.",
+              "3. Nenhuma mudança, já que o clima não influencia."
+            ],
+            0
           ]
-        },
-        {
-          "id": 3,
-          "descricao": "O robô está programado para evitar poças, mas as regras criam um ciclo. Regra A: SE Célula Suja - LIMPAR CÉLULA, Regra B: SE Poça Detectada - MOVER PARA CÉLULA ANTERIOR",
-          "perguntas": [
-            ["O robô está em uma célula LIMPA adjacente a uma célula SUJA. Ele executa uma ação de busca: MOVER PARA FRENTE. Ele entra na célula SUJA, mas executa sua ação de limpeza de forma muito lenta, e a sujeira persiste. Qual regra ele executa logo após o ciclo de limpeza lento, considerando que a célula ainda está SUJA?",["Regra A (SE Célula Suja - LIMPAR CÉLULA).","Regra B (SE Poça Detectada - MOVER PARA CÉLULA ANTERIOR).","Nenhuma regra é executada."]],
-            ["Como o conjunto de regras do Cenário 3 pode ser alterado para evitar esse ciclo vicioso de limpeza infinita?",["Adicionar um contador: SE Limpou 3 Vezes E Sujo - MOVER ALEATORIAMENTE.","Remover a Regra A, pois a limpeza não é importante."]],
-            ["Se o robô estivesse programado com a falha clássica de oscilação: Regra A: SE Sujo - LIMPAR e Regra B: SE Limpo - SUJAR NOVAMENTE (por falha de programação), e a célula está Suja, qual seria o resultado a longo prazo?",["Ele executaria a Regra A e pararia na célula Limpa.","Ele entraria em um ciclo infinito, alternando entre Sujo e Limpo."]]
         ]
       }
     ]
-  }
+  },
+  "ia": [
+    {
+      "id": 1,
+      "descricao": "O robô está em uma célula que é percebida como SUJA. Regra A: SE Célula Suja - MOVER ALEATORIAMENTE, Regra B: SE Célula Suja - LIMPAR CÉLULA, Regra C: SE Célula Limpa - PARAR AGENTE",
+      "perguntas": [
+        [
+          "Qual ação deve ser executada primeiro?",
+          [
+            "1. O robô executa a Regra C: SE Célula Limpa - PARAR AGENTE.",
+            "2. O robô executa a Regra B: SE Célula Suja - LIMPAR CÉLULA.",
+            "3. O robô executa a Regra A: SE Célula Suja - MOVER ALEATORIAMENTE."
+          ],
+          1
+        ],
+        [
+          "Qual ação deve ser a última avaliada pelo robô?",
+          [
+            "1. Regra A (SE Célula Suja - MOVER ALEATORIAMENTE).",
+            "2. Regra C (SE Célula Limpa - PARAR AGENTE).",
+            "3. Regra B (SE Célula Suja - LIMPAR CÉLULA)."
+          ],
+          1
+        ],
+        [
+          "Se a Regra B fosse a primeira na lista, qual seria o resultado correto para a situação 'Célula Suja'?",
+          [
+            "1. O robô executa a Regra A e se move aleatoriamente.",
+            "2. O robô executa a Regra B e limpa a célula.",
+            "3. O robô para o agente."
+          ],
+          1
+        ]
+      ]
+    },
+    {
+      "id": 2,
+      "descricao": "O robô está em uma célula LIMPA. Ele tem a capacidade de perceber se encontrou a SUJEIRA MÁXIMA (uma sujeira que exige limpeza imediata). Regra A: SE Sujeira Máxima Detectada - LIMPAR AGORA, Regra B: SE Célula Suja - MOVER ALEATORIAMENTE, Regra C: SE Bateria Baixa - VOLTAR PARA BASE",
+      "perguntas": [
+        [
+          "Assumindo que a Bateria NÃO está baixa e a célula está LIMPA, qual é a primeira regra que será executada?",
+          [
+            "1. O robô executa a Regra C: SE Bateria Baixa - VOLTAR PARA BASE.",
+            "2. O robô executa a Regra B: SE Célula Suja - MOVER ALEATORIAMENTE.",
+            "3. Nenhuma regra é executada. O robô para."
+          ],
+          2
+        ],
+        [
+          "Se o robô detectasse apenas SUJEIRA NORMAL (que o qualifica como 'Célula Suja'), mas não 'Sujeira Máxima', qual regra ele executaria?",
+          [
+            "1. O robô executa a Regra A: SE Sujeira Máxima Detectada - LIMPAR AGORA.",
+            "2. O robô executa a Regra B: SE Célula Suja - MOVER ALEATORIAMENTE.",
+            "3. O robô para."
+          ],
+          1
+        ],
+        [
+          "Qual regra o robô precisaria para garantir que continue buscando sujeira após ter certeza de que a célula atual não tem 'Sujeira Máxima' e a bateria está OK?",
+          [
+            "1. Regra de Falha de Busca: SE Limpo - PARAR AGENTE.",
+            "2. Regra de Busca: SE Não Sujeira Máxima E Não Bateria Baixa - MOVER PARA PRÓXIMA CÉLULA."
+          ],
+          1
+        ]
+      ]
+    },
+    {
+      "id": 3,
+      "descricao": "O robô está programado para evitar poças, mas as regras criam um ciclo. Regra A: SE Célula Suja - LIMPAR CÉLULA, Regra B: SE Poça Detectada - MOVER PARA CÉLULA ANTERIOR",
+      "perguntas": [
+        [
+          "O robô está em uma célula LIMPA adjacente a uma célula SUJA. Ele executa uma ação de busca: MOVER PARA FRENTE. Ele entra na célula SUJA, mas executa sua ação de limpeza de forma muito lenta, e a sujeira persiste. Qual regra ele executa logo após o ciclo de limpeza lento, considerando que a célula ainda está SUJA?",
+          [
+            "1. Regra A (SE Célula Suja - LIMPAR CÉLULA).",
+            "2. Regra B (SE Poça Detectada - MOVER PARA CÉLULA ANTERIOR).",
+            "3. Nenhuma regra é executada."
+          ],
+          0
+        ],
+        [
+          "Como o conjunto de regras do Cenário 3 pode ser alterado para evitar esse ciclo vicioso de limpeza infinita?",
+          [
+            "1. Adicionar um contador: SE Limpou 3 Vezes E Sujo - MOVER ALEATORIAMENTE.",
+            "2. Remover a Regra A, pois a limpeza não é importante."
+          ],
+          0
+        ],
+        [
+          "Se o robô estivesse programado com a falha clássica de oscilação: Regra A: SE Sujo - LIMPAR e Regra B: SE Limpo - SUJAR NOVAMENTE (por falha de programação), e a célula está Suja, qual seria o resultado a longo prazo?",
+          [
+            "1. Ele executaria a Regra A e pararia na célula Limpa.",
+            "2. Ele entraria em um ciclo infinito, alternando entre Sujo e Limpo."
+          ],
+          1
+        ]
+      ]
+    }
+  ]
 }
