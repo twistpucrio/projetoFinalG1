@@ -14,18 +14,18 @@
           [
             "Por que a cantina vende mais salgados na sexta? Qual é a explicação mais provável?",
             [
-              "1. Está mais quente, então preferem salgados e sucos.",
-              "2. É sexta-feira, todos estão animados e compram mais.",
-              "3. A cantina faz promoção de pastel na sexta."
+              "Está mais quente, então preferem salgados e sucos.",
+              "É sexta-feira, todos estão animados e compram mais.",
+              "A cantina faz promoção de pastel na sexta."
             ],
             0
           ],
           [
             "Em quais dias os alunos compram mais sucos? Qual é a explicação mais provável?",
             [
-              "1. Nos dias mais quentes, como quinta e sexta.",
-              "2. Em todos os dias a mesma quantidade.",
-              "3. Quando está frio, compram mais."
+              "Nos dias mais quentes, como quinta e sexta.",
+              "Em todos os dias a mesma quantidade.",
+              "Quando está frio, compram mais."
             ],
             0
           ],
@@ -49,27 +49,27 @@
           [
             "Por que há mais bicicletas no pátio em dias de sol? Qual é a explicação mais provável?",
             [
-              "1. Quando faz sol, mais alunos vêm de bicicleta.",
-              "2. Na sexta-feira todos preferem vir de bicicleta.",
-              "3. Quando chove, as pessoas trazem mais bicicletas para se proteger."
+              "Quando faz sol, mais alunos vêm de bicicleta.",
+              "Na sexta-feira todos preferem vir de bicicleta.",
+              "Quando chove, as pessoas trazem mais bicicletas para se proteger."
             ],
             0
           ],
           [
             "Por que há mais bicicletas na quinta e sexta-feira? Qual é a explicação mais provável?",
             [
-              "1. O clima está mais ensolarado e quente, incentivando o uso de bicicleta.",
-              "2. É sexta, e os alunos querem sair direto da escola para casa de bicicleta.",
-              "3. Chove mais, então os alunos preferem ir de bicicleta."
+              "O clima está mais ensolarado e quente, incentivando o uso de bicicleta.",
+              "É sexta, e os alunos querem sair direto da escola para casa de bicicleta.",
+              "Chove mais, então os alunos preferem ir de bicicleta."
             ],
             0
           ],
           [
             "O que aconteceria se começasse a chover na sexta? Qual é a explicação mais provável?",
             [
-              "1. Provavelmente haveria menos bicicletas, pois a chuva desestimula o uso.",
-              "2. Continuaria igual, pois sexta é o dia favorito.",
-              "3. Nenhuma mudança, já que o clima não influencia."
+              "Provavelmente haveria menos bicicletas, pois a chuva desestimula o uso.",
+              "Continuaria igual, pois sexta é o dia favorito.",
+              "Nenhuma mudança, já que o clima não influencia."
             ],
             0
           ]
@@ -84,27 +84,27 @@
         [
           "Qual ação deve ser executada primeiro?",
           [
-            "1. O robô executa a Regra C: SE Célula Limpa - PARAR AGENTE.",
-            "2. O robô executa a Regra B: SE Célula Suja - LIMPAR CÉLULA.",
-            "3. O robô executa a Regra A: SE Célula Suja - MOVER ALEATORIAMENTE."
+            "O robô executa a Regra C: SE Célula Limpa - PARAR AGENTE.",
+            "O robô executa a Regra B: SE Célula Suja - LIMPAR CÉLULA.",
+            "O robô executa a Regra A: SE Célula Suja - MOVER ALEATORIAMENTE."
           ],
           1
         ],
         [
           "Qual ação deve ser a última avaliada pelo robô?",
           [
-            "1. Regra A (SE Célula Suja - MOVER ALEATORIAMENTE).",
-            "2. Regra C (SE Célula Limpa - PARAR AGENTE).",
-            "3. Regra B (SE Célula Suja - LIMPAR CÉLULA)."
+            "Regra A (SE Célula Suja - MOVER ALEATORIAMENTE).",
+            "Regra C (SE Célula Limpa - PARAR AGENTE).",
+            "Regra B (SE Célula Suja - LIMPAR CÉLULA)."
           ],
           1
         ],
         [
           "Se a Regra B fosse a primeira na lista, qual seria o resultado correto para a situação 'Célula Suja'?",
           [
-            "1. O robô executa a Regra A e se move aleatoriamente.",
-            "2. O robô executa a Regra B e limpa a célula.",
-            "3. O robô para o agente."
+            "O robô executa a Regra A e se move aleatoriamente.",
+            "O robô executa a Regra B e limpa a célula.",
+            "O robô para o agente."
           ],
           1
         ]
@@ -117,26 +117,26 @@
         [
           "Assumindo que a Bateria NÃO está baixa e a célula está LIMPA, qual é a primeira regra que será executada?",
           [
-            "1. O robô executa a Regra C: SE Bateria Baixa - VOLTAR PARA BASE.",
-            "2. O robô executa a Regra B: SE Célula Suja - MOVER ALEATORIAMENTE.",
-            "3. Nenhuma regra é executada. O robô para."
+            "O robô executa a Regra C: SE Bateria Baixa - VOLTAR PARA BASE.",
+            "O robô executa a Regra B: SE Célula Suja - MOVER ALEATORIAMENTE.",
+            "Nenhuma regra é executada. O robô para."
           ],
           2
         ],
         [
           "Se o robô detectasse apenas SUJEIRA NORMAL (que o qualifica como 'Célula Suja'), mas não 'Sujeira Máxima', qual regra ele executaria?",
           [
-            "1. O robô executa a Regra A: SE Sujeira Máxima Detectada - LIMPAR AGORA.",
-            "2. O robô executa a Regra B: SE Célula Suja - MOVER ALEATORIAMENTE.",
-            "3. O robô para."
+            "O robô executa a Regra A: SE Sujeira Máxima Detectada - LIMPAR AGORA.",
+            "O robô executa a Regra B: SE Célula Suja - MOVER ALEATORIAMENTE.",
+            "O robô para."
           ],
           1
         ],
         [
           "Qual regra o robô precisaria para garantir que continue buscando sujeira após ter certeza de que a célula atual não tem 'Sujeira Máxima' e a bateria está OK?",
           [
-            "1. Regra de Falha de Busca: SE Limpo - PARAR AGENTE.",
-            "2. Regra de Busca: SE Não Sujeira Máxima E Não Bateria Baixa - MOVER PARA PRÓXIMA CÉLULA."
+            "Regra de Falha de Busca: SE Limpo - PARAR AGENTE.",
+            "Regra de Busca: SE Não Sujeira Máxima E Não Bateria Baixa - MOVER PARA PRÓXIMA CÉLULA."
           ],
           1
         ]
@@ -149,25 +149,25 @@
         [
           "O robô está em uma célula LIMPA adjacente a uma célula SUJA. Ele executa uma ação de busca: MOVER PARA FRENTE. Ele entra na célula SUJA, mas executa sua ação de limpeza de forma muito lenta, e a sujeira persiste. Qual regra ele executa logo após o ciclo de limpeza lento, considerando que a célula ainda está SUJA?",
           [
-            "1. Regra A (SE Célula Suja - LIMPAR CÉLULA).",
-            "2. Regra B (SE Poça Detectada - MOVER PARA CÉLULA ANTERIOR).",
-            "3. Nenhuma regra é executada."
+            "Regra A (SE Célula Suja - LIMPAR CÉLULA).",
+            "Regra B (SE Poça Detectada - MOVER PARA CÉLULA ANTERIOR).",
+            "Nenhuma regra é executada."
           ],
           0
         ],
         [
           "Como o conjunto de regras do Cenário 3 pode ser alterado para evitar esse ciclo vicioso de limpeza infinita?",
           [
-            "1. Adicionar um contador: SE Limpou 3 Vezes E Sujo - MOVER ALEATORIAMENTE.",
-            "2. Remover a Regra A, pois a limpeza não é importante."
+            "Adicionar um contador: SE Limpou 3 Vezes E Sujo - MOVER ALEATORIAMENTE.",
+            "Remover a Regra A, pois a limpeza não é importante."
           ],
           0
         ],
         [
           "Se o robô estivesse programado com a falha clássica de oscilação: Regra A: SE Sujo - LIMPAR e Regra B: SE Limpo - SUJAR NOVAMENTE (por falha de programação), e a célula está Suja, qual seria o resultado a longo prazo?",
           [
-            "1. Ele executaria a Regra A e pararia na célula Limpa.",
-            "2. Ele entraria em um ciclo infinito, alternando entre Sujo e Limpo."
+            "Ele executaria a Regra A e pararia na célula Limpa.",
+            "Ele entraria em um ciclo infinito, alternando entre Sujo e Limpo."
           ],
           1
         ]

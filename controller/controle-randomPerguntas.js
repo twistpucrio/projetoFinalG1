@@ -6,15 +6,17 @@ const DATA_URL = "../../model/json/perguntas.json";
 function organizarPerguntas(situacao, cursoSelec){ // Renderiza na página o enunciado e as questoes
   const descricao = document.getElementById("questao-descricao");
   const tabela = document.getElementById("cd-tabela");
-    if(cursoSelec === 'cd'){
-      if (tabela) renderizarTabela(situacao.descricao);
-    }
-    else{
-      if(tabela) tabela.textContent = "";
-      if (descricao) descricao.textContent = situacao.descricao || "";
-    }
+  console.log(cursoSelec);
+  if(cursoSelec === 'cd'){
+    console.log("sim");
+    if (tabela) renderizarTabela(situacao.descricao);
+  }
+  else{
+    if(tabela) tabela.textContent = "";
+    if (descricao) descricao.textContent = situacao.descricao || "";
+  }
 
-    situacao.perguntas.forEach((pergunta, i) => {
+  situacao.perguntas.forEach((pergunta, i) => {
     const enunciado = document.getElementById(`enunciado-${i + 1}`);
     if (enunciado) enunciado.textContent = pergunta.texto;
 
@@ -55,7 +57,6 @@ async function init() {
 
     const data = await carregarDados(DATA_URL);
     const cursos = data.cursos;
-    console.log(cursos);
     const cursoSelec = curso;
 
     const perguntas = await randomizarPerguntas(cursos, cursoSelec);
@@ -64,7 +65,7 @@ async function init() {
     const botaoFinalizar = document.getElementById("finalizar-btn");
     botaoFinalizar.addEventListener("click", () => {
       const acertos = validarRespostas(perguntas);
-      alert(`Você acertou ${acertos} de ${perguntas.length} perguntas!`);
+      alert(`Você acertou ${acertos} de ${perguntas.perguntas.length} perguntas!`);
     });
   }
    catch (err) {
