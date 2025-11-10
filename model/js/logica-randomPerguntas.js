@@ -1,5 +1,5 @@
-export async function randomizarPerguntas(cursos, curso_selec) {
-    const niveis = cursos[curso_selec];
+export async function randomizarPerguntas(cursos, cursoSelec) {
+    const niveis = cursos[cursoSelec];
     const nivelRandom = niveis[Math.floor(Math.random() * niveis.length)];
     const perguntas = nivelRandom.perguntas;
 
@@ -16,4 +16,17 @@ export async function randomizarPerguntas(cursos, curso_selec) {
       gabarito: p[2]
     }))
   };
+}
+
+export function validarRespostas(situacao) {
+  let acertos = 0;
+
+  situacao.perguntas.forEach((pergunta, i) => {
+    const selecionado = document.querySelector(`input[name="pergunta${i + 1}"]:checked`);
+    if (selecionado && parseInt(selecionado.value) === pergunta.gabarito) {
+      acertos++;
+    }
+  });
+
+  return acertos;
 }
