@@ -173,6 +173,73 @@
         ]
       ]
     }
+  ],
+  "fp": [
+    {
+      "descricao": "O que é um algoritmo?\nHoje em dia, muito se ouve falar em programar, mas nem todo mundo sabe o que isso significa de verdade. Dar instruções a uma máquina pode soar como uma tarefa simples, mas o computador, diferente da mente humana, não lê entrelinhas nem adivinha intenções. No vídeo abaixo, um pai tenta ensinar aos seus filhos como a mente de um computador funciona, pedindo que eles o ajudem a fazer um sanduíche de geleia e pasta de amendoim. Assista para visualizar como a máquina leva tudo ao pé da letra!",
+      "perguntas": [
+        [
+          "Com base no vídeo, qual seria a melhor definição para o que é um algoritmo?",
+          [
+            "Um código secreto usado para proteger informações.",
+            "Uma lista de ideias que o computador interpreta sozinho.",
+            "Um conjunto de instruções claras e precisas que dizem ao computador exatamente o que fazer.",
+            "Um desenho que mostra como o programa deve ficar visualmente."
+          ],
+          2
+        ],
+        [
+          "Caso um robô seguisse a instrução “pegue um pouco de geleia e espalhe no pão”, produziria qual tipo de comportamento?",
+          [
+            "O robô pegaria a geleia com a mão e jogaria sobre o pão.",
+            "O robô pegaria uma colher, abriria o pote e passaria certinho.",
+            "O robô ignoraria a instrução por não entender “espalhar”.",
+            "O robô escolheria sozinho a melhor forma de fazer."
+          ],
+          0
+        ],
+        [
+          "Quais características tem um bom algoritmo?",
+          [
+            "Deve ser criativo e rápido.",
+            "Deve ser preciso, ordenado e sem ambiguidades.",
+            "Deve ter o maior número possível de passos.",
+            "Deve funcionar mesmo se faltar informações."
+          ],
+          1
+        ],
+        [
+          "Quais foram as dificuldades percebidas pelas crianças ao escrever as instruções?",
+          [
+            "Escolher os ingredientes certos para o sanduíche.",
+            "Lembrar a ordem dos passos, mesmo sem dar detalhes.",
+            "Fazer o robô entender que era só uma brincadeira.",
+            "Explicar cada ação de forma precisa, sem deixar brechas para interpretação."
+          ],
+          3
+        ],
+        [
+          "Como podemos reescrever a instrução “pegue uma faca de manteiga e enfie-a dentro do pote de pasta de amendoim”?",
+          [
+            "Pegue a faca e insira no pote de pasta de amendoim.",
+            "Pegue a faca, abra o pote de pasta de amendoim, insira a faca no pote e retire uma porção de pasta.",
+            "Pegue o pote e use a faca para retirar a pasta.",
+            "Pegue a faca e posicione-a próxima ao pote de pasta de amendoim."
+          ],
+          1
+        ],
+        [
+          "Da forma mais precisa possível, complete a instrução “Junte as duas fatias de pão…”",
+          [
+            "…empilhando as duas fatias, sem especificar o lado do recheio.",
+            "…posicionando as duas fatias uma próxima da outra na mesa.",
+            "…sobrepondo as fatias sem garantir o alinhamento dos recheios.",
+            "…colocando uma sobre a outra, com os lados com recheio voltados um para o outro."
+          ],
+          3
+        ]
+      ]
+    }
   ]
   }
 }
