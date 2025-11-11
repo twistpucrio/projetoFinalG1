@@ -4,11 +4,36 @@
       {
         "id": 1,
         "descricao": [
-          { "Dia": "Segunda", "Temperatura (°C)": 22, "Comida mais vendida": "Pastel", "Quantidade vendida": 25 },
-          { "Dia": "Terça", "Temperatura (°C)": 24, "Comida mais vendida": "Pão de queijo", "Quantidade vendida": 27 },
-          { "Dia": "Quarta", "Temperatura (°C)": 25, "Comida mais vendida": "Coxinha", "Quantidade vendida": 30 },
-          { "Dia": "Quinta", "Temperatura (°C)": 27, "Comida mais vendida": "Pão de queijo", "Quantidade vendida": 33 },
-          { "Dia": "Sexta", "Temperatura (°C)": 29, "Comida mais vendida": "Pastel", "Quantidade vendida": 50 }
+          {
+            "Dia": "Segunda",
+            "Temperatura (°C)": 22,
+            "Comida mais vendida": "Pastel",
+            "Quantidade vendida": 25
+          },
+          {
+            "Dia": "Terça",
+            "Temperatura (°C)": 24,
+            "Comida mais vendida": "Pão de queijo",
+            "Quantidade vendida": 27
+          },
+          {
+            "Dia": "Quarta",
+            "Temperatura (°C)": 25,
+            "Comida mais vendida": "Coxinha",
+            "Quantidade vendida": 30
+          },
+          {
+            "Dia": "Quinta",
+            "Temperatura (°C)": 27,
+            "Comida mais vendida": "Pão de queijo",
+            "Quantidade vendida": 33
+          },
+          {
+            "Dia": "Sexta",
+            "Temperatura (°C)": 29,
+            "Comida mais vendida": "Pastel",
+            "Quantidade vendida": 50
+          }
         ],
         "perguntas": [
           [
@@ -31,7 +56,11 @@
           ],
           [
             "Qual comida é mais popular na semana? Qual é a explicação mais provável?",
-            ["1. Pastel", "2. Pão de queijo", "3. Coxinha"],
+            [
+              "1. Pastel",
+              "2. Pão de queijo",
+              "3. Coxinha"
+            ],
             0
           ]
         ]
@@ -39,11 +68,36 @@
       {
         "id": 2,
         "descricao": [
-          { "Dia": "Segunda", "Temperatura (°C)": 21, "Choveu?": "Sim", "Nº de Bicicletas": 5 },
-          { "Dia": "Terça", "Temperatura (°C)": 24, "Choveu?": "Não", "Nº de Bicicletas": 15 },
-          { "Dia": "Quarta", "Temperatura (°C)": 26, "Choveu?": "Não", "Nº de Bicicletas": 20 },
-          { "Dia": "Quinta", "Temperatura (°C)": 18, "Choveu?": "Sim", "Nº de Bicicletas": 3 },
-          { "Dia": "Sexta", "Temperatura (°C)": 27, "Choveu?": "Não", "Nº de Bicicletas": 25 }
+          {
+            "Dia": "Segunda",
+            "Temperatura (°C)": 21,
+            "Choveu?": "Sim",
+            "Nº de Bicicletas": 5
+          },
+          {
+            "Dia": "Terça",
+            "Temperatura (°C)": 24,
+            "Choveu?": "Não",
+            "Nº de Bicicletas": 15
+          },
+          {
+            "Dia": "Quarta",
+            "Temperatura (°C)": 26,
+            "Choveu?": "Não",
+            "Nº de Bicicletas": 20
+          },
+          {
+            "Dia": "Quinta",
+            "Temperatura (°C)": 18,
+            "Choveu?": "Sim",
+            "Nº de Bicicletas": 3
+          },
+          {
+            "Dia": "Sexta",
+            "Temperatura (°C)": 27,
+            "Choveu?": "Não",
+            "Nº de Bicicletas": 25
+          }
         ],
         "perguntas": [
           [
@@ -76,103 +130,204 @@
         ]
       }
     ],
-  "ia": [
-    {
-      "id": 1,
-      "descricao": "O robô está em uma célula que é percebida como SUJA. Regra A: SE Célula Suja - MOVER ALEATORIAMENTE, Regra B: SE Célula Suja - LIMPAR CÉLULA, Regra C: SE Célula Limpa - PARAR AGENTE",
-      "perguntas": [
-        [
-          "Qual ação deve ser executada primeiro?",
+    "ia": [
+      {
+        "id": 1,
+        "descricao": "O robô está em uma célula que é percebida como SUJA. Regra A: SE Célula Suja - MOVER ALEATORIAMENTE, Regra B: SE Célula Suja - LIMPAR CÉLULA, Regra C: SE Célula Limpa - PARAR AGENTE",
+        "perguntas": [
           [
-            "O robô executa a Regra C: SE Célula Limpa - PARAR AGENTE.",
-            "O robô executa a Regra B: SE Célula Suja - LIMPAR CÉLULA.",
-            "O robô executa a Regra A: SE Célula Suja - MOVER ALEATORIAMENTE."
+            "Qual ação deve ser executada primeiro?",
+            [
+              "O robô executa a Regra C: SE Célula Limpa - PARAR AGENTE.",
+              "O robô executa a Regra B: SE Célula Suja - LIMPAR CÉLULA.",
+              "O robô executa a Regra A: SE Célula Suja - MOVER ALEATORIAMENTE."
+            ],
+            1
           ],
-          1
-        ],
-        [
-          "Qual ação deve ser a última avaliada pelo robô?",
           [
-            "Regra A (SE Célula Suja - MOVER ALEATORIAMENTE).",
-            "Regra C (SE Célula Limpa - PARAR AGENTE).",
-            "Regra B (SE Célula Suja - LIMPAR CÉLULA)."
+            "Qual ação deve ser a última avaliada pelo robô?",
+            [
+              "Regra A (SE Célula Suja - MOVER ALEATORIAMENTE).",
+              "Regra C (SE Célula Limpa - PARAR AGENTE).",
+              "Regra B (SE Célula Suja - LIMPAR CÉLULA)."
+            ],
+            1
           ],
-          1
-        ],
-        [
-          "Se a Regra B fosse a primeira na lista, qual seria o resultado correto para a situação 'Célula Suja'?",
           [
-            "O robô executa a Regra A e se move aleatoriamente.",
-            "O robô executa a Regra B e limpa a célula.",
-            "O robô para o agente."
-          ],
-          1
+            "Se a Regra B fosse a primeira na lista, qual seria o resultado correto para a situação 'Célula Suja'?",
+            [
+              "O robô executa a Regra A e se move aleatoriamente.",
+              "O robô executa a Regra B e limpa a célula.",
+              "O robô para o agente."
+            ],
+            1
+          ]
         ]
-      ]
-    },
-    {
-      "id": 2,
-      "descricao": "O robô está em uma célula LIMPA. Ele tem a capacidade de perceber se encontrou a SUJEIRA MÁXIMA (uma sujeira que exige limpeza imediata). Regra A: SE Sujeira Máxima Detectada - LIMPAR AGORA, Regra B: SE Célula Suja - MOVER ALEATORIAMENTE, Regra C: SE Bateria Baixa - VOLTAR PARA BASE",
-      "perguntas": [
-        [
-          "Assumindo que a Bateria NÃO está baixa e a célula está LIMPA, qual é a primeira regra que será executada?",
+      },
+      {
+        "id": 2,
+        "descricao": "O robô está em uma célula LIMPA. Ele tem a capacidade de perceber se encontrou a SUJEIRA MÁXIMA (uma sujeira que exige limpeza imediata). Regra A: SE Sujeira Máxima Detectada - LIMPAR AGORA, Regra B: SE Célula Suja - MOVER ALEATORIAMENTE, Regra C: SE Bateria Baixa - VOLTAR PARA BASE",
+        "perguntas": [
           [
-            "O robô executa a Regra C: SE Bateria Baixa - VOLTAR PARA BASE.",
-            "O robô executa a Regra B: SE Célula Suja - MOVER ALEATORIAMENTE.",
-            "Nenhuma regra é executada. O robô para."
+            "Assumindo que a Bateria NÃO está baixa e a célula está LIMPA, qual é a primeira regra que será executada?",
+            [
+              "O robô executa a Regra C: SE Bateria Baixa - VOLTAR PARA BASE.",
+              "O robô executa a Regra B: SE Célula Suja - MOVER ALEATORIAMENTE.",
+              "Nenhuma regra é executada. O robô para."
+            ],
+            2
           ],
-          2
-        ],
-        [
-          "Se o robô detectasse apenas SUJEIRA NORMAL (que o qualifica como 'Célula Suja'), mas não 'Sujeira Máxima', qual regra ele executaria?",
           [
-            "O robô executa a Regra A: SE Sujeira Máxima Detectada - LIMPAR AGORA.",
-            "O robô executa a Regra B: SE Célula Suja - MOVER ALEATORIAMENTE.",
-            "O robô para."
+            "Se o robô detectasse apenas SUJEIRA NORMAL (que o qualifica como 'Célula Suja'), mas não 'Sujeira Máxima', qual regra ele executaria?",
+            [
+              "O robô executa a Regra A: SE Sujeira Máxima Detectada - LIMPAR AGORA.",
+              "O robô executa a Regra B: SE Célula Suja - MOVER ALEATORIAMENTE.",
+              "O robô para."
+            ],
+            1
           ],
-          1
-        ],
-        [
-          "Qual regra o robô precisaria para garantir que continue buscando sujeira após ter certeza de que a célula atual não tem 'Sujeira Máxima' e a bateria está OK?",
           [
-            "Regra de Falha de Busca: SE Limpo - PARAR AGENTE.",
-            "Regra de Busca: SE Não Sujeira Máxima E Não Bateria Baixa - MOVER PARA PRÓXIMA CÉLULA."
-          ],
-          1
+            "Qual regra o robô precisaria para garantir que continue buscando sujeira após ter certeza de que a célula atual não tem 'Sujeira Máxima' e a bateria está OK?",
+            [
+              "Regra de Falha de Busca: SE Limpo - PARAR AGENTE.",
+              "Regra de Busca: SE Não Sujeira Máxima E Não Bateria Baixa - MOVER PARA PRÓXIMA CÉLULA."
+            ],
+            1
+          ]
         ]
-      ]
-    },
-    {
-      "id": 3,
-      "descricao": "O robô está programado para evitar poças, mas as regras criam um ciclo. Regra A: SE Célula Suja - LIMPAR CÉLULA, Regra B: SE Poça Detectada - MOVER PARA CÉLULA ANTERIOR",
-      "perguntas": [
-        [
-          "O robô está em uma célula LIMPA adjacente a uma célula SUJA. Ele executa uma ação de busca: MOVER PARA FRENTE. Ele entra na célula SUJA, mas executa sua ação de limpeza de forma muito lenta, e a sujeira persiste. Qual regra ele executa logo após o ciclo de limpeza lento, considerando que a célula ainda está SUJA?",
+      },
+      {
+        "id": 3,
+        "descricao": "O robô está programado para evitar poças, mas as regras criam um ciclo. Regra A: SE Célula Suja - LIMPAR CÉLULA, Regra B: SE Poça Detectada - MOVER PARA CÉLULA ANTERIOR",
+        "perguntas": [
           [
-            "Regra A (SE Célula Suja - LIMPAR CÉLULA).",
-            "Regra B (SE Poça Detectada - MOVER PARA CÉLULA ANTERIOR).",
-            "Nenhuma regra é executada."
+            "O robô está em uma célula LIMPA adjacente a uma célula SUJA. Ele executa uma ação de busca: MOVER PARA FRENTE. Ele entra na célula SUJA, mas executa sua ação de limpeza de forma muito lenta, e a sujeira persiste. Qual regra ele executa logo após o ciclo de limpeza lento, considerando que a célula ainda está SUJA?",
+            [
+              "Regra A (SE Célula Suja - LIMPAR CÉLULA).",
+              "Regra B (SE Poça Detectada - MOVER PARA CÉLULA ANTERIOR).",
+              "Nenhuma regra é executada."
+            ],
+            0
           ],
-          0
-        ],
-        [
-          "Como o conjunto de regras do Cenário 3 pode ser alterado para evitar esse ciclo vicioso de limpeza infinita?",
           [
-            "Adicionar um contador: SE Limpou 3 Vezes E Sujo - MOVER ALEATORIAMENTE.",
-            "Remover a Regra A, pois a limpeza não é importante."
+            "Como o conjunto de regras do Cenário 3 pode ser alterado para evitar esse ciclo vicioso de limpeza infinita?",
+            [
+              "Adicionar um contador: SE Limpou 3 Vezes E Sujo - MOVER ALEATORIAMENTE.",
+              "Remover a Regra A, pois a limpeza não é importante."
+            ],
+            0
           ],
-          0
-        ],
-        [
-          "Se o robô estivesse programado com a falha clássica de oscilação: Regra A: SE Sujo - LIMPAR e Regra B: SE Limpo - SUJAR NOVAMENTE (por falha de programação), e a célula está Suja, qual seria o resultado a longo prazo?",
           [
-            "Ele executaria a Regra A e pararia na célula Limpa.",
-            "Ele entraria em um ciclo infinito, alternando entre Sujo e Limpo."
-          ],
-          1
+            "Se o robô estivesse programado com a falha clássica de oscilação: Regra A: SE Sujo - LIMPAR e Regra B: SE Limpo - SUJAR NOVAMENTE (por falha de programação), e a célula está Suja, qual seria o resultado a longo prazo?",
+            [
+              "Ele executaria a Regra A e pararia na célula Limpa.",
+              "Ele entraria em um ciclo infinito, alternando entre Sujo e Limpo."
+            ],
+            1
+          ]
         ]
-      ]
-    }
-  ]
+      }
+    ],
+    "hardware": [
+      {
+        "id": 1,
+        "descricao": "O hardware é a parte física do computador — ou seja, tudo aquilo que você pode tocar. Ele é formado por peças e componentes que fazem o computador funcionar, como o processador, a memória RAM, o HD e a placa-mãe.",
+        "perguntas": [
+          [
+            "O que é hardware?",
+            [
+              "Os programas do computador",
+              "A parte física do computador",
+              "O sistema operacional"
+            ],
+            1
+          ],
+          [
+            "Qual dos itens abaixo não faz parte do hardware interno de um computador?",
+            [
+              "Memória RAM",
+              "Placa de vídeo",
+              "Monitor"
+            ],
+            2
+          ],
+          [
+            "Qual das opções representa corretamente a relação entre hardware e software?",
+            [
+              "O hardware executa as instruções enviadas pelo software",
+              "O software fornece energia elétrica ao hardware",
+              "O hardware é responsável por programar o software"
+            ],
+            0
+          ]
+        ]
+      },
+      {
+        "id": 2,
+        "descricao": "O processador (CPU) é considerado o cérebro do computador: ele realiza cálculos e executa instruções. A memória RAM guarda informações temporariamente enquanto o computador está ligado. Já o HD ou SSD armazena os arquivos de forma permanente, mesmo depois que o computador é desligado.",
+        "perguntas": [
+          [
+            "Qual é a função do processador?",
+            [
+              "Exibir imagens na tela",
+              "Realizar cálculos e executar instruções",
+              "Armazenar arquivos"
+            ],
+            1
+          ],
+          [
+            "Qual componente armazena dados temporariamente?",
+            [
+              "HD",
+              "Placa de vídeo",
+              "Memória RAM"
+            ],
+            0
+          ],
+          [
+            "Onde os arquivos ficam salvos mesmo após desligar o computador?",
+            [
+              "Memória RAM",
+              "SSD ou HD",
+              "Fonte de energia"
+            ],
+            1
+          ]
+        ]
+      },
+      {
+        "id": 3,
+        "descricao": "Os dispositivos de entrada são aqueles que enviam informações para o computador, como teclado, mouse e microfone. Os dispositivos de saída são os que mostram o resultado, como monitor e impressora. Todos esses componentes se conectam na placa-mãe, que é a peça central responsável por ligar tudo.",
+        "perguntas": [
+          [
+            "Qual das opções abaixo é um dispositivo de entrada?",
+            [
+              "Monitor",
+              "Impressora",
+              "Teclado"
+            ],
+            2
+          ],
+          [
+            "Qual das opções abaixo é um dispositivo de saída?",
+            [
+              "Mouse",
+              "Monitor",
+              "Teclado"
+            ],
+            1
+          ],
+          [
+            "Para que serve a placa-mãe?",
+            [
+              "Armazenar arquivos",
+              "Resfriar o computador",
+              "Conectar todos os componentes"
+            ],
+            2
+          ]
+        ]
+      }
+    ]
   }
 }
