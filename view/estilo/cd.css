@@ -1,61 +1,182 @@
+
+
 body {
-    font-family: "Open Sans", sans-serif;
-    background-color: #f3f6fc;
+    background-color: #f0f2f5; 
+    color: #333333;
+    line-height: 1.7;
     margin: 0;
-    padding: 20px;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; 
+}
+
+#questao-descricao {
+    color: #000000; 
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 30px;
     text-align: center;
-    color: #333;
+    padding: 0 15px;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); 
 }
 
-h1 {
-    color: #F4A222;
-}
-
-table {
-    margin: 20px auto;
-    border-collapse: collapse;
-    width: 80%;
-    background: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-th, td {
-    padding: 10px 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-th {
-    background-color: #F4A222;
-    color: white;
-}
-
-#hipoteses {
-    background: white;
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-button {
-    background-color: #F4A222;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
+#cd-tabela {
+    width: 90%;
+    max-width: 800px;
+    background-color: #ffffff;
+    border: 1px solid #e0e6ed;
+    padding: 25px;
+    margin-bottom: 40px;
+    border-radius: 12px; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    min-height: 60px;
     font-size: 1em;
+    color: #555555;
+    text-align: center;
 }
 
-button:hover {
-    background-color: #C54B14;
+#questoes-container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 35px 30px;
+    border-radius: 15px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 30px;
 }
 
-#resultado {
-    margin-top: 15px;
-    font-weight: bold;
-    color: #C54B14;
+
+.questao {
+    padding: 20px 0;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e7eaf0;
+    transition: all 0.3s ease-in-out; 
+}
+
+.questao:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.questao-enunciado {
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 1.25em;
+    color: #34495e; 
+    line-height: 1.4;
+}
+
+label {
+    display: flex; 
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 12px;
+    padding: 15px 20px;
+    border-radius: 10px; 
+    background-color: #f7f9fc;
+    border: 1px solid #e0e6ed;
+    transition: all 0.2s ease-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03); 
+}
+
+label:hover {
+    background-color: #eef3f8;
+    border-color: #dddddd46; 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.questao-opcao {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #00000060; 
+    border-radius: 50%;
+    margin-right: 15px;
+    position: relative;
+    top: 0;
+    flex-shrink: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.questao-opcao:checked {
+    background-color: #000000;
+    border-color: #b6b6b6;
+    box-shadow: 0 0 0 4px rgba(3, 5, 8, 0.3); 
+}
+
+label span {
+    font-size: 1em;
+    color: #333333;
+    flex-grow: 1; 
+}
+
+
+#finalizar-btn {
+    width: 90%;
+    max-width: 200px;
+    padding: 15px 25px;
+    font-size: 1.15em;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #afa9aa; 
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    transition: all 0.2s ease-in-out;
+    letter-spacing: 0.5px;
+}
+
+#finalizar-btn:hover {
+    background-color: #474747;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); 
+}
+
+#finalizar-btn:active {
+    transform: translateY(1px); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 0;
+    }
+    
+    #questao-descricao {
+        font-size: 1.7em;
+        margin-bottom: 20px;
+    }
+
+    #questoes-container, #cd-tabela, #finalizar-btn {
+        width: 95%;
+        padding: 25px 15px;
+    }
+    
+    .questao-enunciado {
+        font-size: 1.1em;
+    }
+
+    label {
+        padding: 12px 15px;
+    }
+
+    .questao-opcao {
+        width: 20px;
+        height: 20px;
+        margin-right: 12px;
+    }
+    
+    #finalizar-btn {
+        padding: 13px 20px;
+        font-size: 1em;
+    }
 }

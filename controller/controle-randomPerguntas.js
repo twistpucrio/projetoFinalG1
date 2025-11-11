@@ -27,7 +27,63 @@ function organizarPerguntas(situacao, cursoSelec){ // Renderiza na página o enu
   });
 }
 
+function adicionarEstiloTabela() {
+  const css = `
+    #cd-tabela {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #ffe2b6ff;
+    }
+
+    #cd-tabela thead th {
+      background-color:  #e96224ff; 
+      color: white; 
+      padding: 12px 15px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    #cd-tabela tbody td {
+      padding: 10px 15px;
+      vertical-align: middle;
+      text-align: center;
+      border-bottom: 1px solid #dddddd; 
+    }
+
+    #cd-tabela tbody tr:nth-of-type(even) {
+      background-color: #fcf4e8; 
+    }
+
+    #cd-tabela tbody tr:hover {
+      background-color: #ffffffff; 
+      cursor: pointer;
+      box-shadow: inset 0 0 5px rgba(197, 75, 20, 0.4); 
+    }
+    
+    @media screen and (max-width: 600px) {
+      #cd-tabela thead th,
+      #cd-tabela tbody td {
+        font-size: 14px; 
+        padding: 8px 10px;
+      }
+    }
+`;
+
+  const styleTag = document.createElement('style');
+  styleTag.textContent = css;
+
+  if (!document.getElementById('table-styles')) {
+    styleTag.id = 'table-styles'; 
+    document.head.appendChild(styleTag);
+  }
+}
+
+
 function renderizarTabela(dados){
+  adicionarEstiloTabela();
   const tabela = document.getElementById("cd-tabela");
   if (!tabela) return;
 
