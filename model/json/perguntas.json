@@ -163,11 +163,118 @@
               1
             ]
           ]
-        },
-        {
-          "id": 2,
-          "descricao": "O robô está em uma célula LIMPA. Ele tem a capacidade de perceber se encontrou a SUJEIRA MÁXIMA (uma sujeira que exige limpeza imediata). Regra A: SE Sujeira Máxima Detectada - LIMPAR AGORA, Regra B: SE Célula Suja - MOVER ALEATORIAMENTE, Regra C: SE Bateria Baixa - VOLTAR PARA BASE",
-          "perguntas": [
+        ]
+      }
+    ],
+    "webdev":[
+      {
+        "id":1,
+        "descricao":" O profissional que trabalha com web Dev é conhecido como web developer e realiza o desenvolvimento de sites, aplicativos e outros sistemas na internet. Ele é o responsável por toda a estrutura e manutenção de páginas na web para que elas estejam sempre ativas e desempenhando bem. Em resumo, o desenvolvedor web planeja, constrói e dá manutenção para tudo que roda em uma plataforma web para que tudo funcione de acordo com o esperado.",
+        "perguntas":[
+          [
+            " O que faz um profissional conhecido como web developer?",
+            [
+              "Cria apenas aplicativos para celular.",
+              "Desenvolve e mantém sites e sistemas para a internet.",
+              "Trabalha somente com design gráfico."
+            ],
+            1
+          ],
+          [
+            "Qual é a principal responsabilidade do desenvolvedor web?",
+            [
+              "Garantir que as páginas funcionem bem e estejam sempre ativas.",
+              "Apenas desenhar o layout das páginas.",
+              "Cuidar exclusivamente da parte de segurança de dados."
+            ],
+            0
+          ],
+          [
+            "O que o desenvolvedor web precisa fazer para que tudo funcione como esperado?",
+            [
+              "Planejar, construir e dar manutenção em plataformas web.",
+              "Criar apenas o conteúdo dos sites.",
+              "Fazer o marketing das páginas na internet."
+            ],
+            0
+          ]
+        ]
+      },
+      {
+        "id":2,
+        "descricao": "Normalmente, um web Developer pode se dividir em  duas áreas: front-end e back-end. front-end — cuida de toda a parte que você pode efetivamente ver em um site, a chamada camada gráfica. Sua maior preocupação é a experiência que o usuário tem ao fazer um acesso, cuidando desde o layout até pequenos detalhes de menus e rodapés, por exemplo. Costuma trabalhar com HTML, CSS e JavaScript; back-end — é o profissional responsável pelo servidor que hospeda o seu site, garantindo que os dados enviados para o navegador estejam corretos. Deve seguir as boas práticas de segurança de dados. Costuma dominar SQL, MySQL e PostgreSQL.",
+        "perguntas":[
+          [
+            "Qual é a principal diferença entre o front-end e o back-end? O front-end cuida da parte visual e o back-end do servidor e dados",
+            [
+              "O front-end cuida da parte visual e o back-end do servidor e dados.",
+              "O front-end cuida dos bancos de dados e o back-end do design.",
+              "Ambos fazem exatamente as mesmas funções."
+            ],
+            0
+          ],
+          [
+            "Quais linguagens o desenvolvedor front-end costuma usar?",
+            [
+              "Java, Python e C++",
+              "HTML, CSS e JavaScript",
+              "SQL, MySQL e PostgreSQL"
+            ],
+            1
+          ],
+          [
+            "O que faz o desenvolvedor back-end?",
+            [
+              "Cuida apenas do visual do site.",
+              "É responsável pelo servidor e pela segurança dos dados.",
+              "Trabalha somente com animações."
+            ],
+            1
+          ]
+        ]
+      },
+      {
+        "id":3,
+        "descricao": "O desenvolvedor web full stack é aquele que consegue trabalhar no front-end e back-end, ou seja, é capaz de atuar com toda a pilha de desenvolvimento de um projeto. Esse profissional atua em todas as etapas de um sistema, do servidor ao banco de dados, além de também se envolver na parte de desenvolvimento mobile, já que essa área está cada vez mais presente nas empresas.",
+        "perguntas":[
+          [
+            "O que caracteriza um desenvolvedor full stack?",
+            [
+              "Trabalha apenas com design de interfaces",
+              "Atua tanto no front-end quanto no back-end de um sistema",
+              "Especializa-se somente em bancos de dados"
+            ],
+            1
+          ],
+          [
+            "Em quais partes de um projeto o desenvolvedor full stack pode atuar?",
+            [
+              "Somente no design e na escrita de conteúdo.",
+              "No servidor, banco de dados e interface do sistema.",
+              "Apenas na manutenção de redes."
+            ],
+            1
+          ],
+          [
+            "Por que o desenvolvedor full stack também pode atuar no desenvolvimento mobile?",
+            [
+              "Porque domina várias etapas do desenvolvimento e pode adaptar sistemas para dispositivos móveis.",
+              "Porque trabalha exclusivamente com aplicativos de celular.",
+              "Porque substitui o trabalho dos designers."
+            ],
+            0
+          ]
+        ]
+      }
+    ],
+
+    "ia": [
+      {
+        "id": 1,
+        "descricao": "O robô está em uma célula que é percebida como SUJA. Regra A: SE Célula Suja - MOVER ALEATORIAMENTE, Regra B: SE Célula Suja - LIMPAR CÉLULA, Regra C: SE Célula Limpa - PARAR AGENTE",
+        "perguntas": [
+          [
+            "Qual ação deve ser executada primeiro?",
             [
               "Assumindo que a Bateria NÃO está baixa e a célula está LIMPA, qual é a primeira regra que será executada?",
               [
@@ -439,8 +546,7 @@
               "Exigir autenticação constante de todos os usuários e sistemas."
             ],
             3
-          ],
-
+          ]
         ]
       }
     ]
