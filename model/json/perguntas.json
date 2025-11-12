@@ -1,131 +1,167 @@
 {
   "cursos": {
-    "cd": [
-      {
-        "id": 1,
-        "descricao": [
-          {
-            "Dia": "Segunda",
-            "Temperatura (°C)": 22,
-            "Comida mais vendida": "Pastel",
-            "Quantidade vendida": 25
-          },
-          {
-            "Dia": "Terça",
-            "Temperatura (°C)": 24,
-            "Comida mais vendida": "Pão de queijo",
-            "Quantidade vendida": 27
-          },
-          {
-            "Dia": "Quarta",
-            "Temperatura (°C)": 25,
-            "Comida mais vendida": "Coxinha",
-            "Quantidade vendida": 30
-          },
-          {
-            "Dia": "Quinta",
-            "Temperatura (°C)": 27,
-            "Comida mais vendida": "Pão de queijo",
-            "Quantidade vendida": 33
-          },
-          {
-            "Dia": "Sexta",
-            "Temperatura (°C)": 29,
-            "Comida mais vendida": "Pastel",
-            "Quantidade vendida": 50
-          }
-        ],
-        "perguntas": [
-          [
-            "Por que a cantina vende mais salgados na sexta? Qual é a explicação mais provável?",
-            [
-              "Está mais quente, então preferem salgados e sucos.",
-              "É sexta-feira, todos estão animados e compram mais.",
-              "A cantina faz promoção de pastel na sexta."
-            ],
-            0
+      "cd": [
+        {
+          "id": 1,
+          "descricao": [
+            {
+              "Dia": "Segunda",
+              "Temperatura (°C)": 22,
+              "Comida mais vendida": "Pastel",
+              "Quantidade vendida": 25
+            },
+            {
+              "Dia": "Terça",
+              "Temperatura (°C)": 24,
+              "Comida mais vendida": "Pão de queijo",
+              "Quantidade vendida": 27
+            },
+            {
+              "Dia": "Quarta",
+              "Temperatura (°C)": 25,
+              "Comida mais vendida": "Coxinha",
+              "Quantidade vendida": 30
+            },
+            {
+              "Dia": "Quinta",
+              "Temperatura (°C)": 27,
+              "Comida mais vendida": "Pão de queijo",
+              "Quantidade vendida": 33
+            },
+            {
+              "Dia": "Sexta",
+              "Temperatura (°C)": 29,
+              "Comida mais vendida": "Pastel",
+              "Quantidade vendida": 50
+            }
           ],
-          [
-            "Em quais dias os alunos compram mais sucos? Qual é a explicação mais provável?",
+          "perguntas": [
             [
-              "Nos dias mais quentes, como quinta e sexta.",
-              "Em todos os dias a mesma quantidade.",
-              "Quando está frio, compram mais."
+              "Por que a cantina vende mais salgados na sexta? Qual é a explicação mais provável?",
+              [
+                "Está mais quente, então preferem salgados e sucos.",
+                "É sexta-feira, todos estão animados e compram mais.",
+                "A cantina faz promoção de pastel na sexta."
+              ],
+              0
             ],
-            0
-          ],
-          [
-            "Qual comida é mais popular na semana? Qual é a explicação mais provável?",
             [
-              "1. Pastel",
-              "2. Pão de queijo",
-              "3. Coxinha"
+              "Em quais dias os alunos compram mais sucos? Qual é a explicação mais provável?",
+              [
+                "Nos dias mais quentes, como quinta e sexta.",
+                "Em todos os dias a mesma quantidade.",
+                "Quando está frio, compram mais."
+              ],
+              0
             ],
-            0
+            [
+              "Qual comida é mais popular na semana? Qual é a explicação mais provável?",
+              [
+                "1. Pastel",
+                "2. Pão de queijo",
+                "3. Coxinha"
+              ],
+              0
+            ]
           ]
-        ]
-      },
-      {
-        "id": 2,
-        "descricao": [
-          {
-            "Dia": "Segunda",
-            "Temperatura (°C)": 21,
-            "Choveu?": "Sim",
-            "Nº de Bicicletas": 5
-          },
-          {
-            "Dia": "Terça",
-            "Temperatura (°C)": 24,
-            "Choveu?": "Não",
-            "Nº de Bicicletas": 15
-          },
-          {
-            "Dia": "Quarta",
-            "Temperatura (°C)": 26,
-            "Choveu?": "Não",
-            "Nº de Bicicletas": 20
-          },
-          {
-            "Dia": "Quinta",
-            "Temperatura (°C)": 18,
-            "Choveu?": "Sim",
-            "Nº de Bicicletas": 3
-          },
-          {
-            "Dia": "Sexta",
-            "Temperatura (°C)": 27,
-            "Choveu?": "Não",
-            "Nº de Bicicletas": 25
-          }
-        ],
-        "perguntas": [
-          [
-            "Por que há mais bicicletas no pátio em dias de sol? Qual é a explicação mais provável?",
-            [
-              "Quando faz sol, mais alunos vêm de bicicleta.",
-              "Na sexta-feira todos preferem vir de bicicleta.",
-              "Quando chove, as pessoas trazem mais bicicletas para se proteger."
-            ],
-            0
+        },
+        {
+          "id": 2,
+          "descricao": [
+            {
+              "Dia": "Segunda",
+              "Temperatura (°C)": 21,
+              "Choveu?": "Sim",
+              "Nº de Bicicletas": 5
+            },
+            {
+              "Dia": "Terça",
+              "Temperatura (°C)": 24,
+              "Choveu?": "Não",
+              "Nº de Bicicletas": 15
+            },
+            {
+              "Dia": "Quarta",
+              "Temperatura (°C)": 26,
+              "Choveu?": "Não",
+              "Nº de Bicicletas": 20
+            },
+            {
+              "Dia": "Quinta",
+              "Temperatura (°C)": 18,
+              "Choveu?": "Sim",
+              "Nº de Bicicletas": 3
+            },
+            {
+              "Dia": "Sexta",
+              "Temperatura (°C)": 27,
+              "Choveu?": "Não",
+              "Nº de Bicicletas": 25
+            }
           ],
-          [
-            "Por que há mais bicicletas na quinta e sexta-feira? Qual é a explicação mais provável?",
+          "perguntas": [
             [
-              "O clima está mais ensolarado e quente, incentivando o uso de bicicleta.",
-              "É sexta, e os alunos querem sair direto da escola para casa de bicicleta.",
-              "Chove mais, então os alunos preferem ir de bicicleta."
+              "Por que há mais bicicletas no pátio em dias de sol? Qual é a explicação mais provável?",
+              [
+                "Quando faz sol, mais alunos vêm de bicicleta.",
+                "Na sexta-feira todos preferem vir de bicicleta.",
+                "Quando chove, as pessoas trazem mais bicicletas para se proteger."
+              ],
+              0
             ],
-            0
-          ],
-          [
-            "O que aconteceria se começasse a chover na sexta? Qual é a explicação mais provável?",
             [
-              "Provavelmente haveria menos bicicletas, pois a chuva desestimula o uso.",
-              "Continuaria igual, pois sexta é o dia favorito.",
-              "Nenhuma mudança, já que o clima não influencia."
+              "Por que há mais bicicletas na quinta e sexta-feira? Qual é a explicação mais provável?",
+              [
+                "O clima está mais ensolarado e quente, incentivando o uso de bicicleta.",
+                "É sexta, e os alunos querem sair direto da escola para casa de bicicleta.",
+                "Chove mais, então os alunos preferem ir de bicicleta."
+              ],
+              0
             ],
-            0
+            [
+              "O que aconteceria se começasse a chover na sexta? Qual é a explicação mais provável?",
+              [
+                "Provavelmente haveria menos bicicletas, pois a chuva desestimula o uso.",
+                "Continuaria igual, pois sexta é o dia favorito.",
+                "Nenhuma mudança, já que o clima não influencia."
+              ],
+              0
+            ]
+          ]
+        }
+      ],
+      "ia": [
+        {
+          "id": 1,
+          "descricao": "O robô está em uma célula que é percebida como SUJA. Regra A: SE Célula Suja - MOVER ALEATORIAMENTE, Regra B: SE Célula Suja - LIMPAR CÉLULA, Regra C: SE Célula Limpa - PARAR AGENTE",
+          "perguntas": [
+            [
+              "Qual ação deve ser executada primeiro?",
+              [
+                "O robô executa a Regra C: SE Célula Limpa - PARAR AGENTE.",
+                "O robô executa a Regra B: SE Célula Suja - LIMPAR CÉLULA.",
+                "O robô executa a Regra A: SE Célula Suja - MOVER ALEATORIAMENTE."
+              ],
+              1
+            ],
+            [
+              "Qual ação deve ser a última avaliada pelo robô?",
+              [
+                "Regra A (SE Célula Suja - MOVER ALEATORIAMENTE).",
+                "Regra C (SE Célula Limpa - PARAR AGENTE).",
+                "Regra B (SE Célula Suja - LIMPAR CÉLULA)."
+              ],
+              1
+            ],
+            [
+              "Se a Regra B fosse a primeira na lista, qual seria o resultado correto para a situação 'Célula Suja'?",
+              [
+                "O robô executa a Regra A e se move aleatoriamente.",
+                "O robô executa a Regra B e limpa a célula.",
+                "O robô para o agente."
+              ],
+              1
+            ]
           ]
         ]
       }
@@ -240,263 +276,279 @@
           [
             "Qual ação deve ser executada primeiro?",
             [
-              "O robô executa a Regra C: SE Célula Limpa - PARAR AGENTE.",
-              "O robô executa a Regra B: SE Célula Suja - LIMPAR CÉLULA.",
-              "O robô executa a Regra A: SE Célula Suja - MOVER ALEATORIAMENTE."
+              "Assumindo que a Bateria NÃO está baixa e a célula está LIMPA, qual é a primeira regra que será executada?",
+              [
+                "O robô executa a Regra C: SE Bateria Baixa - VOLTAR PARA BASE.",
+                "O robô executa a Regra B: SE Célula Suja - MOVER ALEATORIAMENTE.",
+                "Nenhuma regra é executada. O robô para."
+              ],
+              2
             ],
-            1
-          ],
-          [
-            "Qual ação deve ser a última avaliada pelo robô?",
             [
-              "Regra A (SE Célula Suja - MOVER ALEATORIAMENTE).",
-              "Regra C (SE Célula Limpa - PARAR AGENTE).",
-              "Regra B (SE Célula Suja - LIMPAR CÉLULA)."
+              "Se o robô detectasse apenas SUJEIRA NORMAL (que o qualifica como 'Célula Suja'), mas não 'Sujeira Máxima', qual regra ele executaria?",
+              [
+                "O robô executa a Regra A: SE Sujeira Máxima Detectada - LIMPAR AGORA.",
+                "O robô executa a Regra B: SE Célula Suja - MOVER ALEATORIAMENTE.",
+                "O robô para."
+              ],
+              1
             ],
-            1
-          ],
-          [
-            "Se a Regra B fosse a primeira na lista, qual seria o resultado correto para a situação 'Célula Suja'?",
             [
-              "O robô executa a Regra A e se move aleatoriamente.",
-              "O robô executa a Regra B e limpa a célula.",
-              "O robô para o agente."
-            ],
-            1
+              "Qual regra o robô precisaria para garantir que continue buscando sujeira após ter certeza de que a célula atual não tem 'Sujeira Máxima' e a bateria está OK?",
+              [
+                "Regra de Falha de Busca: SE Limpo - PARAR AGENTE.",
+                "Regra de Busca: SE Não Sujeira Máxima E Não Bateria Baixa - MOVER PARA PRÓXIMA CÉLULA."
+              ],
+              1
+            ]
           ]
-        ]
-      },
+        },
+        {
+          "id": 3,
+          "descricao": "O robô está programado para evitar poças, mas as regras criam um ciclo. Regra A: SE Célula Suja - LIMPAR CÉLULA, Regra B: SE Poça Detectada - MOVER PARA CÉLULA ANTERIOR",
+          "perguntas": [
+            [
+              "O robô está em uma célula LIMPA adjacente a uma célula SUJA. Ele executa uma ação de busca: MOVER PARA FRENTE. Ele entra na célula SUJA, mas executa sua ação de limpeza de forma muito lenta, e a sujeira persiste. Qual regra ele executa logo após o ciclo de limpeza lento, considerando que a célula ainda está SUJA?",
+              [
+                "Regra A (SE Célula Suja - LIMPAR CÉLULA).",
+                "Regra B (SE Poça Detectada - MOVER PARA CÉLULA ANTERIOR).",
+                "Nenhuma regra é executada."
+              ],
+              0
+            ],
+            [
+              "Como o conjunto de regras do Cenário 3 pode ser alterado para evitar esse ciclo vicioso de limpeza infinita?",
+              [
+                "Adicionar um contador: SE Limpou 3 Vezes E Sujo - MOVER ALEATORIAMENTE.",
+                "Remover a Regra A, pois a limpeza não é importante."
+              ],
+              0
+            ],
+            [
+              "Se o robô estivesse programado com a falha clássica de oscilação: Regra A: SE Sujo - LIMPAR e Regra B: SE Limpo - SUJAR NOVAMENTE (por falha de programação), e a célula está Suja, qual seria o resultado a longo prazo?",
+              [
+                "Ele executaria a Regra A e pararia na célula Limpa.",
+                "Ele entraria em um ciclo infinito, alternando entre Sujo e Limpo."
+              ],
+              1
+            ]
+          ]
+        }
+      ],
+      "hardware": [
+        {
+          "id": 1,
+          "descricao": "O hardware é a parte física do computador — ou seja, tudo aquilo que você pode tocar. Ele é formado por peças e componentes que fazem o computador funcionar, como o processador, a memória RAM, o HD e a placa-mãe.",
+          "perguntas": [
+            [
+              "O que é hardware?",
+              [
+                "Os programas do computador",
+                "A parte física do computador",
+                "O sistema operacional"
+              ],
+              1
+            ],
+            [
+              "Qual dos itens abaixo não faz parte do hardware interno de um computador?",
+              [
+                "Memória RAM",
+                "Placa de vídeo",
+                "Monitor"
+              ],
+              2
+            ],
+            [
+              "Qual das opções representa corretamente a relação entre hardware e software?",
+              [
+                "O hardware executa as instruções enviadas pelo software",
+                "O software fornece energia elétrica ao hardware",
+                "O hardware é responsável por programar o software"
+              ],
+              0
+            ]
+          ]
+        },
+        {
+          "id": 2,
+          "descricao": "O processador (CPU) é considerado o cérebro do computador: ele realiza cálculos e executa instruções. A memória RAM guarda informações temporariamente enquanto o computador está ligado. Já o HD ou SSD armazena os arquivos de forma permanente, mesmo depois que o computador é desligado.",
+          "perguntas": [
+            [
+              "Qual é a função do processador?",
+              [
+                "Exibir imagens na tela",
+                "Realizar cálculos e executar instruções",
+                "Armazenar arquivos"
+              ],
+              1
+            ],
+            [
+              "Qual componente armazena dados temporariamente?",
+              [
+                "HD",
+                "Placa de vídeo",
+                "Memória RAM"
+              ],
+              0
+            ],
+            [
+              "Onde os arquivos ficam salvos mesmo após desligar o computador?",
+              [
+                "Memória RAM",
+                "SSD ou HD",
+                "Fonte de energia"
+              ],
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "descricao": "Os dispositivos de entrada são aqueles que enviam informações para o computador, como teclado, mouse e microfone. Os dispositivos de saída são os que mostram o resultado, como monitor e impressora. Todos esses componentes se conectam na placa-mãe, que é a peça central responsável por ligar tudo.",
+          "perguntas": [
+            [
+              "Qual das opções abaixo é um dispositivo de entrada?",
+              [
+                "Monitor",
+                "Impressora",
+                "Teclado"
+              ],
+              2
+            ],
+            [
+              "Qual das opções abaixo é um dispositivo de saída?",
+              [
+                "Mouse",
+                "Monitor",
+                "Teclado"
+              ],
+              1
+            ],
+            [
+              "Para que serve a placa-mãe?",
+              [
+                "Armazenar arquivos",
+                "Resfriar o computador",
+                "Conectar todos os componentes"
+              ],
+              2
+            ]
+          ]
+        }
+      ],
+    "fp": [
       {
-        "id": 2,
-        "descricao": "O robô está em uma célula LIMPA. Ele tem a capacidade de perceber se encontrou a SUJEIRA MÁXIMA (uma sujeira que exige limpeza imediata). Regra A: SE Sujeira Máxima Detectada - LIMPAR AGORA, Regra B: SE Célula Suja - MOVER ALEATORIAMENTE, Regra C: SE Bateria Baixa - VOLTAR PARA BASE",
+        "descricao": "O que é um algoritmo?\nHoje em dia, muito se ouve falar em programar, mas nem todo mundo sabe o que isso significa de verdade. Dar instruções a uma máquina pode soar como uma tarefa simples, mas o computador, diferente da mente humana, não lê entrelinhas nem adivinha intenções. No vídeo abaixo, um pai tenta ensinar aos seus filhos como a mente de um computador funciona, pedindo que eles o ajudem a fazer um sanduíche de geleia e pasta de amendoim. Assista para visualizar como a máquina leva tudo ao pé da letra!",
         "perguntas": [
           [
-            "Assumindo que a Bateria NÃO está baixa e a célula está LIMPA, qual é a primeira regra que será executada?",
+            "Com base no vídeo, qual seria a melhor definição para o que é um algoritmo?",
             [
-              "O robô executa a Regra C: SE Bateria Baixa - VOLTAR PARA BASE.",
-              "O robô executa a Regra B: SE Célula Suja - MOVER ALEATORIAMENTE.",
-              "Nenhuma regra é executada. O robô para."
+              "Um código secreto usado para proteger informações.",
+              "Uma lista de ideias que o computador interpreta sozinho.",
+              "Um conjunto de instruções claras e precisas que dizem ao computador exatamente o que fazer.",
+              "Um desenho que mostra como o programa deve ficar visualmente."
             ],
             2
           ],
           [
-            "Se o robô detectasse apenas SUJEIRA NORMAL (que o qualifica como 'Célula Suja'), mas não 'Sujeira Máxima', qual regra ele executaria?",
+            "Caso um robô seguisse a instrução “pegue um pouco de geleia e espalhe no pão”, produziria qual tipo de comportamento?",
             [
-              "O robô executa a Regra A: SE Sujeira Máxima Detectada - LIMPAR AGORA.",
-              "O robô executa a Regra B: SE Célula Suja - MOVER ALEATORIAMENTE.",
-              "O robô para."
-            ],
-            1
-          ],
-          [
-            "Qual regra o robô precisaria para garantir que continue buscando sujeira após ter certeza de que a célula atual não tem 'Sujeira Máxima' e a bateria está OK?",
-            [
-              "Regra de Falha de Busca: SE Limpo - PARAR AGENTE.",
-              "Regra de Busca: SE Não Sujeira Máxima E Não Bateria Baixa - MOVER PARA PRÓXIMA CÉLULA."
-            ],
-            1
-          ]
-        ]
-      },
-      {
-        "id": 3,
-        "descricao": "O robô está programado para evitar poças, mas as regras criam um ciclo. Regra A: SE Célula Suja - LIMPAR CÉLULA, Regra B: SE Poça Detectada - MOVER PARA CÉLULA ANTERIOR",
-        "perguntas": [
-          [
-            "O robô está em uma célula LIMPA adjacente a uma célula SUJA. Ele executa uma ação de busca: MOVER PARA FRENTE. Ele entra na célula SUJA, mas executa sua ação de limpeza de forma muito lenta, e a sujeira persiste. Qual regra ele executa logo após o ciclo de limpeza lento, considerando que a célula ainda está SUJA?",
-            [
-              "Regra A (SE Célula Suja - LIMPAR CÉLULA).",
-              "Regra B (SE Poça Detectada - MOVER PARA CÉLULA ANTERIOR).",
-              "Nenhuma regra é executada."
+              "O robô pegaria a geleia com a mão e jogaria sobre o pão.",
+              "O robô pegaria uma colher, abriria o pote e passaria certinho.",
+              "O robô ignoraria a instrução por não entender “espalhar”.",
+              "O robô escolheria sozinho a melhor forma de fazer."
             ],
             0
           ],
           [
-            "Como o conjunto de regras do Cenário 3 pode ser alterado para evitar esse ciclo vicioso de limpeza infinita?",
+            "Quais características tem um bom algoritmo?",
             [
-              "Adicionar um contador: SE Limpou 3 Vezes E Sujo - MOVER ALEATORIAMENTE.",
-              "Remover a Regra A, pois a limpeza não é importante."
-            ],
-            0
-          ],
-          [
-            "Se o robô estivesse programado com a falha clássica de oscilação: Regra A: SE Sujo - LIMPAR e Regra B: SE Limpo - SUJAR NOVAMENTE (por falha de programação), e a célula está Suja, qual seria o resultado a longo prazo?",
-            [
-              "Ele executaria a Regra A e pararia na célula Limpa.",
-              "Ele entraria em um ciclo infinito, alternando entre Sujo e Limpo."
+              "Deve ser criativo e rápido.",
+              "Deve ser preciso, ordenado e sem ambiguidades.",
+              "Deve ter o maior número possível de passos.",
+              "Deve funcionar mesmo se faltar informações."
             ],
             1
+          ],
+          [
+            "Quais foram as dificuldades percebidas pelas crianças ao escrever as instruções?",
+            [
+              "Escolher os ingredientes certos para o sanduíche.",
+              "Lembrar a ordem dos passos, mesmo sem dar detalhes.",
+              "Fazer o robô entender que era só uma brincadeira.",
+              "Explicar cada ação de forma precisa, sem deixar brechas para interpretação."
+            ],
+            3
+          ],
+          [
+            "Como podemos reescrever a instrução “pegue uma faca de manteiga e enfie-a dentro do pote de pasta de amendoim”?",
+            [
+              "Pegue a faca e insira no pote de pasta de amendoim.",
+              "Pegue a faca, abra o pote de pasta de amendoim, insira a faca no pote e retire uma porção de pasta.",
+              "Pegue o pote e use a faca para retirar a pasta.",
+              "Pegue a faca e posicione-a próxima ao pote de pasta de amendoim."
+            ],
+            1
+          ],
+          [
+            "Da forma mais precisa possível, complete a instrução “Junte as duas fatias de pão…”",
+            [
+              "…empilhando as duas fatias, sem especificar o lado do recheio.",
+              "…posicionando as duas fatias uma próxima da outra na mesa.",
+              "…sobrepondo as fatias sem garantir o alinhamento dos recheios.",
+              "…colocando uma sobre a outra, com os lados com recheio voltados um para o outro."
+            ],
+            3
           ]
         ]
       }
     ],
-    "hardware": [
+    "sc": [
       {
-        "id": 1,
-        "descricao": "O hardware é a parte física do computador — ou seja, tudo aquilo que você pode tocar. Ele é formado por peças e componentes que fazem o computador funcionar, como o processador, a memória RAM, o HD e a placa-mãe.",
+        "descricao": "O que é segurança digital?\nVivemos em um mundo cada vez mais conectado e parece meio óbvio reafirmar que proteger nossas informações é essencial. Mas você realmente sabe o que significa estar seguro online? No vídeo abaixo, o canal Cybernews Brasil mostra como pequenos descuidos podem abrir brechas para ataques cibernéticos. Assista e descubra por que até mesmo ações inocentes, como clicar em um link ou compartilhar uma senha, podem colocar sua segurança em risco!",
         "perguntas": [
           [
-            "O que é hardware?",
+            "O que é um ataque cibernético?",
             [
-              "Os programas do computador",
-              "A parte física do computador",
-              "O sistema operacional"
+              "Uma falha acidental no computador.",
+              "Um evento intencional que tenta acessar sistemas sem permissão.",
+              "Um erro de programação causado por vírus.",
+              "Qualquer travamento de software."
             ],
             1
           ],
           [
-            "Qual dos itens abaixo não faz parte do hardware interno de um computador?",
+            "O que é phishing?",
             [
-              "Memória RAM",
-              "Placa de vídeo",
-              "Monitor"
+              "Um ataque que bloqueia acesso a arquivos até pagamento de resgate.",
+              "Um tipo de vírus que rouba informações pessoais.",
+              "Um golpe que engana o usuário para revelar dados sensíveis.",
+              "Uma técnica de proteção de senhas."
             ],
             2
           ],
           [
-            "Qual das opções representa corretamente a relação entre hardware e software?",
+            "Qual é o papel da criptografia?",
             [
-              "O hardware executa as instruções enviadas pelo software",
-              "O software fornece energia elétrica ao hardware",
-              "O hardware é responsável por programar o software"
-            ],
-            0
-          ]
-        ]
-      },
-      {
-        "id": 2,
-        "descricao": "O processador (CPU) é considerado o cérebro do computador: ele realiza cálculos e executa instruções. A memória RAM guarda informações temporariamente enquanto o computador está ligado. Já o HD ou SSD armazena os arquivos de forma permanente, mesmo depois que o computador é desligado.",
-        "perguntas": [
-          [
-            "Qual é a função do processador?",
-            [
-              "Exibir imagens na tela",
-              "Realizar cálculos e executar instruções",
-              "Armazenar arquivos"
-            ],
-            1
-          ],
-          [
-            "Qual componente armazena dados temporariamente?",
-            [
-              "HD",
-              "Placa de vídeo",
-              "Memória RAM"
+              "Proteger dados tornando-os ilegíveis sem chave correta.",
+              "Acelerar a transferência de arquivos.",
+              "Armazenar backups automaticamente.",
+              "Deletar informações antigas para liberar espaço."
             ],
             0
           ],
           [
-            "Onde os arquivos ficam salvos mesmo após desligar o computador?",
+            "O que significa “confiança zero” em segurança digital?",
             [
-              "Memória RAM",
-              "SSD ou HD",
-              "Fonte de energia"
+              "Permitir acesso livre à rede interna.",
+              "Bloquear todos os logins externos.",
+              "Confiar apenas em senhas curtas.",
+              "Exigir autenticação constante de todos os usuários e sistemas."
             ],
-            1
-          ]
-        ]
-      },
-      {
-        "id": 3,
-        "descricao": "Os dispositivos de entrada são aqueles que enviam informações para o computador, como teclado, mouse e microfone. Os dispositivos de saída são os que mostram o resultado, como monitor e impressora. Todos esses componentes se conectam na placa-mãe, que é a peça central responsável por ligar tudo.",
-        "perguntas": [
-          [
-            "Qual das opções abaixo é um dispositivo de entrada?",
-            [
-              "Monitor",
-              "Impressora",
-              "Teclado"
-            ],
-            2
-          ],
-          [
-            "Qual das opções abaixo é um dispositivo de saída?",
-            [
-              "Mouse",
-              "Monitor",
-              "Teclado"
-            ],
-            1
-          ],
-          [
-            "Para que serve a placa-mãe?",
-            [
-              "Armazenar arquivos",
-              "Resfriar o computador",
-              "Conectar todos os componentes"
-            ],
-            2
+            3
           ]
         ]
       }
-    ],
-  "fp": [
-    {
-      "descricao": "O que é um algoritmo?\nHoje em dia, muito se ouve falar em programar, mas nem todo mundo sabe o que isso significa de verdade. Dar instruções a uma máquina pode soar como uma tarefa simples, mas o computador, diferente da mente humana, não lê entrelinhas nem adivinha intenções. No vídeo abaixo, um pai tenta ensinar aos seus filhos como a mente de um computador funciona, pedindo que eles o ajudem a fazer um sanduíche de geleia e pasta de amendoim. Assista para visualizar como a máquina leva tudo ao pé da letra!",
-      "perguntas": [
-        [
-          "Com base no vídeo, qual seria a melhor definição para o que é um algoritmo?",
-          [
-            "Um código secreto usado para proteger informações.",
-            "Uma lista de ideias que o computador interpreta sozinho.",
-            "Um conjunto de instruções claras e precisas que dizem ao computador exatamente o que fazer.",
-            "Um desenho que mostra como o programa deve ficar visualmente."
-          ],
-          2
-        ],
-        [
-          "Caso um robô seguisse a instrução “pegue um pouco de geleia e espalhe no pão”, produziria qual tipo de comportamento?",
-          [
-            "O robô pegaria a geleia com a mão e jogaria sobre o pão.",
-            "O robô pegaria uma colher, abriria o pote e passaria certinho.",
-            "O robô ignoraria a instrução por não entender “espalhar”.",
-            "O robô escolheria sozinho a melhor forma de fazer."
-          ],
-          0
-        ],
-        [
-          "Quais características tem um bom algoritmo?",
-          [
-            "Deve ser criativo e rápido.",
-            "Deve ser preciso, ordenado e sem ambiguidades.",
-            "Deve ter o maior número possível de passos.",
-            "Deve funcionar mesmo se faltar informações."
-          ],
-          1
-        ],
-        [
-          "Quais foram as dificuldades percebidas pelas crianças ao escrever as instruções?",
-          [
-            "Escolher os ingredientes certos para o sanduíche.",
-            "Lembrar a ordem dos passos, mesmo sem dar detalhes.",
-            "Fazer o robô entender que era só uma brincadeira.",
-            "Explicar cada ação de forma precisa, sem deixar brechas para interpretação."
-          ],
-          3
-        ],
-        [
-          "Como podemos reescrever a instrução “pegue uma faca de manteiga e enfie-a dentro do pote de pasta de amendoim”?",
-          [
-            "Pegue a faca e insira no pote de pasta de amendoim.",
-            "Pegue a faca, abra o pote de pasta de amendoim, insira a faca no pote e retire uma porção de pasta.",
-            "Pegue o pote e use a faca para retirar a pasta.",
-            "Pegue a faca e posicione-a próxima ao pote de pasta de amendoim."
-          ],
-          1
-        ],
-        [
-          "Da forma mais precisa possível, complete a instrução “Junte as duas fatias de pão…”",
-          [
-            "…empilhando as duas fatias, sem especificar o lado do recheio.",
-            "…posicionando as duas fatias uma próxima da outra na mesa.",
-            "…sobrepondo as fatias sem garantir o alinhamento dos recheios.",
-            "…colocando uma sobre a outra, com os lados com recheio voltados um para o outro."
-          ],
-          3
-        ]
-      ]
-    }
-  ]
+    ]
   }
 }
