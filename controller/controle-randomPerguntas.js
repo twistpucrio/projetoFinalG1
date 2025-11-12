@@ -12,7 +12,10 @@ function organizarPerguntas(situacao, cursoSelec){ // Renderiza na página o enu
     if (tabela) renderizarTabela(situacao.descricao);
   }
   else{
-    if(tabela) tabela.textContent = "";
+    if(tabela) {
+      tabela.textContent = "";
+      tabela.style.display = "none";
+    }
     if (descricao) descricao.textContent = situacao.descricao || "";
   }
 
@@ -20,10 +23,20 @@ function organizarPerguntas(situacao, cursoSelec){ // Renderiza na página o enu
     const enunciado = document.getElementById(`enunciado-${i + 1}`);
     if (enunciado) enunciado.textContent = pergunta.texto;
 
-    pergunta.opcoes.forEach((opcao, j) => {
-      const opcaoSpan = document.getElementById(`p${i + 1}-op${j + 1}`);
-      if (opcaoSpan) opcaoSpan.textContent = opcao;
-    });
+    for (let j = 0; j < 4; j++) {
+    const label = document.querySelector(
+      `label input[name="pergunta${i + 1}"][value="${j}"]`
+    )?.parentElement;
+    const span = document.getElementById(`p${i + 1}-op${j + 1}`);
+
+    if (pergunta.opcoes[j]) {
+      if (label) label.style.display = "block";
+      if (span) span.textContent = pergunta.opcoes[j];
+    } else {
+      if (label) label.style.display = "none";
+    }
+}
+
   });
 }
 

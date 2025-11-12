@@ -129,7 +129,7 @@
             ]
           ]
         }
-      ],
+      ],      
       "ia": [
         {
           "id": 1,
@@ -163,9 +163,71 @@
               1
             ]
           ]
-        ]
-      }
-    ],
+        },
+        {
+          "id": 2,
+          "descricao": "O robô está em uma célula LIMPA. Ele tem a capacidade de perceber se encontrou a SUJEIRA MÁXIMA (uma sujeira que exige limpeza imediata). Regra A: SE Sujeira Máxima Detectada - LIMPAR AGORA, Regra B: SE Célula Suja - MOVER ALEATORIAMENTE, Regra C: SE Bateria Baixa - VOLTAR PARA BASE",
+          "perguntas": [
+            [
+              "Assumindo que a Bateria NÃO está baixa e a célula está LIMPA, qual é a primeira regra que será executada?",
+              [
+                "O robô executa a Regra C: SE Bateria Baixa - VOLTAR PARA BASE.",
+                "O robô executa a Regra B: SE Célula Suja - MOVER ALEATORIAMENTE.",
+                "Nenhuma regra é executada. O robô para."
+              ],
+              2
+            ],
+            [
+              "Se o robô detectasse apenas SUJEIRA NORMAL (que o qualifica como 'Célula Suja'), mas não 'Sujeira Máxima', qual regra ele executaria?",
+              [
+                "O robô executa a Regra A: SE Sujeira Máxima Detectada - LIMPAR AGORA.",
+                "O robô executa a Regra B: SE Célula Suja - MOVER ALEATORIAMENTE.",
+                "O robô para."
+              ],
+              1
+            ],
+            [
+              "Qual regra o robô precisaria para garantir que continue buscando sujeira após ter certeza de que a célula atual não tem 'Sujeira Máxima' e a bateria está OK?",
+              [
+                "Regra de Falha de Busca: SE Limpo - PARAR AGENTE.",
+                "Regra de Busca: SE Não Sujeira Máxima E Não Bateria Baixa - MOVER PARA PRÓXIMA CÉLULA."
+              ],
+              1
+            ]
+          ]
+        },
+        {
+          "id": 3,
+          "descricao": "O robô está programado para evitar poças, mas as regras criam um ciclo. Regra A: SE Célula Suja - LIMPAR CÉLULA, Regra B: SE Poça Detectada - MOVER PARA CÉLULA ANTERIOR",
+          "perguntas": [
+            [
+              "O robô está em uma célula LIMPA adjacente a uma célula SUJA. Ele executa uma ação de busca: MOVER PARA FRENTE. Ele entra na célula SUJA, mas executa sua ação de limpeza de forma muito lenta, e a sujeira persiste. Qual regra ele executa logo após o ciclo de limpeza lento, considerando que a célula ainda está SUJA?",
+              [
+                "Regra A (SE Célula Suja - LIMPAR CÉLULA).",
+                "Regra B (SE Poça Detectada - MOVER PARA CÉLULA ANTERIOR).",
+                "Nenhuma regra é executada."
+              ],
+              0
+            ],
+            [
+              "Como o conjunto de regras do Cenário 3 pode ser alterado para evitar esse ciclo vicioso de limpeza infinita?",
+              [
+                "Adicionar um contador: SE Limpou 3 Vezes E Sujo - MOVER ALEATORIAMENTE.",
+                "Remover a Regra A, pois a limpeza não é importante."
+              ],
+              0
+            ],
+            [
+              "Se o robô estivesse programado com a falha clássica de oscilação: Regra A: SE Sujo - LIMPAR e Regra B: SE Limpo - SUJAR NOVAMENTE (por falha de programação), e a célula está Suja, qual seria o resultado a longo prazo?",
+              [
+                "Ele executaria a Regra A e pararia na célula Limpa.",
+                "Ele entraria em um ciclo infinito, alternando entre Sujo e Limpo."
+              ],
+              1
+            ]
+          ]
+        }
+      ],
     "webdev":[
       {
         "id":1,
@@ -267,74 +329,6 @@
         ]
       }
     ],
-
-    "ia": [
-      {
-        "id": 1,
-        "descricao": "O robô está em uma célula que é percebida como SUJA. Regra A: SE Célula Suja - MOVER ALEATORIAMENTE, Regra B: SE Célula Suja - LIMPAR CÉLULA, Regra C: SE Célula Limpa - PARAR AGENTE",
-        "perguntas": [
-          [
-            "Qual ação deve ser executada primeiro?",
-            [
-              "Assumindo que a Bateria NÃO está baixa e a célula está LIMPA, qual é a primeira regra que será executada?",
-              [
-                "O robô executa a Regra C: SE Bateria Baixa - VOLTAR PARA BASE.",
-                "O robô executa a Regra B: SE Célula Suja - MOVER ALEATORIAMENTE.",
-                "Nenhuma regra é executada. O robô para."
-              ],
-              2
-            ],
-            [
-              "Se o robô detectasse apenas SUJEIRA NORMAL (que o qualifica como 'Célula Suja'), mas não 'Sujeira Máxima', qual regra ele executaria?",
-              [
-                "O robô executa a Regra A: SE Sujeira Máxima Detectada - LIMPAR AGORA.",
-                "O robô executa a Regra B: SE Célula Suja - MOVER ALEATORIAMENTE.",
-                "O robô para."
-              ],
-              1
-            ],
-            [
-              "Qual regra o robô precisaria para garantir que continue buscando sujeira após ter certeza de que a célula atual não tem 'Sujeira Máxima' e a bateria está OK?",
-              [
-                "Regra de Falha de Busca: SE Limpo - PARAR AGENTE.",
-                "Regra de Busca: SE Não Sujeira Máxima E Não Bateria Baixa - MOVER PARA PRÓXIMA CÉLULA."
-              ],
-              1
-            ]
-          ]
-        },
-        {
-          "id": 3,
-          "descricao": "O robô está programado para evitar poças, mas as regras criam um ciclo. Regra A: SE Célula Suja - LIMPAR CÉLULA, Regra B: SE Poça Detectada - MOVER PARA CÉLULA ANTERIOR",
-          "perguntas": [
-            [
-              "O robô está em uma célula LIMPA adjacente a uma célula SUJA. Ele executa uma ação de busca: MOVER PARA FRENTE. Ele entra na célula SUJA, mas executa sua ação de limpeza de forma muito lenta, e a sujeira persiste. Qual regra ele executa logo após o ciclo de limpeza lento, considerando que a célula ainda está SUJA?",
-              [
-                "Regra A (SE Célula Suja - LIMPAR CÉLULA).",
-                "Regra B (SE Poça Detectada - MOVER PARA CÉLULA ANTERIOR).",
-                "Nenhuma regra é executada."
-              ],
-              0
-            ],
-            [
-              "Como o conjunto de regras do Cenário 3 pode ser alterado para evitar esse ciclo vicioso de limpeza infinita?",
-              [
-                "Adicionar um contador: SE Limpou 3 Vezes E Sujo - MOVER ALEATORIAMENTE.",
-                "Remover a Regra A, pois a limpeza não é importante."
-              ],
-              0
-            ],
-            [
-              "Se o robô estivesse programado com a falha clássica de oscilação: Regra A: SE Sujo - LIMPAR e Regra B: SE Limpo - SUJAR NOVAMENTE (por falha de programação), e a célula está Suja, qual seria o resultado a longo prazo?",
-              [
-                "Ele executaria a Regra A e pararia na célula Limpa.",
-                "Ele entraria em um ciclo infinito, alternando entre Sujo e Limpo."
-              ],
-              1
-            ]
-          ]
-        }
-      ],
       "hardware": [
         {
           "id": 1,
