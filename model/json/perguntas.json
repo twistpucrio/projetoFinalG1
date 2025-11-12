@@ -174,6 +174,107 @@
       ]
     }
   ],
+      "hardware": [
+      {
+        "id": 1,
+        "descricao": "O hardware é a parte física do computador — ou seja, tudo aquilo que você pode tocar. Ele é formado por peças e componentes que fazem o computador funcionar, como o processador, a memória RAM, o HD e a placa-mãe.",
+        "perguntas": [
+          [
+            "O que é hardware?",
+            [
+              "Os programas do computador",
+              "A parte física do computador",
+              "O sistema operacional"
+            ],
+            1
+          ],
+          [
+            "Qual dos itens abaixo não faz parte do hardware interno de um computador?",
+            [
+              "Memória RAM",
+              "Placa de vídeo",
+              "Monitor"
+            ],
+            2
+          ],
+          [
+            "Qual das opções representa corretamente a relação entre hardware e software?",
+            [
+              "O hardware executa as instruções enviadas pelo software",
+              "O software fornece energia elétrica ao hardware",
+              "O hardware é responsável por programar o software"
+            ],
+            0
+          ]
+        ]
+      },
+      {
+        "id": 2,
+        "descricao": "O processador (CPU) é considerado o cérebro do computador: ele realiza cálculos e executa instruções. A memória RAM guarda informações temporariamente enquanto o computador está ligado. Já o HD ou SSD armazena os arquivos de forma permanente, mesmo depois que o computador é desligado.",
+        "perguntas": [
+          [
+            "Qual é a função do processador?",
+            [
+              "Exibir imagens na tela",
+              "Realizar cálculos e executar instruções",
+              "Armazenar arquivos"
+            ],
+            1
+          ],
+          [
+            "Qual componente armazena dados temporariamente?",
+            [
+              "HD",
+              "Placa de vídeo",
+              "Memória RAM"
+            ],
+            0
+          ],
+          [
+            "Onde os arquivos ficam salvos mesmo após desligar o computador?",
+            [
+              "Memória RAM",
+              "SSD ou HD",
+              "Fonte de energia"
+            ],
+            1
+          ]
+        ]
+      },
+      {
+        "id": 3,
+        "descricao": "Os dispositivos de entrada são aqueles que enviam informações para o computador, como teclado, mouse e microfone. Os dispositivos de saída são os que mostram o resultado, como monitor e impressora. Todos esses componentes se conectam na placa-mãe, que é a peça central responsável por ligar tudo.",
+        "perguntas": [
+          [
+            "Qual das opções abaixo é um dispositivo de entrada?",
+            [
+              "Monitor",
+              "Impressora",
+              "Teclado"
+            ],
+            2
+          ],
+          [
+            "Qual das opções abaixo é um dispositivo de saída?",
+            [
+              "Mouse",
+              "Monitor",
+              "Teclado"
+            ],
+            1
+          ],
+          [
+            "Para que serve a placa-mãe?",
+            [
+              "Armazenar arquivos",
+              "Resfriar o computador",
+              "Conectar todos os componentes"
+            ],
+            2
+          ]
+        ]
+      }
+    ],
   "fp": [
     {
       "descricao": "O que é um algoritmo?\nHoje em dia, muito se ouve falar em programar, mas nem todo mundo sabe o que isso significa de verdade. Dar instruções a uma máquina pode soar como uma tarefa simples, mas o computador, diferente da mente humana, não lê entrelinhas nem adivinha intenções. No vídeo abaixo, um pai tenta ensinar aos seus filhos como a mente de um computador funciona, pedindo que eles o ajudem a fazer um sanduíche de geleia e pasta de amendoim. Assista para visualizar como a máquina leva tudo ao pé da letra!",
