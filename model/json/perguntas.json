@@ -174,7 +174,7 @@
       ]
     }
   ],
-      "hardware": [
+    "hardware": [
       {
         "id": 1,
         "descricao": "O hardware é a parte física do computador — ou seja, tudo aquilo que você pode tocar. Ele é formado por peças e componentes que fazem o computador funcionar, como o processador, a memória RAM, o HD e a placa-mãe.",
