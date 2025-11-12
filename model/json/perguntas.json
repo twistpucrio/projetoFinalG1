@@ -228,7 +228,7 @@
           ]
         }
       ],
-    "webdev":[
+    "wd":[
       {
         "id":1,
         "descricao":" O profissional que trabalha com web Dev é conhecido como web developer e realiza o desenvolvimento de sites, aplicativos e outros sistemas na internet. Ele é o responsável por toda a estrutura e manutenção de páginas na web para que elas estejam sempre ativas e desempenhando bem. Em resumo, o desenvolvedor web planeja, constrói e dá manutenção para tudo que roda em uma plataforma web para que tudo funcione de acordo com o esperado.",
@@ -329,7 +329,7 @@
         ]
       }
     ],
-      "hardware": [
+      "hd": [
         {
           "id": 1,
           "descricao": "O hardware é a parte física do computador — ou seja, tudo aquilo que você pode tocar. Ele é formado por peças e componentes que fazem o computador funcionar, como o processador, a memória RAM, o HD e a placa-mãe.",
