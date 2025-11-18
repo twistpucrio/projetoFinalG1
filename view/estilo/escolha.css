@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif; 
+}
+
+body.curso-cd .conteudo-principal {
+    background-color: #fff6e4; 
+}
+
+body.curso-cd .container-botoes button {
+    background-color: #ce541c; 
+    color: white;
+    box-shadow: 0 8px 0 0  #6b2301, 
+                0 0 18px rgba(211, 94, 16, 0.8);
+}
+
+body.curso-cd .container-botoes button:hover {
+    background-color: #fd7424;
+}
+
+body.curso-fp .conteudo-principal {
+    background-color: #f7f7ff; 
+}
+
+body.curso-fp .container-botoes button {
+    background-color: #6f2779; 
+    color: white;
+    box-shadow: 0 8px 0 0 #482450, 
+                0 0 18px #50085a;
+}
+
+body.curso-fp .container-botoes button:hover {
+    background-color: #825886;
+}
+
+body.curso-ia .conteudo-principal {
+    background-color: #e9edf3; 
+}
+body.curso-ia .container-botoes button {
+    background-color: #143A64; 
+    color: white;
+    box-shadow: 0 8px 0 0 #081633, 
+                0 0 20px rgba(102, 120, 179, 0.966);
+}
+body.curso-ia .container-botoes button:hover {
+    background-color: #4B6D97; 
+}
+
+body.curso-sc .conteudo-principal {
+    background-color: #edf2e8; 
+}
+body.curso-sc .container-botoes button {
+    background-color: #44651F;
+    color: white;
+    box-shadow: 0 8px 0 0 #253611, 
+                0 0 20px rgba(47, 107, 40, 0.8);
+}
+body.curso-sc .container-botoes button:hover {
+    background-color: #638B37; 
+}
+
+body.curso-hd .conteudo-principal {
+    background-color: #f5f5f5; 
+}
+
+body.curso-hd .container-botoes button {
+    background-color: #313336; 
+    color: white;
+    box-shadow: 0 8px 0 0 #2e2a2c, 
+                0 0 18px rgba(58, 53, 55, 0.8); 
+}
+
+
+body.curso-hd .container-botoes button:hover {
+    background-color: #5D6164; 
+}
+
+
+
+body.curso-wd .conteudo-principal {
+    background-color: #fff2e6; 
+}
+body.curso-wd .container-botoes button {
+    background-color: #DD6700; 
+    color: white;
+    box-shadow: 0 8px 0 0#753700, 
+                0 0 18px rgba(255, 164, 28, 0.8);
+}
+body.curso-wd .container-botoes button:hover {
+    background-color: #FC963D; 
+}
+
+.barra-lateral {
+    width: 200px; 
+    background-color: #8C275E; 
+    color: #F5F5F5;
+    padding: 10px 0;
+    position: fixed;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+}
+
+.barra-lateral nav ul li a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #F5F5F5; 
+    font-weight: 600;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.barra-lateral nav ul li a.active {
+    font-weight: 700; 
+}
+
+.barra-lateral nav ul li .asterisco {
+    display: block;
+    padding: 15px 25px;
+    font-size: 24px;
+    line-height: 0;
+    color: #F5F5F5;
+    opacity: 0.8;
+}
+
+.barra-lateral nav ul li a {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.barra-lateral nav ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #F5F5F5;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+    transform-origin: top;
+}
+
+.barra-lateral nav ul li a:hover::before {
+    transform: scaleY(1);
+}
+
+
+.container-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+    width: 80%; 
+    max-width: 350px; 
+    margin-top: 80px; 
+}
+
+.botao-principal {
+    padding: 30px 40px; 
+    font-size: 1.9rem; 
+    font-weight: 900; 
+    color: #F5F5F5; 
+    background-color: #8C275E; 
+    border: 3px solid #F5F5F5;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    box-shadow: 0 8px 0 0 #5E1A3F, 
+                0 0 15px rgba(140, 39, 94, 0.8); 
+}
+
+.botao-principal:hover {
+    background-color: #A33372; 
+    
+    box-shadow: 0 6px 0 0 #5E1A3F, 
+                0 0 20px rgba(140, 39, 94, 1);
+}
+
+.botao-principal:active {
+    transform: translateY(6px); 
+    box-shadow: 0 2px 0 0 #5E1A3F, 
+                0 0 10px rgba(140, 39, 94, 0.5); 
+    
+    background-color: #6C1C4A; 
+}
+
+.topo-conteudo {
+    width: 100%; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.logo-texto {
+    font-size: 30px;
+    font-weight: 700;
+    color:  #8C275E; 
+    margin-left: 1150px; 
+}
+
+p{
+    font-size: 22px; 
+    font-weight: 900; 
+    color: #000000; 
+    margin: 0; 
+    letter-spacing: 1px;
+}
+
+.conteudo-principal {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 20px;
+    min-height: 100vh;
+    margin-left: 200px; 
+}

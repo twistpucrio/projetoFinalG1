@@ -6,7 +6,6 @@
       "personagem-img": "../../view/img/lara.png",
       "descricao": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "instrucoes": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
-      "link": "../../view/html/cd.html?curso=fp",
       "frase":"Ensinar um computador é como ensinar um alien: cada passo conta!",
       "cor-borda":"#4C1753",
       "cor-fundo":"#825886"
@@ -17,7 +16,6 @@
       "personagem-img": "../../view/img/ayla.png",
       "descricao": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "instrucoes": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
-      "link": "../../view/html/cd.html?curso=ia",
       "frase":"A mente humana inspira. A máquina aprende.",
       "cor-borda":"#143A64",
       "cor-fundo":"#4B6D97"
@@ -28,7 +26,6 @@
       "personagem-img": "../../view/img/nia.png",
       "descricao": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "instrucoes": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
-      "link": "../../view/html/cd.html?curso=sc",
       "frase":"Confie em mim — eu protejo o que importa.",
       "cor-borda":"#44651F",
       "cor-fundo":"#638B37"
@@ -39,7 +36,6 @@
       "personagem-img": "../../view/img/sofia.png",
       "descricao": "Combina matemática e estatística, programação, análise e visualização de dados, inteligência artificial e aprendizado de máquina, junto com o conhecimento do domínio específico do negócio. O objetivo é extrair insights úteis e acionáveis a partir de grandes volumes de dados, apoiando a tomada de decisão e o planejamento estratégico de uma organização. Um cientista de dados deve compreender o contexto da empresa para formular perguntas relevantes, identificar problemas, coletar e preparar dados, desenvolver modelos e algoritmos, automatizar processos analíticos e comunicar resultados, mostrando como podem resolver desafios reais.",
       "instrucoes": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
-      "link": "../../view/html/cd.html?curso=cd",
       "frase":"Os dados falam. Eu só traduzo.",
       "cor-borda":"#C54B14",
       "cor-fundo":"#F4A222"
@@ -50,8 +46,7 @@
       "personagem-img": "../../view/img/kaori.png",
       "descricao": "Qualquer componente físico que constitui um dispositivo eletrônico. É a parte física que habilita o funcionamento de um dispositivo eletrônico, executam tarefas de processamento, transmissão ou armazenamento de dados, a partir de sistemas mecânicos ou de comandos enviados pelos softwares. Um hardware funciona sem um software desde que o sistema seja controlado por mecanismos físicos, hidráulicos ou elétricos. Geladeiras e micro-ondas mais antigos, por exemplo, funcionavam sem a necessidade de softwares.",
       "instrucoes": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
-      "link": "../../view/html/cd.html?curso=hd",
-      "frase":"Se não funciona, a gente monta de novo melhor ainda!",
+      "frase":"Se não funciona, a gente monta de novo — melhor ainda!",
       "cor-borda":"#313336",
       "cor-fundo":"#5D6164"
     },
@@ -61,7 +56,6 @@
       "personagem-img": "../../view/img/maya.png",
       "descricao": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "instrucoes": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
-      "link": "../../view/html/cd.html?curso=wd",
       "frase":"Se dá pra imaginar, dá pra publicar!",
       "cor-borda":"#DD6700",
       "cor-fundo":"#FC963D"

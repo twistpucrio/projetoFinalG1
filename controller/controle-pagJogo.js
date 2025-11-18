@@ -34,12 +34,15 @@ function preencherCampos(curso) {
 }
 
 function prepararBotoes(curso) { // Responde a uma interação do usuário
-  const btnJogo = document.getElementById("btn-jogar");
-  if (btnJogo && curso && curso.link) {
-    btnJogo.addEventListener("click", () => {
-      window.location.href = curso.link;
-    });
-  }
+    const btnJogo = document.getElementById("btn-jogar");
+    const personagem = curso["personagem-nome"]; // Pega 'Lara', 'Sofia', etc.
+
+    if (btnJogo && personagem) {
+        btnJogo.addEventListener("click", () => {
+            // REDIRECIONA para a página de escolha, REPASSANDO o parâmetro 'personagem'
+            window.location.href = `escolha.html?personagem=${personagem}`; 
+        });
+    }
 }
 
 async function init() {
@@ -62,3 +65,30 @@ async function init() {
 }
 
 document.addEventListener("DOMContentLoaded", init);
+
+// logica para transitar entre paginas
+const btnQuizz = document.getElementById('btn-quizz');
+const urlParams = new URLSearchParams(window.location.search);
+const personagem = urlParams.get('personagem'); 
+
+// Mapeia o nome do personagem para o ID do curso (para o Quizz)
+const mapaPersonagemCurso = {
+    'Lara': 'fp', 
+    'Ayla': 'ia', 
+    'Sofia': 'cd', 
+    'Kaori': 'hd', 
+    'Nia': 'sc', 
+    'Maya': 'wd'  
+};
+const cursoId = mapaPersonagemCurso[personagem];
+
+if (btnQuizz && cursoId) {
+    btnQuizz.addEventListener('click', () => {
+        window.location.href = `cd.html?curso=${cursoId}&personagem=${personagem}`; 
+    });
+} else {
+    if(btnQuizz) btnQuizz.disabled = true;
+}
+if (cursoId) {
+        document.body.classList.add(`curso-${cursoId}`);
+    }

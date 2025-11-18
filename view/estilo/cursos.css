@@ -42,7 +42,8 @@ h2{
     font-size: 1.3rem;
     margin: auto 100px;
     text-align: justify;
-    padding: 15px;
+    padding: 45px;
+    
 }
 
 #btn-jogar{
@@ -51,6 +52,18 @@ h2{
     padding: 15px 15px 15px 15px;
     border-radius: 10px;
     color: white;
+    font-weight: 2-00; 
     margin-top: 15px;
+    border: 3px solid #F5F5F5;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase; 
+    letter-spacing: 1.5px;
+    width: 300px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
 }
 
+#btn-jogar:hover {
+    transform: scale(1.1);
+}
