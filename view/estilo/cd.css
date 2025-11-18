@@ -47,6 +47,7 @@ body {
     font-size: 1em;
     color: #555555;
     text-align: center;
+    overflow: hidden;
 }
 
 #questoes-container {
@@ -90,7 +91,7 @@ label {
     padding: 15px 20px;
     border-radius: 10px; 
     background-color: #f7f9fc;
-    border: 1px solid #e0e6ed;
+    border: 2px solid #e0e6ed;
     transition: all 0.2s ease-out;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03); 
 }
@@ -119,7 +120,7 @@ label:hover {
 .questao-opcao:checked {
     background-color: #000000;
     border-color: #b6b6b6;
-    box-shadow: 0 0 0 4px rgba(3, 5, 8, 0.3); 
+    box-shadow: 0 0 0 1px rgba(3, 5, 8, 0.3); 
 }
 
 label span {
@@ -129,8 +130,13 @@ label span {
     font-family: 'secundaria';
 }
 
+#botoes {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
 
-#finalizar-btn {
+#finalizar-btn, #reiniciar-btn, #links-btn {
     width: 90%;
     max-width: 200px;
     padding: 15px 25px;
@@ -144,7 +150,13 @@ label span {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
     transition: all 0.2s ease-in-out;
     letter-spacing: 0.5px;
+    white-space: nowrap;
 }
+
+#reiniciar-btn{
+    margin-right: 380px;
+}
+
 
 #finalizar-btn:hover {
     background-color: #474747;
@@ -156,8 +168,6 @@ label span {
     transform: translateY(1px); 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-
 
 
 @media (max-width: 768px) {
