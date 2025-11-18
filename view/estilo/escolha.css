@@ -5,8 +5,8 @@
     font-family: 'Open Sans', sans-serif; 
 }
 
-body.curso-cd {
-    background-color: #f9fff7; 
+body.curso-cd .conteudo-principal {
+    background-color: #fff6e4; 
 }
 
 body.curso-cd .container-botoes button {
@@ -20,8 +20,8 @@ body.curso-cd .container-botoes button:hover {
     background-color: #fd7424;
 }
 
-body.curso-fp {
-    background-color: #f0f0f5; 
+body.curso-fp .conteudo-principal {
+    background-color: #f7f7ff; 
 }
 
 body.curso-fp .container-botoes button {
@@ -36,7 +36,7 @@ body.curso-fp .container-botoes button:hover {
 }
 
 body.curso-ia .conteudo-principal {
-    background-color: #e5eaf2; 
+    background-color: #e9edf3; 
 }
 body.curso-ia .container-botoes button {
     background-color: #143A64; 
@@ -221,5 +221,4 @@ p{
     padding: 20px;
     min-height: 100vh;
     margin-left: 200px; 
-    background-color: #F8F8F8; 
 }
