@@ -1,7 +1,8 @@
 import { carregarDados, cursoURL } from "../model/js/logica-pagJogo.js";
 import { randomizarPerguntas, validarRespostas } from "../model/js/logica-randomPerguntas.js";
 
-const DATA_URL = "../../model/json/perguntas.json";
+const DATA_PERGUNTAS = "../../model/json/perguntas.json";
+const DATA_CURSOS = "../../model/json/cursos.json";
 
 function organizarPerguntas(situacao, cursoSelec){ // Renderiza na página o enunciado e as questoes
   const descricao = document.getElementById("questao-descricao");
@@ -42,17 +43,23 @@ function organizarPerguntas(situacao, cursoSelec){ // Renderiza na página o enu
 
 function adicionarEstiloTabela() {
   const css = `
+    @font-face {
+        font-family: 'secundaria';
+        src: url(../view/fonts/Momo_Trust_Sans/MomoTrustSans-Regular.ttf)
+        format('truetype');
+    }
+
     #cd-tabela {
       width: 100%;
       border-collapse: collapse;
       margin: 20px 0;
-      font-family: Arial, sans-serif;
+      font-family: 'secundaria';
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       background-color: #ffe2b6ff;
     }
 
     #cd-tabela thead th {
-      background-color:  #e96224ff; 
+      background-color:  #FCB33F; 
       color: white; 
       padding: 12px 15px;
       text-align: center;
@@ -63,7 +70,6 @@ function adicionarEstiloTabela() {
       padding: 10px 15px;
       vertical-align: middle;
       text-align: center;
-      border-bottom: 1px solid #dddddd; 
     }
 
     #cd-tabela tbody tr:nth-of-type(even) {
@@ -121,12 +127,18 @@ function renderizarTabela(dados){
 
 async function init() {
   try {
-    const curso = cursoURL();
-    if (!curso) throw new Error("Parâmetro ?curso não encontrado na URL.");
+    const cursoSelec = cursoURL();
+    if (!cursoSelec) throw new Error("Parâmetro ?curso não encontrado na URL.");
 
-    const data = await carregarDados(DATA_URL);
-    const cursos = data.cursos;
-    const cursoSelec = curso;
+    const data_perg = await carregarDados(DATA_PERGUNTAS);
+    const cursos = data_perg.cursos;
+
+    const data_cursos = await carregarDados(DATA_CURSOS);
+    const info = data_cursos.cursos;
+    const selec = info.find(c => c["curso-nome"] === cursoSelec);
+    const cor_fundo = selec["cor-fundo"];
+    const cor_borda = selec["cor-borda"];
+    const cor_questao = selec["cor-questao"];
 
     const perguntas = await randomizarPerguntas(cursos, cursoSelec);
     organizarPerguntas(perguntas, cursoSelec);
@@ -136,6 +148,23 @@ async function init() {
       const acertos = validarRespostas(perguntas);
       alert(`Você acertou ${acertos} de ${perguntas.perguntas.length} perguntas!`);
     });
+
+    const fundo = document.body;
+    const enunciados = document.querySelectorAll(".questao-enunciado")
+    const opcoes = document.querySelectorAll(".questao-opcao");
+    if(cor_fundo && cor_borda && cor_questao){
+      if(fundo) fundo.style.backgroundColor = cor_borda;
+      enunciados.forEach(enun => {
+        enun.style.color = cor_borda;
+      });
+      opcoes.forEach(op => {
+        op.style.accentColor = cor_borda;
+
+        const label = op.parentElement;
+        label.style.backgroundColor = cor_questao;
+      });
+      botaoFinalizar.style.backgroundColor = cor_questao;
+    }
   }
    catch (err) {
     const box = document.getElementById("quiz-container");

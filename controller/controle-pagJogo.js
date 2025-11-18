@@ -50,6 +50,7 @@ async function init() {
     const data = await carregarDados(DATA_URL);
     const lista = Array.isArray(data) ? data : (data.cursos || []);
     const curso = lista.find(c => c["personagem-nome"] === personagem);
+    console.log(curso);
 
     if (!curso) throw new Error("Curso não encontrado para: " + personagem);
 

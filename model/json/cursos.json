@@ -2,6 +2,7 @@
   "cursos": [
     {
       "titulo": "Fundamentos da Programação",
+      "curso-nome":"fp",
       "personagem-nome": "Lara",
       "personagem-img": "../../view/img/lara.png",
       "descricao": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
@@ -9,10 +10,12 @@
       "link": "../../view/html/cd.html?curso=fp",
       "frase":"Ensinar um computador é como ensinar um alien: cada passo conta!",
       "cor-borda":"#4C1753",
-      "cor-fundo":"#825886"
+      "cor-fundo":"#825886",
+      "cor-questao":"#B27BB8"
     },
     {
       "titulo": "Inteligência Artificial",
+      "curso-nome":"ia",
       "personagem-nome": "Ayla",
       "personagem-img": "../../view/img/ayla.png",
       "descricao": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
@@ -20,10 +23,12 @@
       "link": "../../view/html/cd.html?curso=ia",
       "frase":"A mente humana inspira. A máquina aprende.",
       "cor-borda":"#143A64",
-      "cor-fundo":"#4B6D97"
+      "cor-fundo":"#4B6D97",
+      "cor-questao":"#597DA8"
     },
     {
       "titulo": "Segurança Cibernética",
+      "curso-nome":"sc",
       "personagem-nome": "Nia",
       "personagem-img": "../../view/img/nia.png",
       "descricao": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
@@ -31,10 +36,12 @@
       "link": "../../view/html/cd.html?curso=sc",
       "frase":"Confie em mim — eu protejo o que importa.",
       "cor-borda":"#44651F",
-      "cor-fundo":"#638B37"
+      "cor-fundo":"#638B37",
+      "cor-questao":"#7CA64E"
     },
     {
       "titulo": "Ciência de Dados",
+      "curso-nome":"cd",
       "personagem-nome": "Sofia",
       "personagem-img": "../../view/img/sofia.png",
       "descricao": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
@@ -42,10 +49,12 @@
       "link": "../../view/html/cd.html?curso=cd",
       "frase":"Os dados falam. Eu só traduzo.",
       "cor-borda":"#C54B14",
-      "cor-fundo":"#F4A222"
+      "cor-fundo":"#F4A222",
+      "cor-questao":"#FCB33F"
     },
     {
       "titulo": "Hardware",
+      "curso-nome":"hd",
       "personagem-nome": "Kaori",
       "personagem-img": "../../view/img/kaori.png",
       "descricao": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
@@ -53,10 +62,12 @@
       "link": "../../view/html/cd.html?curso=hd",
       "frase":"Se não funciona, a gente monta de novo — melhor ainda!",
       "cor-borda":"#313336",
-      "cor-fundo":"#5D6164"
+      "cor-fundo":"#5D6164",
+      "cor-questao":"#666869"
     },
     {
       "titulo": "Web Development",
+      "curso-nome":"wd",
       "personagem-nome": "Maya",
       "personagem-img": "../../view/img/maya.png",
       "descricao": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
@@ -64,7 +75,8 @@
       "link": "../../view/html/cd.html?curso=wd",
       "frase":"Se dá pra imaginar, dá pra publicar!",
       "cor-borda":"#DD6700",
-      "cor-fundo":"#FC963D"
+      "cor-fundo":"#FC963D",
+      "cor-questao":"#F59949"
     }
     ]
 }
