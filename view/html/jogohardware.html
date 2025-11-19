@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Monte seu PC</title>
+    <link rel="stylesheet" href="../estilo/jogohardware.css">
+    <script type="module" src="../../model/js/jogohardware.js"></script>
+</head>
+
+<body>
+    <div id="titulo">
+        <h1>Monte seu PC</h1>
+    </div>
+    <div id="jogo">
+        <div id="imagens">
+            <img src="../img/placa-mae.jpg" draggable="true" data-id="placa-mae">
+            <img src="../img/hd.jpg" draggable="true" data-id="hd">
+            <img src="../img/memoria_ram.jpg" draggable="true" data-id="ram">
+            <img src="../img/cooler.jpg" draggable="true" data-id="cooler">
+            <img src="../img/processador.jpg" draggable="true" data-id="processador">
+        </div>
+
+        <div id="descricoes">
+            <div class="item-descricao">
+                <b>Peça central responsável por conectar e interligar todos os componentes, como processador (CPU),
+                    memória RAM, armazenamento (HD ou SSD) e placa gráfica, permitindo que se comuniquem e funcionem
+                    juntos.</b>
+                <div class="slot" data-aceita="placa-mae"></div>
+            </div>
+
+            <div class="item-descricao">
+                <b>Funciona como o espaço de trabalho ultrarrápido do processador (CPU), sendo essencial para o
+                    desempenho e a multitarefa. Ela armazena temporariamente os dados e as instruções de todos os
+                    programas e processos que estão em execução, permitindo que a CPU os acesse e manipule
+                    instantaneamente, contudo, por ser volátil, todo esse conteúdo é perdido assim que o computador é
+                    desligado ou reiniciado.</b>
+                <div class="slot" data-aceita="ram"></div>
+            </div>
+
+            <div class="item-descricao">
+                <b>Executa as instruções de todos os programas, realiza cálculos lógicos e aritméticos e coordena o
+                    funcionamento de todo o sistema.</b>
+                <div class="slot" data-aceita="processador"></div>
+            </div>
+
+            <div class="item-descricao">
+                <b>Guarda o sistema operacional, programas e todos os arquivos pessoais de forma permanente
+                    (não-volátil), é como se fosse a biblioteca da sua máquina.</b>
+                <div class="slot" data-aceita="hd"></div>
+            </div>
+
+            <div class="item-descricao">
+                <b>Remove o calor gerado pelo processador e outros componentes, garantindo que eles operem em
+                    temperaturas seguras.</b>
+                <div class="slot" data-aceita="cooler"></div>
+            </div>
+        </div>
+    </div>
+    <button id="voltar">Voltar</button>
+    <button id="resetar">Resetar Jogo</button>
+</body>
+
+</html>
