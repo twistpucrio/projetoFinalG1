@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#titulo {
+    text-align: center;
+    margin-top: 10px; /* era maior */
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 5px; /* diminui o espaço abaixo do título */
+}
+
+/* Área principal do jogo */
+#jogo {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 10px; /* antes era ~30px */
+    padding: 10px; /* opcional para reduzir ainda mais */
+}
+
+/* ====== ÁREA DAS IMAGENS ====== */
+#imagens {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#imagens img {
+    width: 130px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    cursor: grab;
+    transition: 0.2s;
+    background: white;
+}
+
+#imagens img:active {
+    cursor: grabbing;
+    opacity: 0.8;
+}
+
+/* ====== ÁREA DAS DESCRIÇÕES ====== */
+#descricoes {
+    width: 60%;
+    display: grid;
+    gap: 20px 30px; /* linha / coluna */
+    align-items: center; /* alinha slot verticalmente com a descrição */
+    text-align: left;
+}
+
+
+.item-descricao {
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Caixa que contém só o texto */
+.item-descricao b {
+    flex: 1; /* texto ocupa a largura restante */
+}
+
+/* Slot ao lado do texto */
+.slot {
+    width: 150px;
+    height: 120px;
+    border: 2px dashed #aaa;
+    border-radius: 10px;
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; /* impede o slot de diminuir */
+}
+
+
+/* Imagem dentro do slot */
+.slot img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    cursor: grab;
+}
+
+/* ====== FEEDBACK DE ACERTO/ERRO ====== */
+.slot.correto {
+    border-color: #3CB371;
+    background:white;
+    box-shadow: 0 0 8px #3CB371;
+}
+
+.slot.errado {
+    border-color: #DC143C;
+    background:white;
+    box-shadow: 0 0 8px #DC143C;
+}
+
+#resetar, #voltar {
+    padding: 12px 10px;
+    font-size: 1.1rem;
+    border: none;
+    background: #4CAF50;
+    color: white;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    display: inline-block;
+    margin: 20px 10px;
+}
