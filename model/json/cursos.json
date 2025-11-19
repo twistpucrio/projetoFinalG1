@@ -2,63 +2,75 @@
   "cursos": [
     {
       "titulo": "Fundamentos da Programação",
+      "curso-nome":"fp",
       "personagem-nome": "Lara",
       "personagem-img": "../../view/img/lara.png",
       "descricao": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "instrucoes": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "frase":"Ensinar um computador é como ensinar um alien: cada passo conta!",
       "cor-borda":"#4C1753",
-      "cor-fundo":"#825886"
+      "cor-fundo":"#825886",
+      "cor-questao":"#B27BB8"
     },
     {
       "titulo": "Inteligência Artificial",
+      "curso-nome":"ia",
       "personagem-nome": "Ayla",
       "personagem-img": "../../view/img/ayla.png",
       "descricao": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "instrucoes": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "frase":"A mente humana inspira. A máquina aprende.",
       "cor-borda":"#143A64",
-      "cor-fundo":"#4B6D97"
+      "cor-fundo":"#4B6D97",
+      "cor-questao":"#597DA8"
     },
     {
       "titulo": "Segurança Cibernética",
+      "curso-nome":"sc",
       "personagem-nome": "Nia",
       "personagem-img": "../../view/img/nia.png",
       "descricao": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "instrucoes": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "frase":"Confie em mim — eu protejo o que importa.",
       "cor-borda":"#44651F",
-      "cor-fundo":"#638B37"
+      "cor-fundo":"#638B37",
+      "cor-questao":"#7CA64E"
     },
     {
       "titulo": "Ciência de Dados",
+      "curso-nome":"cd",
       "personagem-nome": "Sofia",
       "personagem-img": "../../view/img/sofia.png",
       "descricao": "Combina matemática e estatística, programação, análise e visualização de dados, inteligência artificial e aprendizado de máquina, junto com o conhecimento do domínio específico do negócio. O objetivo é extrair insights úteis e acionáveis a partir de grandes volumes de dados, apoiando a tomada de decisão e o planejamento estratégico de uma organização. Um cientista de dados deve compreender o contexto da empresa para formular perguntas relevantes, identificar problemas, coletar e preparar dados, desenvolver modelos e algoritmos, automatizar processos analíticos e comunicar resultados, mostrando como podem resolver desafios reais.",
       "instrucoes": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "frase":"Os dados falam. Eu só traduzo.",
       "cor-borda":"#C54B14",
-      "cor-fundo":"#F4A222"
+      "cor-fundo":"#F4A222",
+      "cor-questao":"#FCB33F"
     },
     {
       "titulo": "Hardware",
+      "curso-nome":"hd",
       "personagem-nome": "Kaori",
       "personagem-img": "../../view/img/kaori.png",
       "descricao": "Qualquer componente físico que constitui um dispositivo eletrônico. É a parte física que habilita o funcionamento de um dispositivo eletrônico, executam tarefas de processamento, transmissão ou armazenamento de dados, a partir de sistemas mecânicos ou de comandos enviados pelos softwares. Um hardware funciona sem um software desde que o sistema seja controlado por mecanismos físicos, hidráulicos ou elétricos. Geladeiras e micro-ondas mais antigos, por exemplo, funcionavam sem a necessidade de softwares.",
       "instrucoes": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "frase":"Se não funciona, a gente monta de novo — melhor ainda!",
       "cor-borda":"#313336",
-      "cor-fundo":"#5D6164"
+      "cor-fundo":"#5D6164",
+      "cor-questao":"#666869"
     },
     {
       "titulo": "Web Development",
+      "curso-nome":"wd",
       "personagem-nome": "Maya",
       "personagem-img": "../../view/img/maya.png",
       "descricao": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "instrucoes": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
       "frase":"Se dá pra imaginar, dá pra publicar!",
       "cor-borda":"#DD6700",
-      "cor-fundo":"#FC963D"
+      "cor-fundo":"#FC963D",
+      "cor-questao":"#F59949"
     }
     ]
 }
