@@ -82,6 +82,9 @@ const mapaPersonagemCurso = {
     'Maya': 'wd'  
 };
 const cursoId = mapaPersonagemCurso[personagem];
+const personagensOrdem = ['Lara','Ayla','Sofia','Kaori','Nia','Maya'];
+const jogos = [`jogoFP_1.html`,`jogoIA.html`, `jogoCD.html`,`jogohardware.html`,`jogoSC.html`,`jogoWD.html`];
+const index = personagensOrdem.indexOf(personagem);
 
 if (btnQuizz && cursoId) {
     btnQuizz.addEventListener('click', () => {
@@ -93,3 +96,12 @@ if (btnQuizz && cursoId) {
 if (cursoId) {
         document.body.classList.add(`curso-${cursoId}`);
     }
+
+const btnJogo = document.getElementById("btn-jogo");
+if(btnJogo){
+  btnJogo.addEventListener('click', () => {
+      window.location.href = jogos[index]; 
+    });
+  } else {
+      if(btnJogo) btnJogo.disabled = true;
+  } 
