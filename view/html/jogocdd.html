@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Planejamento de viagem (dados e decisões)</title>
+  <link rel="stylesheet" href="../estilo/jogocdd.css">
+  <script type="module" src="../../model/js/jogocdd.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1>Planejamento de viagem</h1>
+    <h2>Objetivo: Imagine que vai viajar e possui um orçamento limitado. <br> O que você escolheria para ficar dentro do
+      orçamento?</h2>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Escolhas</h2>
+      <p id="orcamento"></p>
+      <div class="grid">
+        <div class="field">
+          <label for="destino">Destino</label>
+          <select id="destino">
+            <option value="" selected disabled>Selecione...</option>
+            <option value="0" data-label="São Paulo">São Paulo</option>
+            <option value="0" data-label="Buenos Aires">Buenos Aires</option>
+            <option value="0" data-label="Nova York">Nova York</option>
+          </select>
+        </div>
+
+
+        <div class="field">
+          <label for="passagem">Passagem de avião - ida e volta com o horário de saída</label>
+          <select id="passagem">
+            <option value="" selected disabled>Selecione...</option>
+            <option value="480" data-label="9h">9h - R$480</option>
+            <option value="1200" data-label="13h">13h - R$1200</option>
+            <option value="500" data-label="17h"> 17h - R$500</option>
+            <option value="800" data-label="20h"> 20h - R$800</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="noite">Quantidade de noites no hotel</label>
+          <select id="noite" disabled>
+            <option value="" selected disabled>Selecione...</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="7">7</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="hospedagem">Hospedagem</label>
+          <select id="hospedagem">
+            <option value="" selected disabled>Selecione...</option>
+            <option value="400" data-label="Hostel">Hostel — R$ 400</option>
+            <option value="700" data-label="Hotel 3★">Hotel 3★ — R$ 700</option>
+            <option value="1200" data-label="Hotel 5★">Hotel 5★ — R$ 1200</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="alimentacao">Alimentação</label>
+          <select id="alimentacao">
+            <option value="" selected disabled>Selecione...</option>
+            <option value="300" data-label="Comida simples">Comida simples — R$ 300</option>
+            <option value="600" data-label="Restaurantes médios">Restaurantes médios — R$ 600</option>
+            <option value="1000" data-label="Restaurantes caros">Restaurantes caros — R$ 1000</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="btnCalc">Verificar orçamento</button>
+        <button id="btnReset" class="ghost">Resetar escolhas</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Resultado</h2>
+      <div class="bars">
+        <div class="bar">
+          <div class="bar-label">Passagem</div>
+          <div class="bar-track">
+            <div id="barDestino" class="bar-fill"></div>
+          </div>
+          <div id="barDestinoVal" class="bar-val"></div>
+        </div>
+        <div class="bar">
+          <div class="bar-label">Hospedagem</div>
+          <div class="bar-track">
+            <div id="barHospedagem" class="bar-fill"></div>
+          </div>
+          <div id="barHospedagemVal" class="bar-val">R$ 0</div>
+        </div>
+        <div class="bar">
+          <div class="bar-label">Alimentação</div>
+          <div class="bar-track">
+            <div id="barAlimentacao" class="bar-fill"></div>
+          </div>
+          <div id="barAlimentacaoVal" class="bar-val">R$ 0</div>
+        </div>
+      </div>
+
+      <div class="summary">
+        <table>
+          <thead>
+            <tr>
+              <th>Categoria</th>
+              <th>Escolha</th>
+              <th>Custo</th>
+            </tr>
+          </thead>
+          <tbody id="summaryBody"></tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2">Total</td>
+              <td id="totalCell">R$ 0</td>
+            </tr>
+            <tr>
+              <td colspan="2">Saldo</td>
+              <td id="saldoCell">R$ 0</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Por que isso é ciência de dados?</h2>
+      <ul class="bullets">
+        <li><strong>Dados relevantes:</strong> preços por categoria (destino, hospedagem, alimentação).</li>
+        <li><strong>Restrição:</strong> orçamento limita as escolhas — decisão baseada em números.</li>
+        <li><strong>Trade-offs:</strong> gastar mais em um item exige economizar em outro.</li>
+        <li><strong>Interpretação:</strong> barras mostram visualmente onde o custo pesa.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+
+</html>
