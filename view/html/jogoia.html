@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Construtor de Agentes de IA</title>
+    <style>
+
+        body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-height: 100vh; margin: 20px; background-color: #f4f4f9; }
+        h1 { color: #5c67f2; }
+        #app-container { display: flex; gap: 40px; margin-top: 20px; max-width: 1000px; width: 100%; }
+        #configuracao, #simulacao { padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background-color: white; height: fit-content; }
+        #configuracao { flex: 1; }
+        #simulacao { flex: 1; }
+
+        #ambiente { display: grid; grid-template-columns: repeat(3, 80px); gap: 5px; margin-bottom: 15px; }
+        .celula { width: 80px; height: 80px; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center; font-size: 2em; transition: background-color 0.5s; }
+        .agente { background-color: #5c67f2 !important; color: white; border: 3px solid #000; }
+        .sujo { background-color: #ffcccb; } 
+        .limpo { background-color: #d1ffd1; } 
+
+        .regra-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: center; }
+        .regra-item span { flex-grow: 1; }
+        .regra-item button { background-color: #ff6961; color: white; border: none; padding: 5px; cursor: pointer; border-radius: 5px; }
+        
+        #controles button { padding: 10px 15px; margin-right: 10px; border: none; border-radius: 5px; background-color: #5c67f2; color: white; cursor: pointer; }
+        #log { border: 1px solid #ccc; padding: 10px; width: 100%; min-height: 100px; overflow-y: scroll; margin-top: 10px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+    <h1>Construtor de Agentes: Robô de Limpeza</h1>
+    
+    <div id="app-container">
+        <div id="configuracao">
+            <h2>Regras Dinâmicas</h2>
+            <p>Defina uma regra: **SE** (Percepção) **ENTÃO** (Ação)</p>
+            
+            <div class="regra-item">
+                <label>SE:</label>
+                <select id="select-percepcao">
+                    <option value="celula_atual_suja">Célula Atual ESTÁ SUJA</option>
+                    <option value="celula_atual_limpa">Célula Atual ESTÁ LIMPA</option>
+                    <option value="todas_limpas">Ambiente ESTÁ LIMPO</option>
+                </select>
+
+                <label>ENTÃO:</label>
+                <select id="select-acao">
+                    <option value="limpar">LIMPAR Célula</option>
+                    <option value="mover_aleatorio">MOVER ALEATORIAMENTE</option>
+                    <option value="parar">PARAR Agente</option>
+                </select>
+
+                <button onclick="adicionarRegra()">Adicionar Regra</button>
+            </div>
+
+            <h3>Lista de Regras Ativas:</h3>
+            <div id="lista-regras">
+                </div>
+        </div>
+
+        <div id="simulacao">
+            <h2>Simulação do Ambiente</h2>
+            <div id="ambiente"></div>
+
+            <div id="controles">
+                <button onclick="iniciarSimulacao()">Reiniciar Ambiente</button>
+                <button onclick="rodarUmCiclo()">Executar Próxima Ação</button>
+            </div>
+
+            <h3>Log de Decisões:</h3>
+            <div id="log"></div>
+        </div>
+    </div>
+
+<script>
+
+    let estadoAmbiente = []; 
+    let posicaoAgente = 0;
+    let regrasAgente = []; 
+
+    function logDecisao(mensagem) {
+        const log = document.getElementById('log');
+        log.innerHTML += `<div>> ${mensagem}</div>`;
+        log.scrollTop = log.scrollHeight;
+    }
+
+   function renderizarAmbiente() {
+    const ambienteDiv = document.getElementById('ambiente');
+    ambienteDiv.innerHTML = ''; 
+
+    estadoAmbiente.forEach((estado, index) => {
+        const celula = document.createElement('div');
+        celula.className = `celula ${estado}`;
+        
+       
+        celula.textContent = estado === 'sujo' ? '🔴' : '🟢'; 
+
+        if (index === posicaoAgente) {
+            celula.classList.add('agente'); 
+            
+            
+            const roboImg = document.createElement('img');
+            
+            roboImg.src = '../view/img/robo-ia.png'; 
+            
+            roboImg.style.width = '100%'; 
+            roboImg.style.height = '100%';
+            roboImg.style.objectFit = 'contain'; 
+            
+            celula.textContent = ''; 
+            
+            celula.appendChild(roboImg);
+        }
+
+        ambienteDiv.appendChild(celula); 
+    });
+}
+
+    function exibirRegras() {
+        const listaDiv = document.getElementById('lista-regras');
+        listaDiv.innerHTML = '';
+
+        if (regrasAgente.length === 0) {
+            listaDiv.innerHTML = '<p>Nenhuma regra definida. O Agente não sabe o que fazer!</p>';
+            return;
+        }
+
+        regrasAgente.forEach((regra, index) => {
+            const item = document.createElement('div');
+            item.className = 'regra-item';
+            
+            const percepcaoFormatada = regra.percepcao.replace(/_/g, ' ').toUpperCase();
+            const acaoFormatada = regra.acao.replace(/_/g, ' ').toUpperCase();
+
+            item.innerHTML = `
+                <span>Regra ${index + 1}: SE <strong>${percepcaoFormatada}</strong> ENTÃO <strong>${acaoFormatada}</strong></span>
+                <button onclick="removerRegra(${index})">X</button>
+            `;
+            listaDiv.appendChild(item);
+        });
+    }
+
+
+    function adicionarRegra() {
+        const percepcao = document.getElementById('select-percepcao').value;
+        const acao = document.getElementById('select-acao').value;
+
+        const novaRegra = { percepcao, acao };
+
+        regrasAgente.push(novaRegra);
+        exibirRegras();
+        logDecisao(`Regra adicionada: SE ${percepcao} ENTÃO ${acao}`);
+    }
+
+    function removerRegra(index) {
+        regrasAgente.splice(index, 1);
+        exibirRegras();
+        logDecisao(`Regra ${index + 1} removida. O cérebro foi modificado.`);
+    }
+
+
+    function perceber() {
+        if (estadoAmbiente[posicaoAgente] === 'sujo') return 'celula_atual_suja';
+        
+        if (estadoAmbiente.every(estado => estado === 'limpo')) return 'todas_limpas';
+        
+        return 'celula_atual_limpa';
+    }
+
+    function rodarUmCiclo() {
+        if (regrasAgente.length === 0) {
+            logDecisao('ERRO: O agente não tem regras e não pode agir.');
+            return;
+        }
+
+        const percepcaoAtual = perceber();
+        
+   
+        const regraEncontrada = regrasAgente.find(regra => regra.percepcao === percepcaoAtual);
+
+        if (!regraEncontrada) {
+            logDecisao(`Nenhuma regra para a percepção '${percepcaoAtual.replace(/_/g, ' ')}'. Agente fica inerte.`);
+            return;
+        }
+
+        logDecisao(`[DECISÃO] Percepção: ${percepcaoAtual}. Ação Escolhida: ${regraEncontrada.acao}`);
+        executarAcao(regraEncontrada.acao);
+        renderizarAmbiente();
+    }
+
+    function executarAcao(acao) {
+        if (acao === 'limpar') {
+            estadoAmbiente[posicaoAgente] = 'limpo';
+        } 
+        else if (acao === 'mover_aleatorio') {
+            let novoPosicao;
+            do {
+                novoPosicao = Math.floor(Math.random() * estadoAmbiente.length);
+            } while (novoPosicao === posicaoAgente);
+            posicaoAgente = novoPosicao;
+        }
+        else if (acao === 'parar') {
+            document.getElementById('controles').innerHTML = '<h2> Objetivo Atingido!</h2>';
+        }
+    }
+
+
+    function iniciarSimulacao() {
+        estadoAmbiente = ['sujo', 'sujo', 'limpo', 'sujo', 'limpo', 'sujo', 'limpo', 'sujo', 'sujo'];
+        posicaoAgente = 0;
+        document.getElementById('log').innerHTML = ''; // Limpa o log
+        
+        document.getElementById('controles').innerHTML = `
+            <button onclick="iniciarSimulacao()">Reiniciar Ambiente</button>
+            <button onclick="rodarUmCiclo()">Executar Próxima Ação</button>
+        `;
+        
+        renderizarAmbiente();
+        logDecisao('Simulação reiniciada. Crie as regras para o Robô!');
+    }
+
+    iniciarSimulacao();
+    exibirRegras();
+</script>
+</body>
+</html>
