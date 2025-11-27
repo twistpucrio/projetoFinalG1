@@ -83,7 +83,7 @@ const mapaPersonagemCurso = {
 };
 const cursoId = mapaPersonagemCurso[personagem];
 const personagensOrdem = ['Lara','Ayla','Sofia','Kaori','Nia','Maya'];
-const jogos = [`jogoFP.html`,`jogoIA.html`, `jogoCD.html`,`jogohardware.html`,`jogoSC.html`,`jogoWD.html`];
+const jogos = [`jogoFP_1.html`,`jogoIA.html`, `jogoCD.html`,`jogohardware.html`,`jogoSC.html`,`jogoWD.html`];
 const index = personagensOrdem.indexOf(personagem);
 
 if (btnQuizz && cursoId) {
