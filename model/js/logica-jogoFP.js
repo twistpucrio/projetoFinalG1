@@ -1,127 +1,194 @@
 export const situacoes = {
-    sanduiche: {
-        nome: "Preparar um sanduíche PB&J",
-        blocos: [
-            { funcao: "Pegar" },
-            { funcao: "Abrir" },
-            { funcao: "Passar na fatia de pão" },
-            { funcao: "Juntar" },
-            { funcao: "Loop" }
-        ]
+  sanduiche: {
+    nome: "Preparar um sanduíche PB&J",
+    blocos: [
+      { funcao: "Pegar", args: ["obj"] },
+      { funcao: "Abrir", args: ["obj"] },
+      { funcao: "Passar na fatia de pão", args: ["spread"] },
+      { funcao: "Juntar", args: [] },
+      { funcao: "Loop", args: [] }
+    ],
+    argsPossiveis: {
+      obj: ["pote-amendoim", "pote-geleia", "fatia-pao", "faca"],
+      spread: ["pasta-amendoim", "geleia"],
+    }
+  },
+
+  omelete: {
+    nome: "Preparar uma omelete",
+
+    blocos: [
+        { funcao: "Pegar", args: ["ingrediente"] },
+        { funcao: "Quebrar", args: ["ingrediente"] },
+
+        // NOVO – dois argumentos
+        { funcao: "Bater ... na ...", args: ["ingrediente", "dest"] },
+
+        { funcao: "Picotar", args: ["ingrediente"] },
+
+        { funcao: "Untar a panela", args: [] },
+
+        // NOVO – dois argumentos
+        { funcao: "Colocar ... na ...", args: ["ingrediente", "dest"] },
+
+        { funcao: "Misturar", args: ["ingrediente"] },
+        { funcao: "Servir", args: ["ingrediente"] }
+    ],
+
+    argsPossiveis: {
+        obj: ["ovo"],
+        ingrediente: ["ovo", "presunto", "queijo", "omelete"],
+        dest: ["batedeira", "panela"]
+    }
     }
 };
 
 
-// Novo gabarito com objetos que descrevem dependências
+
 export function gabaritoSanduiche() {
     return [
-        // 1. pegar um dos potes (amendoim OU geleia)
         { tipo: "ChooseFirstPot", opcoes: ["Pegar:pote-amendoim", "Pegar:pote-geleia"] },
-
-        // 2. abrir o pote escolhido anteriormente
         { tipo: "OpenSameAsPrevious" },
-
-        // 3. pegar o pote restante
         { tipo: "PickRemainingPot" },
-
-        // 4. abrir o pote restante
         { tipo: "OpenSameAsPrevious" },
 
-        // 5. pegar faca
         "Pegar:faca",
-
-        // 6. loop 2x: para cada fatia: pegar fatia, passar uma substância, passar a substância restante
+        
         {
             tipo: "Loop",
             repeticoes: 2,
             conteudo: [
                 "Pegar:fatia-pao",
-                // este objeto significa: dois "Passar" consecutivos, primeiro qualquer uma das duas substâncias,
-                // segundo a SUBSTÂNCIA RESTANTE (não pode repetir a mesma duas vezes)
-                { tipo: "PassBothInOrder", opcoes: ["Passar na fatia de pão:pasta-amendoim", "Passar na fatia de pão:geleia"] }
+                { 
+                  tipo: "PassBothInOrder", 
+                  opcoes: [
+                     "Passar na fatia de pão:pasta-amendoim",
+                     "Passar na fatia de pão:geleia"
+                  ] 
+                }
             ]
         },
 
-        // 7. juntar
-        "Juntar:fatia-pao"
+        "Juntar"   // <<< CORRIGIDO — sem argumentos
     ];
 }
 
 
-// compararAlgoritmo revisada para entender as novas etapas dependentes
+export function gabaritoOmelete() {
+    return [
+        "Pegar:ovo",
+        "Quebrar:ovo",
+        "Bater ... na ...:ovo:batedeira",
+
+        "Pegar:presunto",
+        "Picotar:presunto",
+
+        "Pegar:queijo",
+        "Picotar:queijo",
+
+        "Untar a panela",
+
+        "Colocar ... na ...:ovo:panela",
+        "Colocar ... na ...:presunto:panela",
+        "Colocar ... na ...:queijo:panela",
+
+        "Misturar:ovo",
+
+        "Servir:omelete"
+    ];
+}
+
+
+
 export function compararAlgoritmo(usuarioOrig, certoOrig) {
     const usuario = (usuarioOrig || []).filter(x => x);
-    const certo = JSON.parse(JSON.stringify(certoOrig)); // cloninho
+    const certo = JSON.parse(JSON.stringify(certoOrig));
 
     let i = 0;
-    // estado para lembrar qual pote foi escolhido primeiro
-    let firstPot = null; // "pote-amendoim" ou "pote-geleia"
-    let firstPegarString = null; // ex: "Pegar:pote-amendoim"
+
+    let firstPot = null;
+    let firstPegarString = null;
 
     for (let k = 0; k < certo.length; k++) {
         const etapa = certo[k];
+        const u = usuario[i];
 
+        // -----------------------------
+        // 1) CASO SANDUÍCHE: objetos com .tipo
+        // -----------------------------
+        if (etapa && etapa.tipo) {
+
+            if (etapa.tipo === "ChooseFirstPot") {
+                if (!u || !etapa.opcoes.includes(u)) return false;
+                firstPegarString = u;
+                firstPot = u.split(":")[1];
+                i++;
+                continue;
+            }
+
+            if (etapa.tipo === "OpenSameAsPrevious") {
+                if (!firstPot) return false;
+                const esperado = `Abrir:${firstPot}`;
+                if (u !== esperado) return false;
+                i++;
+                continue;
+            }
+
+            if (etapa.tipo === "PickRemainingPot") {
+                if (!firstPot) return false;
+                const remaining = firstPot === "pote-amendoim" ? "pote-geleia" : "pote-amendoim";
+                const esperado = `Pegar:${remaining}`;
+                if (u !== esperado) return false;
+                firstPot = remaining;
+                i++;
+                continue;
+            }
+
+            if (etapa.tipo === "Loop") {
+                const loopUser = u;
+                if (typeof loopUser !== "object" || loopUser.tipo !== "Loop") return false;
+                if (loopUser.repeticoes !== etapa.repeticoes) return false;
+
+                if (!compararLoop(loopUser.conteudo, JSON.parse(JSON.stringify(etapa.conteudo)))) {
+                    return false;
+                }
+
+                i++;
+                continue;
+            }
+
+            // Tipo desconhecido
+            return false;
+        }
+
+        // -----------------------------
+        // 2) CASO SIMPLES DO OMELETE:
+        //    etapa = { funcao: "...", args: [...] }
+        // -----------------------------
+        if (typeof etapa === "object" && etapa.funcao && !etapa.tipo) {
+            if (!u) return false;
+
+            // Usuário deve ter salvo como string "Funcao:arg1:arg2"
+            const esperado = etapa.funcao + (etapa.args.length ? ":" + etapa.args.join(":") : "");
+            if (u !== esperado) return false;
+
+            i++;
+            continue;
+        }
+
+        // -----------------------------
+        // 3) Caso simples de string (sanduíche)
+        // -----------------------------
         if (typeof etapa === "string") {
-            // passo simples: comparar igualdade exata
-            if (usuario[i] !== etapa) return false;
+            if (u !== etapa) return false;
             i++;
             continue;
         }
 
-        // etapa é um objeto com regras especiais
-        if (etapa && etapa.tipo === "ChooseFirstPot") {
-            const u = usuario[i];
-            if (!u || !etapa.opcoes.includes(u)) return false;
-            // guardar escolha
-            firstPegarString = u; // ex: "Pegar:pote-amendoim"
-            // extrair nome do pote depois dos dois pontos
-            firstPot = u.split(":")[1]; // "pote-amendoim" ou "pote-geleia"
-            i++;
-            continue;
-        }
-
-        if (etapa && etapa.tipo === "OpenSameAsPrevious") {
-            if (firstPot == null) return false; // não foi escolhido primeiro pote
-            const esperado = `Abrir:${firstPot}`;
-            // Note: isso é usado duas vezes consecutivas: a primeira abre o primeiro pote,
-            // a segunda OpenSameAsPrevious deverá abrir o pote que for 'current' (ver abaixo).
-            // Para a segunda ocorrência, antes de chamá-la, nós atualizamos firstPot (veja PickRemainingPot).
-            if (usuario[i] !== esperado) return false;
-            i++;
-            continue;
-        }
-
-        if (etapa && etapa.tipo === "PickRemainingPot") {
-            if (firstPot == null) return false;
-            // remaining pot:
-            const remaining = firstPot === "pote-amendoim" ? "pote-geleia" : "pote-amendoim";
-            const esperado = `Pegar:${remaining}`;
-            if (usuario[i] !== esperado) return false;
-            // atualizar 'firstPot' para agora apontar para o pote que foi pego (para que a próxima
-            // OpenSameAsPrevious abra esse pote restante)
-            firstPot = remaining;
-            i++;
-            continue;
-        }
-
-        if (etapa && etapa.tipo === "Loop") {
-            // o usuário deve ter um objeto Loop nesta posição
-            const loopUser = usuario[i];
-            if (typeof loopUser !== "object" || loopUser.tipo !== "Loop") return false;
-            if (loopUser.repeticoes !== etapa.repeticoes) return false;
-
-            // comparar o conteúdo do loop; vamos permitir validar a regra "PassBothInOrder"
-            if (!compararLoop(loopUser.conteudo, JSON.parse(JSON.stringify(etapa.conteudo)))) return false;
-
-            i++;
-            continue;
-        }
-
-        // se chegou aqui, encontrou algo inesperado
+        // Caso inesperado
         return false;
     }
 
-    // todos os passos em certo devem corresponder aos passos do usuário, e não sobrar itens no usuário
     return i === usuario.length;
 }
 
