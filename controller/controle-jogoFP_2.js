@@ -1,14 +1,14 @@
-import { situacoes, gabaritoSanduiche, compararAlgoritmo } from "../model/js/logica-jogoFP.js";
-
-/*
-  Controller atualizado:
-  - corrige duplicação ao dropar dentro do loop (stopPropagation + guard no workspace)
-  - loop aceita blocos dentro e blocks no workspace não podem ser reordenados
-  - lixeira remove por data-id
-  - montarAlgoritmoAPartirDoDOM produz objeto Loop compatível
-*/
+import { situacoes, gabaritoSanduiche, gabaritoOmelete, compararAlgoritmo }  from "../model/js/logica-jogoFP.js";
 
 let nextId = 1;
+const params = new URLSearchParams(window.location.search);
+const situacaoURL = params.get("situacao");
+
+let situacaoAtual = situacoes.sanduiche;
+
+if (situacaoURL && situacoes[situacaoURL]) {
+  situacaoAtual = situacoes[situacaoURL];
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   inicializarArrastarBlocos();
@@ -17,25 +17,28 @@ document.addEventListener("DOMContentLoaded", () => {
   inicializarBotao();
 });
 
-// -------------- Renderizar barra lateral --------------
 function inicializarArrastarBlocos() {
   const container = document.getElementById("blocos-container");
   container.innerHTML = "";
 
-  situacoes.sanduiche.blocos.forEach(b => {
-    const bloco = criarBlocoOpcaoDOM(b.funcao);
+
+  situacaoAtual.blocos.forEach(b => {
+    const bloco = criarBlocoOpcaoDOM(b.funcao, b.args);
     container.appendChild(bloco);
   });
 }
 
-function criarBlocoOpcaoDOM(funcao) {
+function criarBlocoOpcaoDOM(funcao, args = []) {
   const bloco = document.createElement("div");
   bloco.classList.add("bloco-opcao");
   bloco.textContent = funcao;
   bloco.draggable = true;
 
   bloco.addEventListener("dragstart", e => {
-    e.dataTransfer.setData("text/bloco", JSON.stringify({ funcao }));
+    e.dataTransfer.setData("text/bloco", JSON.stringify({ 
+      funcao, 
+      args: [...args]   // garante que args sempre são ["obj"], ["ingrediente"], etc.
+  }));
     e.dataTransfer.effectAllowed = "copy";
     bloco.classList.add("sendo-arrastado");
   });
@@ -45,11 +48,10 @@ function criarBlocoOpcaoDOM(funcao) {
   return bloco;
 }
 
-// -------------- Workspace e Loop (recebem drops da barra lateral) --------------
+
 function inicializarAreaWorkspace() {
   const workspace = document.getElementById("workspace");
 
-  // permitir drop apenas quando vem "text/bloco" (da barra lateral)
   workspace.addEventListener("dragover", e => {
     if (e.dataTransfer && (e.dataTransfer.types && e.dataTransfer.types.includes && e.dataTransfer.types.includes("text/bloco") || e.dataTransfer.getData("text/bloco"))) {
       e.preventDefault();
@@ -57,8 +59,6 @@ function inicializarAreaWorkspace() {
   });
 
   workspace.addEventListener("drop", e => {
-    // GUARD: se o drop veio de dentro de um conteudo-loop, ignorar aqui.
-    // Isso evita duplicação quando o .conteudo-loop já tratou o drop e não parou a propagação.
     if (e.target && e.target.closest && e.target.closest('.conteudo-loop')) {
       return;
     }
@@ -70,46 +70,33 @@ function inicializarAreaWorkspace() {
     if (data.funcao === "Loop") {
       adicionarBlocoLoopAoWorkspace();
     } else {
-      adicionarBlocoSimplesAoWorkspace(data.funcao);
+      const argsOriginais = situacaoAtual.blocos.find(b => b.funcao === data.funcao)?.args || [];
+      adicionarBlocoSimplesAoWorkspace(data.funcao, undefined, argsOriginais);
     }
   });
 }
 
-function adicionarBlocoSimplesAoWorkspace(funcao, parentConteudoEl = null) {
-  // parentConteudoEl: se fornecido, insere dentro do loop; se não, insere no topo do workspace
+function adicionarBlocoSimplesAoWorkspace(funcao, parentConteudoEl = null, args = []) {
   const id = `b${Date.now()}_${nextId++}`;
   const bloco = document.createElement("div");
   bloco.classList.add("bloco");
   bloco.dataset.id = id;
-  bloco.dataset.tipo = "workspace"; // marca que é um bloco vindo do workspace/loop
 
-  // conteúdo com select igual ao original
-  if (funcao === "Passar na fatia de pão") {
-    bloco.innerHTML = `
-      <span class="funcao">${funcao}</span>
-      (<select class="arg1">
-        <option value="">---</option>
-        <option value="pasta-amendoim">pasta de amendoim</option>
-        <option value="geleia">geleia</option>
-      </select>)
-    `;
-  } else {
-    bloco.innerHTML = `
-      <span class="funcao">${funcao}</span>
-      (<select class="arg1">
-        <option value="">---</option>
-        <option value="fatia-pao">fatia de pão</option>
-        <option value="pote-amendoim">pote de amendoim</option>
-        <option value="faca">faca</option>
-        <option value="pote-geleia">pote de geleia</option>
-      </select>)
-    `;
+  let selectsHtml = "";
+
+  if (args.length > 0) {
+    selectsHtml = "(" + args.map((a, i) =>
+      gerarSelect(i + 1, obterOpcoesParaSituacaoAtual(a))
+    ).join(" ") + ")";
   }
 
-  // blocos no workspace/loop SÓ podem ser arrastados para a lixeira
+  bloco.innerHTML = `
+    <span class="funcao">${funcao}</span>
+    ${selectsHtml}
+  `;
+
   bloco.draggable = true;
   bloco.addEventListener("dragstart", e => {
-    // enviar apenas token de remoção
     e.dataTransfer.setData("text/bloco-remover", JSON.stringify({ id }));
     e.dataTransfer.effectAllowed = "move";
     bloco.classList.add("sendo-arrastado");
@@ -120,6 +107,7 @@ function adicionarBlocoSimplesAoWorkspace(funcao, parentConteudoEl = null) {
   else document.getElementById("workspace").appendChild(bloco);
 }
 
+
 function adicionarBlocoLoopAoWorkspace() {
   const id = `loop${Date.now()}_${nextId++}`;
   const blocoLoop = document.createElement("div");
@@ -127,7 +115,6 @@ function adicionarBlocoLoopAoWorkspace() {
   blocoLoop.dataset.id = id;
   blocoLoop.dataset.tipo = "workspace";
 
-  // header do loop + conteudo-dropzone
   blocoLoop.innerHTML = `
     <div class="label">Loop (2x)</div>
     <div class="conteudo-loop" data-parent-id="${id}">
@@ -135,7 +122,6 @@ function adicionarBlocoLoopAoWorkspace() {
     </div>
   `;
 
-  // o próprio bloco-loop pode ser arrastado apenas para remoção (como os outros)
   blocoLoop.draggable = true;
   blocoLoop.addEventListener("dragstart", e => {
     e.dataTransfer.setData("text/bloco-remover", JSON.stringify({ id }));
@@ -144,10 +130,8 @@ function adicionarBlocoLoopAoWorkspace() {
   });
   blocoLoop.addEventListener("dragend", () => blocoLoop.classList.remove("sendo-arrastado"));
 
-  // configurar a zona interna do loop para aceitar drops de blocos da barra lateral
   const conteudoEl = blocoLoop.querySelector(".conteudo-loop");
 
-  // visual: highlight ao arrastar por cima
   conteudoEl.addEventListener("dragover", e => {
     if (e.dataTransfer && (e.dataTransfer.types && e.dataTransfer.types.includes && e.dataTransfer.types.includes("text/bloco") || e.dataTransfer.getData("text/bloco"))) {
       e.preventDefault();
@@ -156,34 +140,28 @@ function adicionarBlocoLoopAoWorkspace() {
   });
   conteudoEl.addEventListener("dragleave", () => conteudoEl.classList.remove("conteudo-ativo"));
 
-  // IMPORTANT: parar a propagação do evento DROP para evitar que o workspace também
-  // receba o drop e crie o bloco fora do loop (isso causava duplicação).
   conteudoEl.addEventListener("drop", e => {
     const raw = e.dataTransfer.getData("text/bloco");
     if (!raw) return;
-    // evita que o evento suba e o workspace também processe
     e.preventDefault();
     e.stopPropagation();
     conteudoEl.classList.remove("conteudo-ativo");
 
     const data = JSON.parse(raw);
-    // inserir bloco filho dentro do loop
-    // remover placeholder se existir
     const ph = conteudoEl.querySelector(".placeholder");
     if (ph) ph.remove();
-
-    adicionarBlocoSimplesAoWorkspace(data.funcao, conteudoEl);
+    
+    const argsOriginais = situacaoAtual.blocos.find(b => b.funcao === data.funcao)?.args || [];
+    adicionarBlocoSimplesAoWorkspace(data.funcao, conteudoEl, argsOriginais);
   });
 
   document.getElementById("workspace").appendChild(blocoLoop);
 }
 
-// -------------- Lixeira (aceita text/bloco-remover) --------------
 function inicializarLixeira() {
   const lixeira = document.getElementById("lixeira");
 
   lixeira.addEventListener("dragover", e => {
-    // aceitar apenas se for token de remoção
     const dt = e.dataTransfer;
     if (dt && (dt.types && (dt.types.includes && dt.types.includes("text/bloco-remover") || dt.getData("text/bloco-remover")))) {
       e.preventDefault();
@@ -204,71 +182,101 @@ function inicializarLixeira() {
 }
 
 function removerBlocoDoDOMPorId(id) {
-  // procura bloco ou loop por data-id em workspace e dentro de loops
   const workspace = document.getElementById("workspace");
   const bloco = workspace.querySelector(`.bloco[data-id="${id}"], .bloco-loop[data-id="${id}"]`);
   if (bloco) bloco.remove();
   else {
-    // talvez o id seja do loop (loop tem mesmo seletor) — se não encontrado, procurar qualquer nó com data-id
     const any = document.querySelector(`[data-id="${id}"]`);
     if (any) any.remove();
   }
 }
 
-// -------------- Botão verificar --------------
 function inicializarBotao() {
   const botao = document.getElementById("btn-verificar");
+
   botao.addEventListener("click", () => {
     const usuario = montarAlgoritmoAPartirDoDOM();
-    const certo = gabaritoSanduiche();
+
+    let certo;
+
+    if (situacaoURL === "omelete") {
+      certo = gabaritoOmelete();
+    } else {
+      // padrão = sanduíche
+      certo = gabaritoSanduiche();
+    }
 
     console.log("Usuario (DOM):", usuario);
     console.log("Gabarito:", certo);
 
     if (compararAlgoritmo(usuario, certo)) {
-      alert("✔ Algoritmo correto!");
+      alert("Algoritmo correto!");
     } else {
-      alert("❌ Ainda não está correto...");
+      alert("Ainda não está correto...");
     }
   });
 }
 
-// -------------- Montar algoritmo lendo o DOM --------------
+
 function montarAlgoritmoAPartirDoDOM() {
   const workspace = document.getElementById("workspace");
   const passos = [];
 
-  // iterar apenas filhos diretos do workspace (top-level)
+  function montarParaBlocoEl(blocoEl) {
+    const funcao = (blocoEl.querySelector(".funcao") ? blocoEl.querySelector(".funcao").textContent : blocoEl.textContent).trim();
+
+    // coletar todos os selects argN dentro do bloco, em ordem por número N
+    const selects = Array.from(blocoEl.querySelectorAll('[class^="arg"]'))
+      .sort((a, b) => {
+        const na = (a.className.match(/arg(\d+)/) || [0,0])[1];
+        const nb = (b.className.match(/arg(\d+)/) || [0,0])[1];
+        return Number(na) - Number(nb);
+      });
+
+    const valores = selects.map(s => (s.value || "").trim()).filter(v => v !== "");
+
+    if (valores.length > 0) {
+      return funcao + ":" + valores.join(":");
+    } else {
+      return funcao; // sem ":" quando não tem argumento
+    }
+  }
+
   workspace.querySelectorAll(":scope > .bloco, :scope > .bloco-loop").forEach(top => {
     if (top.classList.contains("bloco-loop")) {
-      // montar objeto Loop preservando os blocos do usuário COMO STRINGS
       const conteudoEl = top.querySelector(".conteudo-loop");
       const conteudoFeito = [];
 
-      // pegar todos os blocos filhos dentro do loop (apenas .bloco diretos)
       const filhos = conteudoEl ? Array.from(conteudoEl.querySelectorAll(":scope > .bloco")) : [];
 
       filhos.forEach(f => {
-        const funcao = f.querySelector(".funcao") ? f.querySelector(".funcao").textContent.trim() : f.textContent.trim();
-        const arg = f.querySelector(".arg1")?.value || "";
-        if (arg) conteudoFeito.push(`${funcao}:${arg}`);
-        else conteudoFeito.push(`${funcao}:`);
+        conteudoFeito.push(montarParaBlocoEl(f));
       });
 
-      // **Não transformar** as três entradas em um objeto; mantenha as strings do usuário.
       passos.push({
         tipo: "Loop",
         repeticoes: 2,
         conteudo: conteudoFeito
       });
     } else {
-      // bloco simples no nível top
-      const funcao = top.querySelector(".funcao") ? top.querySelector(".funcao").textContent.trim() : top.textContent.trim();
-      const arg = top.querySelector(".arg1")?.value || "";
-      if (arg) passos.push(`${funcao}:${arg}`);
-      else passos.push(`${funcao}:`);
+      passos.push(montarParaBlocoEl(top));
     }
   });
 
   return passos;
+}
+
+
+
+function gerarSelect(indice, valoresPossiveis) {
+  return `
+    <select class="arg${indice}">
+      <option value="">---</option>
+      ${valoresPossiveis.map(v => `<option value="${v}">${v}</option>`).join("")}
+    </select>
+  `;
+}
+
+function obterOpcoesParaSituacaoAtual(tipo) {
+  return situacaoAtual.argsPossiveis[tipo] || [];
 }

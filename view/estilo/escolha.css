@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'principal';
+    src: url(../fonts/Momo_Trust_Display/MomoTrustDisplay-Regular.ttf)
+    format('truetype');
+}
+@font-face {
+    font-family: 'secundaria';
+    src: url(../fonts/Momo_Trust_Sans/MomoTrustSans-Regular.ttf)
+    format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -159,6 +170,7 @@ body.curso-wd .container-botoes button:hover {
 
 .botao-principal {
     padding: 30px 40px; 
+    font-family: 'principal';
     font-size: 1.9rem; 
     font-weight: 900; 
     color: #F5F5F5; 
@@ -211,6 +223,7 @@ p{
     color: #000000; 
     margin: 0; 
     letter-spacing: 1px;
+    font-family: 'secundaria';
 }
 
 .conteudo-principal {
