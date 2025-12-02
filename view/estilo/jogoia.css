@@ -1,0 +1,19 @@
+body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-height: 100vh; margin: 20px; background-color: #e6f0f8; }
+h1 { color: #000658; }
+#h22{ text-align: center;}
+#app-container { display: flex; flex-direction: column;gap: 40px; margin-top: 20px; max-width: 1000px; width: 100%; }
+#configuracao, #simulacao { padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background-color: white; height: fit-content; }
+#configuracao { flex: 1; }
+#simulacao { flex: 1; }
+#ambiente { display: grid; grid-template-columns: repeat(3, 180px); gap: 5px; width: fit-content; margin: 20px auto; }
+.celula { width: 170px; height: 170px; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center; font-size: 2em; transition: background-color 0.5s; }
+.agente { color: white; border: 3px solid #000; }
+.sujo { background-color: #c79786; } 
+.limpo { background-color: #d1ffd1; } 
+.regra-item { display: flex; width: 550px;gap: 10px; margin-bottom: 10px; align-items: center; }
+.regra-item span { flex-grow: 1; }
+.regra-item button { background-color:#373b77; color: white; border: none; padding: 5px; cursor: pointer; border-radius: 5px; }
+#controles button { padding: 10px 15px; margin-right: 10px; border: none; border-radius: 5px; background-color:  #373b77; color: white; cursor: pointer; }
+#log { border: 1px solid #ccc; padding: 10px; width: 100%; min-height: 100px; overflow-y: scroll; margin-top: 10px; font-size: 0.9em; }
+#reiniciar-btn{width: 200px;padding: 15px 25px;font-size: 1.15em;font-weight: 700;background-color: #000658;color: #ffffff;border-radius: 10px;box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); letter-spacing: 0.5px;margin-left: 400px;}
+#reiniciar-btn:hover {box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);transform: translateY(-2px); }
