@@ -1,9 +1,7 @@
-// --- ESTADO INTERNO DO AGENTE ---
-let estadoAmbiente = []; // 9 células
+let estadoAmbiente = []; 
 let posicaoAgente = 0;
-let regrasAgente = []; // ARRAY DINÂMICO! As alunas o preencherão via UI
+let regrasAgente = []; 
 
-// --- FUNÇÕES DE INTERFACE ---
 function logDecisao(mensagem) {
     const log = document.getElementById('log');
     log.innerHTML += `<div>> ${mensagem}</div>`;
@@ -16,10 +14,8 @@ function renderizarAmbiente() {
     estadoAmbiente.forEach((estado, index) => {
         const celula = document.createElement('div');
         celula.className = `celula ${estado}`;
-        celula.textContent = estado === 'sujo' ? '🔴' : '🟢';
         if (index === posicaoAgente) {
             celula.classList.add('agente');
-            celula.textContent = '🤖';
         }
         ambienteDiv.appendChild(celula);
     });
@@ -45,7 +41,6 @@ function exibirRegras() {
     });
 }
 
-// --- CONFIGURAÇÃO DE REGRAS PELA ALUNA (INTERATIVIDADE PRINCIPAL) ---
 
 function adicionarRegra() {
     const percepcao = document.getElementById('select-percepcao').value;
@@ -67,10 +62,8 @@ function removerRegra(index) {
     logDecisao(`Regra ${index + 1} removida. O cérebro foi modificado.`);
 }
 
-// --- LÓGICA DO AGENTE (O MOTOR DE REGRAS) ---
 
 function perceber() {
-    // Mesma lógica de percepção do robô de limpeza
     if (estadoAmbiente[posicaoAgente] === 'sujo') return 'celula_atual_suja';
     if (estadoAmbiente.every(estado => estado === 'limpo')) return 'todas_limpas';
     return 'celula_atual_limpa';
@@ -78,17 +71,16 @@ function perceber() {
 
 function rodarUmCiclo() {
     if (regrasAgente.length === 0) {
-        logDecisao('🚨 ERRO: O agente não tem regras e não pode agir.');
+        logDecisao('ERRO: O agente não tem regras e não pode agir.');
         return;
     }
 
     const percepcaoAtual = perceber();
     
-    // O AGENTE BUSCA A PRIMEIRA REGRA QUE CORRESPONDE À PERCEPÇÃO ATUAL
     const regraEncontrada = regrasAgente.find(regra => regra.percepcao === percepcaoAtual);
 
     if (!regraEncontrada) {
-        logDecisao(`⚠️ Nenhuma regra para a percepção '${percepcaoAtual.replace(/_/g, ' ')}'. Agente fica inerte.`);
+        logDecisao(`Nenhuma regra para a percepção '${percepcaoAtual.replace(/_/g, ' ')}'. Agente fica inerte.`);
         return;
     }
 
@@ -98,7 +90,6 @@ function rodarUmCiclo() {
 }
 
 function executarAcao(acao) {
-    // Lógica para limpar, mover ou parar (simplificada)
     if (acao === 'limpar') {
         estadoAmbiente[posicaoAgente] = 'limpo';
     } 
@@ -110,19 +101,16 @@ function executarAcao(acao) {
         posicaoAgente = novoPosicao;
     }
     else if (acao === 'parar') {
-        document.getElementById('controles').innerHTML = '<h2>🎉 Objetivo Atingido!</h2>';
+        document.getElementById('controles').innerHTML = '<h2> Objetivo Atingido!</h2>';
     }
 }
 
 
-// --- INICIALIZAÇÃO DA SIMULAÇÃO ---
 function iniciarSimulacao() {
-    // Gera um ambiente inicial semi-sujo
     estadoAmbiente = ['sujo', 'sujo', 'limpo', 'sujo', 'limpo', 'sujo', 'limpo', 'sujo', 'sujo'];
     posicaoAgente = 0;
     document.getElementById('log').innerHTML = ''; // Limpa o log
     
-    // Reinicia os botões de controle
     document.getElementById('controles').innerHTML = `
         <button onclick="iniciarSimulacao()">Reiniciar Ambiente</button>
         <button onclick="rodarUmCiclo()">Executar Próxima Ação</button>
@@ -132,6 +120,5 @@ function iniciarSimulacao() {
     logDecisao('Simulação reiniciada. Crie as regras para o Robô!');
 }
 
-// Inicializa a página
 iniciarSimulacao();
 exibirRegras();

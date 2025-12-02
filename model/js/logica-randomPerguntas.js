@@ -31,3 +31,17 @@ export function validarRespostas(situacao) {
   return acertos;
 }
 
+
+function configurarBotaoVoltar() {
+    const botaoVoltar = document.getElementById('reiniciar-btn');
+
+    if (botaoVoltar) {
+        botaoVoltar.addEventListener('click', function() {
+            window.history.back();
+        });
+    } else {
+        console.error('O elemento não foi encontrado.');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', configurarBotaoVoltar);

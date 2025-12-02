@@ -12,7 +12,7 @@
 #curso-container{
     border-radius: 1rem;
     text-align: center;
-    height: 1300px;
+    height: 1600px;
     margin: 50px 100px;
     color: white; 
 }
@@ -38,11 +38,11 @@ h2{
 
 #curso-descricao, #curso-instrucoes{
     font-family: 'secundaria';
-    line-height: 1.5;
+    line-height: 1.4;
     font-size: 1.3rem;
     margin: auto 100px;
     text-align: justify;
-    padding: 45px;
+    padding: 30px;
     
 }
 
