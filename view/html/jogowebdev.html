@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Página Quebrada - WebDev </title>
+    <link rel="stylesheet" href="../estilo/jogowebdev.css" />
+</head>
+<body>
+    <div id="painel-controle">
+        <h2>Nível <span id="nivel-atual">1</span>: <span id="topico-atual"></span></h2>
+        <p><strong>Tarefa:</strong></p>
+        <p id="pergunta-atual"></p>
+
+        <div id="opcoes-codigo"></div>
+
+        <button id="proximo-btn" >Próximo Nível →</button>
+    </div>
+
+    <div id="painel-visualizacao">
+        <h2>Página Web Quebrada</h2>
+        <div id="div-vazia-titulo"></div>
+
+        <button id="meu-botao" >Clique em Mim!</button>
+        <ul id="lista-de-itens" style="margin-top: 20px;"></ul>
+    </div>
+    <div>
+    <button onclick="history.back()" id="reiniciar-btn">Voltar</button>
+    </div>
+    <script src="../../model/js/logica-jogowebdev.js"></script>
+</body>
+</html>
