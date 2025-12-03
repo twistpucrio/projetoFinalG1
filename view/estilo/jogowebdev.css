@@ -1,0 +1,82 @@
+* { box-sizing: border-box; font-family: Arial, sans-serif; }
+
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+}
+
+#painel-controle {
+  width: 45%;
+  padding: 30px;
+  background: #f4f4f4;
+  overflow-y: auto;
+  border-right: 4px solid #ddd;
+}
+
+#painel-visualizacao {
+  width: 55%;
+  padding: 30px;
+  background: #fff;
+  overflow-y: auto;
+}
+
+.opcao-btn {
+  display: block;
+  margin: 8px 0;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+.opcao-btn:hover { box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+
+.opcao-btn.correta {
+  background: #dff0d8;
+  border-color: #8bc34a;
+
+}
+
+#proximo-btn {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  background: #0077cc;
+  color: white;
+  cursor: pointer;
+}
+
+#meu-botao{
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+#proximo-btn{
+    display: none; 
+    margin-top: 20px;
+    background-color: rgb(202, 87, 11);
+}
+#reiniciar-btn {
+   position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 18px;
+    background-color: #ff802c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+
+#reiniciar-btn:hover {
+      background-color: #a23900;
+
+}
+
+

@@ -1,0 +1,169 @@
+[
+  {
+    "id": 1,
+    "topico": "HTML (Estrutura)",
+    "pergunta": "O título principal da página desapareceu! Qual linha de código HTML você deve escolher para que o título 'Minha Primeira Página' apareça como o cabeçalho principal?",
+    "opcoes": [
+      "<h2>Minha Primeira Página</h2>",
+      "<h1>Minha Primeira Página</h1>",
+      "<p>Minha Primeira Página</p>"
+    ],
+    "respostaCorreta": "<h1>Minha Primeira Página</h1>",
+    "efeitoCorrecao": {
+      "tipo": "html",
+      "seletor": "#div-vazia-titulo",
+      "codigo": "<h1>Minha Primeira Página</h1>"
+    }
+  },
+  {
+  "id": 2,
+  "topico": "CSS (Estilo)",
+  "pergunta": "O painel de visualização está sem cor! Aplique um estilo para mudar a cor de fundo (background-color) para 'peachpuff' (um tom suave que combina com laranja).",
+  "opcoes": [
+    "style='background-color: red;'",
+    "style='font-size: 20px;'",
+    "style='background-color: peachpuff;'"
+  ],
+  "respostaCorreta": "style='background-color: peachpuff;'",
+  "efeitoCorrecao": {
+    "tipo": "css",
+    "seletor": "#painel-visualizacao",
+    "propriedade": "backgroundColor",
+    "valor": "peachpuff"
+  }
+
+  },
+  {
+    "id": 3,
+    "topico": "JavaScript (Interatividade)",
+    "pergunta": "O botão 'Clique em Mim' precisa ser funcional. Qual código JavaScript você usaria para fazê-lo exibir 'Parabéns, Você Clicou!' quando for clicado?",
+    "opcoes": [
+      "alert('Código Incorreto')",
+      "document.querySelector('#meu-botao').innerHTML = 'Clicado!';",
+      "document.querySelector('#meu-botao').onclick = () => alert('Parabéns, Você Clicou!');"
+    ],
+    "respostaCorreta": "document.querySelector('#meu-botao').onclick = () => alert('Parabéns, Você Clicou!');",
+    "efeitoCorrecao": {
+      "tipo": "js-evento",
+      "seletor": "#meu-botao",
+      "evento": "onclick",
+      "codigo": "() => alert('Parabéns, Você Clicou!')"
+    }
+  },
+  {
+  "id": 4,
+  "topico": "CSS",
+  "pergunta": "Altere a cor do texto para laranja.",
+  "opcoes": [
+    "color: blue;",
+    "color: orange;",
+    "color: red;"
+  ],
+  "respostaCorreta": "color: orange;",
+  "efeitoCorrecao": {
+    "tipo": "css",
+    "seletor": "#painel-visualizacao",
+    "propriedade": "color",
+    "valor": "orange"
+  }
+},
+
+  {
+  "id": 5,
+  "topico": "HTML",
+  "pergunta": "Adicione um subtítulo abaixo do título principal.",
+  "opcoes": [
+    "<h1>Subtítulo</h1>",
+    "<h3>Subtítulo</h3>",
+    "<p>Subtítulo</p>"
+  ],
+  "respostaCorreta": "<h3>Subtítulo</h3>",
+  "efeitoCorrecao": {
+    "tipo": "html",
+    "seletor": "#div-vazia-titulo",
+    "codigo": "<h3>Subtítulo</h3>"
+  }
+},
+
+{
+  "id": 6,
+  "topico": "JavaScript",
+  "pergunta": "Faça o botão exibir a mensagem 'Clicado!' ao ser pressionado.",
+  "opcoes": [
+    "botao.innerText = 'Clicado!';",
+    "botao.style.color = 'orange';",
+    "botao.remove();"
+  ],
+  "respostaCorreta": "botao.innerText = 'Clicado!';",
+  "efeitoCorrecao": {
+    "tipo": "javascript",
+    "codigo": "document.querySelector('#meu-botao').innerText = 'Clicado!';"
+  }
+},{
+  "id": 7,
+  "topico": "CSS",
+  "pergunta": "Aumente o tamanho do texto para 24px.",
+  "opcoes": [
+    "font-size: 12px;",
+    "font-size: 24px;",
+    "font-size: 40px;"
+  ],
+  "respostaCorreta": "font-size: 24px;",
+  "efeitoCorrecao": {
+    "tipo": "css",
+    "seletor": "#painel-visualizacao",
+    "propriedade": "font-size",
+    "valor": "24px"
+  }
+},
+
+{
+  "id": 8,
+  "topico": "HTML",
+  "pergunta": "Insira um parágrafo explicativo.",
+  "opcoes": [
+    "<p>Olá Mundo!</p>",
+    "<p>Este é um parágrafo de teste.</p>",
+    "<span>Texto</span>"
+  ],
+  "respostaCorreta": "<p>Este é um parágrafo de teste.</p>",
+  "efeitoCorrecao": {
+    "tipo": "html",
+    "seletor": "#painel-visualizacao",
+    "conteudo": "<p>Este é um parágrafo de teste.</p>"
+  }
+},
+{
+  "id": 9,
+  "topico": "JavaScript",
+  "pergunta": "Faça o botão ficar laranja ao ser clicado.",
+  "opcoes": [
+    "botao.style.backgroundColor = 'orange';",
+    "botao.style.border = 'none';",
+    "botao.innerText = 'Oi!';"
+  ],
+  "respostaCorreta": "botao.style.backgroundColor = 'orange';",
+  "efeitoCorrecao": {
+    "tipo": "javascript",
+    "codigo": "document.querySelector('#meu-botao').style.backgroundColor = 'orange';"
+  }
+},
+{
+  "id": 10,
+  "topico": "CSS",
+  "pergunta": "Deixe os cantos arredondados.",
+  "opcoes": [
+    "border-radius: 0;",
+    "border-radius: 10px;",
+    "border-radius: 100px;"
+  ],
+  "respostaCorreta": "border-radius: 10px;",
+  "efeitoCorrecao": {
+    "tipo": "css",
+    "seletor": "#painel-visualizacao",
+    "propriedade": "border-radius",
+    "valor": "10px"
+  }
+}
+
+]
