@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'principal';
+    src: url(../fonts/Momo_Trust_Display/MomoTrustDisplay-Regular.ttf)
+    format('truetype');
+}
+@font-face {
+    font-family: 'secundaria';
+    src: url(../fonts/Momo_Trust_Sans/MomoTrustSans-Regular.ttf)
+    format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -91,7 +102,7 @@ h2,h3{
   max-width:1024px;margin:28px auto 12px;padding:0 16px;
   color:#8C275E ;
 }
-h2{font-size:1.6rem}
+h2{font-size:1.6rem; font-family: 'principal';}
 h3{font-size:1.3rem;color:#8C275E}
 
 .divsobre{
@@ -110,6 +121,7 @@ h3{font-size:1.3rem;color:#8C275E}
   text-align: justify;
   font-family: 'Open Sans', sans-serif;
   line-height: 30px;
+  font-family: 'secundaria';
 }
 
 #div{
@@ -138,8 +150,8 @@ h3{font-size:1.3rem;color:#8C275E}
   margin:6px auto 10px;
   display:block;
 }
-.pessoa h5{margin:8px 0 6px;font-size:1.05rem}
-.pessoa p{margin:6px 0;color:#374151;font-size:.95rem}
+.pessoa h5{margin:8px 0 6px;font-size:1.05rem;font-family: 'secundaria';}
+.pessoa p{margin:6px 0;color:#374151;font-size:.95rem;font-family: 'secundaria';}
 .pessoa a{color:#8C275E;text-decoration:none;font-weight:600}
 .pessoa a:hover{text-decoration:underline}
 
