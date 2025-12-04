@@ -155,7 +155,7 @@
   "opcoes": [
     "border-radius: 0;",
     "border-radius: 10px;",
-    "border-radius: 100px;"
+    "border-inline:inherit;"
   ],
   "respostaCorreta": "border-radius: 10px;",
   "efeitoCorrecao": {
