@@ -1,0 +1,50 @@
+.logo-texto {
+    font-size: 30px;
+    font-weight: 700;
+    color:  #8C275E; 
+    margin-right: 190px; 
+}
+
+h1{
+    font-family: 'principal';
+    font-size: 2.5rem; 
+    font-weight: 900; 
+    color: #8C275E; 
+    text-align: center; 
+    margin-top: 40px; 
+    margin-bottom: 20px; 
+}
+.links{
+    font-size: 2.5rem;
+}
+
+.botao-principal {
+    padding: 10px 20px; 
+    font-family: 'principal';
+    font-size: 1rem; 
+    font-weight: 500; 
+    color: #F5F5F5; 
+    background-color: #8C275E; 
+    border: 3px solid #F5F5F5;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    box-shadow: 0 8px 0 0 #5E1A3F, 
+                0 0 15px rgba(140, 39, 94, 0.8); 
+}
+
+.botao-principal:hover {
+    background-color: #A33372; 
+    box-shadow: 0 6px 0 0 #5E1A3F, 
+                0 0 20px rgba(140, 39, 94, 1);
+}
+
+.botao-principal:active {
+    transform: translateY(6px); 
+    box-shadow: 0 2px 0 0 #5E1A3F, 
+                0 0 10px rgba(140, 39, 94, 0.5); 
+    background-color: #6C1C4A; 
+}
