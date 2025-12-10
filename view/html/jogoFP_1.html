@@ -4,15 +4,20 @@
   <meta charset="utf-8">
   <title>Fundamentos da Programação</title>
   <script type="module" src="../../controller/controle-jogoFP_1.js"></script>
+  <link rel="stylesheet" href="../estilo/jogoFP.css">
 </head>
-<body>
-  <h1>Escolha o que o seu robô vai cozinhar!</h1>
+<body id="bodyFP1">
+  <div id="container-escolha" >
+    <h1>Escolha o que o seu robô vai cozinhar!</h1>
 
-  <select id="escolha">
-    <option value="sanduiche">Fazer sanduíche</option>
-    <option value="omelete">Fazer omelete</option>
-    <option value="cafe">Fazer café</option>
-  </select>
+    <img id="img-prato" src="../img/lara_feliz.png" alt="Prato escolhido">
+
+    <select id="escolha">
+      <option value="nada">-</option>
+      <option value="sanduiche">Fazer sanduíche</option>
+      <option value="omelete">Fazer omelete</option>
+    </select>
+  </div>
 
   <button id="btnCarregar">Ir para o jogo</button>
 </body>
