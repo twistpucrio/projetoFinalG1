@@ -13,10 +13,11 @@ export const state = {
 export const scenes = {
     intro: {
         id: 'intro',
-        title: 'Boas-vindas',
+        title: 'Boas-vindas!',
         text: [
-            'Oi! Bem-vindo(a) — hoje você será dono(a) de uma startup tech.',
-            'Sua missão: manter a empresa segura enquanto cresce. Nem todos os dias serão fáceis — hackers adoram startups promissoras!'
+            'Você foi selecionado(a) para gerir uma startup tech.',
+            'Sua missão: manter a empresa segura enquanto cresce. Nem todos os dias serão fáceis — hackers adoram startups promissoras!',
+            'Mas não se preocupe, meu nome é Nia, expert em segurança cibernética, e vou te ajudar neste desafio.'
         ],
         // opção segue para a próxima cena (ainda não implementada aqui): 'senha'
         options: [
@@ -37,6 +38,14 @@ export const scenes = {
         ],
         options: [
             {
+                label: "Fenix#Start_49!",
+                action: (state) => {
+                    state.senha = "forte";
+                    state.score += 15;
+                },
+                next: "resultadoSenha"
+            },
+            {
                 label: "1234Empresa",
                 action: (state) => {
                     state.senha = "fraca";
@@ -51,14 +60,6 @@ export const scenes = {
                     state.score += 5;
                 },
                 next: "resultadoSenha"
-            },
-            {
-                label: "Fenix#Start_49!",
-                action: (state) => {
-                    state.senha = "forte";
-                    state.score += 15;
-                },
-                next: "resultadoSenha"
             }
         ]
     },
@@ -69,7 +70,7 @@ export const scenes = {
         text: (state) => {
             if (state.senha === "fraca") {
                 return [
-                    "🛑 Sua senha era extremamente fraca!",
+                    "🔴 Sua senha era extremamente fraca!",
                     "Um hacker entrou no sistema em menos de 5 segundos.",
                     "Isso vai custar caro para sua startup…"
                 ];
@@ -77,7 +78,7 @@ export const scenes = {
 
             if (state.senha === "media") {
                 return [
-                    "⚠️ Sua senha é razoável.",
+                    "🟡 Sua senha é razoável.",
                     "Ela resistiu a ataques básicos, mas hackers mais experientes podem quebrá-la.",
                     "Você pode melhorar isso depois."
                 ];
@@ -100,13 +101,13 @@ export const scenes = {
         title: "Possível Ataque de Phishing",
         text: [
             "Você recebe um e-mail com o assunto:",
-            "🎁 *'Parabéns! Você ganhou um brinde exclusivo da TechCorp!'*",
+            "'Parabéns! Você ganhou um brinde exclusivo da TechCorp!'",
             "O e-mail contém um link chamativo e um anexo duvidoso.",
             "O que você faz?"
         ],
         options: [
             {
-                label: "Clicar no link",
+                label: "Clico no link",
                 action: (state) => {
                     state.score -= 20;
                     state.phishing = "clicou";
@@ -114,7 +115,7 @@ export const scenes = {
                 next: "resultadoPhishing"
             },
             {
-                label: "Ignorar e seguir o dia",
+                label: "Ignoro e sigo meu dia",
                 action: (state) => {
                     state.score += 0; // neutro
                     state.phishing = "ignorou";
@@ -122,7 +123,7 @@ export const scenes = {
                 next: "resultadoPhishing"
             },
             {
-                label: "Denunciar como phishing",
+                label: "Denuncio como phishing",
                 action: (state) => {
                     state.score += 15;
                     state.phishing = "denunciou";
@@ -139,7 +140,7 @@ export const scenes = {
         text: (state) => {
             if (state.phishing === "clicou") {
                 return [
-                    "🛑 Você clicou no link...",
+                    "🔴 Você clicou no link...",
                     "O site era falso e tentou instalar malware no sistema.",
                     "Felizmente o navegador bloqueou parte do ataque, mas sua startup ficou vulnerável."
                 ];
@@ -147,7 +148,7 @@ export const scenes = {
 
             if (state.phishing === "ignorou") {
                 return [
-                    "😐 Você ignorou o e-mail.",
+                    "🟡 Você ignorou o e-mail...",
                     "Nada de ruim aconteceu, mas também não ajudou a treinar o sistema.",
                     "Fique atento(a) — ataques podem ser bem mais convincentes!"
                 ];
@@ -160,7 +161,7 @@ export const scenes = {
             ];
         },
         options: [
-            { label: "Continuar para segurança de rede (firewall)", next: "firewall" },
+            { label: "Continuar para segurança de rede", next: "firewall" },
             { label: "Voltar ao início", next: "intro" }
         ]
     },
@@ -176,19 +177,19 @@ export const scenes = {
         ],
         options: [
             {
-                label: "🔓 Desativar o firewall (libera tudo)",
+                label: "Desativar o firewall (libera tudo)",
                 next: "resultadoFirewall",
                 action: (state) => state.firewall = "desativado"
             },
             {
-                label: "🔒 Ativar firewall básico (bloqueia poucas portas)",
-                next: "resultadoFirewall",
-                action: (state) => state.firewall = "basico"
-            },
-            {
-                label: "🛡️ Ativar firewall avançado e configurar somente portas necessárias",
+                label: "Ativar firewall avançado e configurar somente portas necessárias",
                 next: "resultadoFirewall",
                 action: (state) => state.firewall = "avancado"
+            },
+            {
+                label: "Ativar firewall básico (bloqueia poucas portas)",
+                next: "resultadoFirewall",
+                action: (state) => state.firewall = "basico"
             }
         ]
     },
@@ -200,14 +201,14 @@ export const scenes = {
             switch (state.firewall) {
                 case "desativado":
                     return [
-                        "❌ Você desativou o firewall.",
+                        "🔴 Você desativou o firewall.",
                         "Em menos de 2 minutos, bots do mundo inteiro começaram a escanear sua API.",
                         "Um atacante conseguiu acesso à sua base de dados sem muito esforço."
                     ];
 
                 case "basico":
                     return [
-                        "⚠️ Você ativou um firewall básico.",
+                        "🟡 Você ativou um firewall básico.",
                         "Isso bloqueou alguns ataques automatizados, mas ainda deixou portas sensíveis expostas.",
                         "Sua startup recebeu tentativas constantes de invasão. Quase deu ruim!"
                     ];

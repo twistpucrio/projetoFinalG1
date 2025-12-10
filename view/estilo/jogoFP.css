@@ -17,7 +17,20 @@
     padding: 20px;
     margin: auto;
     background: #fafafa;
+}
 
+#btn-voltar{
+    width: 70px;
+    left: 20px;
+    top: 20px;
+    position: absolute;
+}
+
+#btn-home{
+    width: 70px;
+    left: 20px;
+    top: 90px;
+    position: absolute;
 }
 
 #selecao-blocos{
@@ -137,7 +150,8 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;    
-    height: 100vh;            
+    min-height: 100vh;
+    padding-bottom: 40px;
     margin: 0;
     gap: 40px;
 }
