@@ -82,6 +82,7 @@ const mapaPersonagemCurso = {
   'Maya': 'wd'
 };
 const cursoId = mapaPersonagemCurso[personagem];
+
 const personagensOrdem = ['Lara', 'Ayla', 'Sofia', 'Kaori', 'Nia', 'Maya'];
 const jogos = [`jogoFP_1.html`, `jogoIA.html`, `jogocdd.html`, `jogohardware.html`, `jogoSC.html`, `jogowebdev.html`];
 const index = personagensOrdem.indexOf(personagem);

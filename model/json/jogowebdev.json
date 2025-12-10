@@ -88,7 +88,7 @@
 {
   "id": 6,
   "topico": "JavaScript",
-  "pergunta": "Faça o botão exibir a mensagem 'Clicado!' ao ser pressionado.",
+  "pergunta": "Faça o botão exibir a mensagem 'Clicado!'.",
   "opcoes": [
     "botao.innerText = 'Clicado!';",
     "botao.style.color = 'orange';",
