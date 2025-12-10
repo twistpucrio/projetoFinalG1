@@ -10,7 +10,21 @@
       "frase":"Ensinar um computador é como ensinar um alien: cada passo conta!",
       "cor-borda":"#4C1753",
       "cor-fundo":"#825886",
-      "cor-questao":"#B27BB8"
+      "cor-questao":"#B27BB8",
+      "links":[
+        {
+          "nome":"Curso de Lógica de Programação - Curso em Vídeo",
+          "url":"https://www.cursoemvideo.com/course/curso-de-logica-de-programacao/"
+        },
+        {
+          "nome":"Algoritmos: Lógica para Desenvolvimento de Programação de Computadores - Coursera",
+          "url":"https://www.coursera.org/learn/algoritmos-logica-programacao"
+        },
+        {
+          "nome":"Lógica de Programação para Iniciantes - Udemy",
+          "url":"https://www.udemy.com/course/logica-de-programacao-para-iniciantes/"
+        }
+      ]
     },
     {
       "titulo": "Inteligência Artificial",
@@ -46,7 +60,17 @@
       "frase":"Os dados falam. Eu só traduzo.",
       "cor-borda":"#C54B14",
       "cor-fundo":"#F4A222",
-      "cor-questao":"#FCB33F"
+      "cor-questao":"#FCB33F",
+      "links":[
+        {
+          "nome":"Objetivo Ciência de Dados",
+          "url":"https://www.insper.edu.br/pt/conteudos/tecnologia/profissao-cientista-de-dadoss"
+        },
+        {
+          "nome":" O que faz um cientista de dados?",
+          "url":"https://aws.amazon.com/pt/what-is/data-science/   "
+        }
+      ]
     },
     {
       "titulo": "Hardware",
@@ -58,7 +82,17 @@
       "frase":"Se não funciona, a gente monta de novo — melhor ainda!",
       "cor-borda":"#313336",
       "cor-fundo":"#5D6164",
-      "cor-questao":"#666869"
+      "cor-questao":"#666869",
+      "links":[
+        {
+          "nome":" O que faz um profissional que trabalha com hardware?",
+          "url":"https://www.elaborata.com.br/blog/2018/06/11/o-que-faz-um-tecnico-em-hardware/"
+        },
+        {
+          "nome":"O que é Hardware?",
+          "url":"https://tecnoblog.net/responde/o-que-e-hardware/  "
+        }
+      ]
     },
     {
       "titulo": "Web Development",
