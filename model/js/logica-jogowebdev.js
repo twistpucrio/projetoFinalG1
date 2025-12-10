@@ -180,7 +180,7 @@ function exibirCodigoFinal() {
     }
     const painelVisualizacao = document.getElementById('painel-visualizacao');
     if (painelVisualizacao) {
-        painelVisualizacao.innerHTML = '<h2>Jogo Concluído</h2><p>O resultado final é o código que você vê abaixo!</p>';
+        painelVisualizacao.innerHTML = '<h2>Jogo Concluído</h2><p>O resultado final é o código que você vê abaixo! Agora você pode fazer a sua própria página :)</p>';
     }
 
     
