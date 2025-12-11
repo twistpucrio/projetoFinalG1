@@ -92,12 +92,12 @@ body {
     margin-bottom: 20px;
 }
 
-.logo-texto {
-    font-size: 30px;
-    font-weight: 700;
-    color:  #8C275E; 
-    margin-right: 190px; 
+.logo {
+    height: 100px;
+    width: 500px;
+    margin-right: 180px; 
 }
+
 
 .cursos {
     display: flex;

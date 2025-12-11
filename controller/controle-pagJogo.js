@@ -20,13 +20,13 @@ function preencherCampos(curso) {
   if (descricaoCurso) descricaoCurso.textContent = curso.descricao || "";
   if (instrucoesCurso) instrucoesCurso.textContent = curso.instrucoes || "";
 
-  if (container){
-    if(curso["cor-fundo"]){
+  if (container) {
+    if (curso["cor-fundo"]) {
       container.style.backgroundColor = curso["cor-fundo"];
     }
-    if(curso["cor-borda"]){
+    if (curso["cor-borda"]) {
       container.style.border = `4px solid ${curso["cor-borda"]}`;
-      if (btnJogo){
+      if (btnJogo) {
         btnJogo.style.backgroundColor = curso["cor-borda"];
       }
     }
@@ -34,15 +34,15 @@ function preencherCampos(curso) {
 }
 
 function prepararBotoes(curso) { // Responde a uma interação do usuário
-    const btnJogo = document.getElementById("btn-jogar");
-    const personagem = curso["personagem-nome"]; // Pega 'Lara', 'Sofia', etc.
+  const btnJogo = document.getElementById("btn-jogar");
+  const personagem = curso["personagem-nome"]; // Pega 'Lara', 'Sofia', etc.
 
-    if (btnJogo && personagem) {
-        btnJogo.addEventListener("click", () => {
-            // REDIRECIONA para a página de escolha, REPASSANDO o parâmetro 'personagem'
-            window.location.href = `escolha.html?personagem=${personagem}`; 
-        });
-    }
+  if (btnJogo && personagem) {
+    btnJogo.addEventListener("click", () => {
+      // REDIRECIONA para a página de escolha, REPASSANDO o parâmetro 'personagem'
+      window.location.href = `escolha.html?personagem=${personagem}`;
+    });
+  }
 }
 
 async function init() {
@@ -75,16 +75,17 @@ const img = document.getElementById("personagem-fala");
 
 // Mapeia o nome do personagem para o ID do curso (para o Quizz)
 const mapaPersonagemCurso = {
-    'Lara': 'fp', 
-    'Ayla': 'ia', 
-    'Sofia': 'cd', 
-    'Kaori': 'hd', 
-    'Nia': 'sc', 
-    'Maya': 'wd'  
+  'Lara': 'fp',
+  'Ayla': 'ia',
+  'Sofia': 'cd',
+  'Kaori': 'hd',
+  'Nia': 'sc',
+  'Maya': 'wd'
 };
 const cursoId = mapaPersonagemCurso[personagem];
-const personagensOrdem = ['Lara','Ayla','Sofia','Kaori','Nia','Maya'];
-const jogos = [`jogoFP_1.html`,`jogoIA.html`, `jogocdd.html`,`jogohardware.html`,`jogoSC.html`,`jogowebdev.html`];
+
+const personagensOrdem = ['Lara', 'Ayla', 'Sofia', 'Kaori', 'Nia', 'Maya'];
+const jogos = [`jogoFP_1.html`, `jogoIA.html`, `jogocdd.html`, `jogohardware.html`, `jogoSC.html`, `jogowebdev.html`];
 const index = personagensOrdem.indexOf(personagem);
 const tit = document.getElementById("titulo-escolha");
 
@@ -96,18 +97,18 @@ if(curso["cor-fundo"]){
 }
 
 if (btnQuizz && cursoId) {
-    btnQuizz.addEventListener('click', () => {
-        window.location.href = `cd.html?curso=${cursoId}&personagem=${personagem}`; 
-    });
+  btnQuizz.addEventListener('click', () => {
+    window.location.href = `cd.html?curso=${cursoId}&personagem=${personagem}`;
+  });
 } else {
-    if(btnQuizz) btnQuizz.disabled = true;
+  if (btnQuizz) btnQuizz.disabled = true;
 }
 if (cursoId) {
-        document.body.classList.add(`curso-${cursoId}`);
-    }
+  document.body.classList.add(`curso-${cursoId}`);
+}
 
 const btnJogo = document.getElementById("btn-jogo");
-if(btnJogo){
+if (btnJogo) {
   btnJogo.addEventListener('click', () => {
       window.location.href = jogos[index]; 
     });
@@ -127,4 +128,29 @@ if (personagem === "Lara") {
   img.src = "../img/kaori_fala.png";
 } else if (personagem === "Maya"){
   img.src = "../img/maya_fala.png";
+}
+
+const btnMat = document.getElementById("btn-mat");
+if (btnMat) {
+  btnMat.addEventListener('click', () => {
+    window.location.href = `material_estudo.html?personagem=${personagem}`;
+  });
+} else {
+  if (btnMat) btnMat.disabled = true;
+}
+
+const btnVoltar = document.getElementById("btn-voltar");
+if (btnVoltar && curso) {
+  if (curso["cor-fundo"]) {
+    btnVoltar.style.backgroundColor = curso["cor-fundo"];
+    btnVoltar.style.boxShadow =
+      `0 6px 0 ${curso["cor-fundo"]}, 
+       0 0 15px ${curso["cor-fundo"]}`;
+  }
+  if (curso["cor-borda"]) {
+    container.style.border = `4px solid ${curso["cor-borda"]}`;
+    if (btnVoltar) {
+      btnVoltar.style.backgroundColor = curso["cor-borda"];
+    }
+  }
 }
