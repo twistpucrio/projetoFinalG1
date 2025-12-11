@@ -214,7 +214,9 @@ body.curso-wd .container-botoes button:hover {
     font-size: 30px;
     font-weight: 700;
     color:  #8C275E; 
-    margin-left: 1150px; 
+    position: absolute;
+    top: 5%;
+    right: 5%;
 }
 
 p{
@@ -234,4 +236,25 @@ p{
     padding: 20px;
     min-height: 100vh;
     margin-left: 200px; 
+}
+
+#personagem-fala{
+    width: 50%;
+    height: 50%;
+    margin-top: 110px;
+}
+
+#container{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-top: 5%;
+}
+
+#container-info{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
