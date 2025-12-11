@@ -70,7 +70,8 @@ document.addEventListener("DOMContentLoaded", init);
 // logica para transitar entre paginas
 const btnQuizz = document.getElementById('btn-quizz');
 const urlParams = new URLSearchParams(window.location.search);
-const personagem = urlParams.get('personagem');
+const personagem = urlParams.get('personagem'); 
+const img = document.getElementById("personagem-fala");
 
 // Mapeia o nome do personagem para o ID do curso (para o Quizz)
 const mapaPersonagemCurso = {
@@ -86,6 +87,28 @@ const cursoId = mapaPersonagemCurso[personagem];
 const personagensOrdem = ['Lara', 'Ayla', 'Sofia', 'Kaori', 'Nia', 'Maya'];
 const jogos = [`jogoFP_1.html`, `jogoIA.html`, `jogocdd.html`, `jogohardware.html`, `jogoSC.html`, `jogowebdev.html`];
 const index = personagensOrdem.indexOf(personagem);
+const tit = document.getElementById("titulo-escolha");
+
+const data = await carregarDados(DATA_URL);
+const lista = Array.isArray(data) ? data : (data.cursos || []);
+const curso = lista.find(c => c["personagem-nome"] === personagem);
+if(tit && curso["cor-fundo"]){
+  tit.style.color = curso["cor-borda"];
+
+  if (personagem === "Lara") {
+    img.src = "../img/lara_fala.png";
+  } else if (personagem === "Ayla"){
+    img.src = "../img/ayla_fala.png";
+  } else if (personagem === "Nia") {
+    img.src = "../img/nia_fala.png";
+  } else if (personagem === "Sofia"){
+    img.src = "../img/sofia_fala.png";
+  } else if (personagem === "Kaori"){
+    img.src = "../img/kaori_fala.png";
+  } else if (personagem === "Maya"){
+    img.src = "../img/maya_fala.png";
+  }
+}
 
 if (btnQuizz && cursoId) {
   btnQuizz.addEventListener('click', () => {
@@ -101,11 +124,12 @@ if (cursoId) {
 const btnJogo = document.getElementById("btn-jogo");
 if (btnJogo) {
   btnJogo.addEventListener('click', () => {
-    window.location.href = jogos[index];
-  });
-} else {
-  if (btnJogo) btnJogo.disabled = true;
-}
+      window.location.href = jogos[index]; 
+    });
+  } else {
+      if(btnJogo) btnJogo.disabled = true;
+  } 
+
 
 const btnMat = document.getElementById("btn-mat");
 if (btnMat) {
@@ -117,9 +141,6 @@ if (btnMat) {
 }
 
 const btnVoltar = document.getElementById("btn-voltar");
-const data = await carregarDados(DATA_URL);
-const lista = Array.isArray(data) ? data : (data.cursos || []);
-const curso = lista.find(c => c["personagem-nome"] === personagem);
 if (btnVoltar && curso) {
   if (curso["cor-fundo"]) {
     btnVoltar.style.backgroundColor = curso["cor-fundo"];
@@ -128,7 +149,7 @@ if (btnVoltar && curso) {
        0 0 15px ${curso["cor-fundo"]}`;
   }
   if (curso["cor-borda"]) {
-    container.style.border = `4px solid ${curso["cor-borda"]}`;
+    btnVoltar.style.border = `4px solid ${curso["cor-borda"]}`;
     if (btnVoltar) {
       btnVoltar.style.backgroundColor = curso["cor-borda"];
     }
