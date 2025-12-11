@@ -92,8 +92,22 @@ const tit = document.getElementById("titulo-escolha");
 const data = await carregarDados(DATA_URL);
 const lista = Array.isArray(data) ? data : (data.cursos || []);
 const curso = lista.find(c => c["personagem-nome"] === personagem);
-if(curso["cor-fundo"]){
+if(tit && curso["cor-fundo"]){
   tit.style.color = curso["cor-borda"];
+
+  if (personagem === "Lara") {
+    img.src = "../img/lara_fala.png";
+  } else if (personagem === "Ayla"){
+    img.src = "../img/ayla_fala.png";
+  } else if (personagem === "Nia") {
+    img.src = "../img/nia_fala.png";
+  } else if (personagem === "Sofia"){
+    img.src = "../img/sofia_fala.png";
+  } else if (personagem === "Kaori"){
+    img.src = "../img/kaori_fala.png";
+  } else if (personagem === "Maya"){
+    img.src = "../img/maya_fala.png";
+  }
 }
 
 if (btnQuizz && cursoId) {
@@ -116,19 +130,6 @@ if (btnJogo) {
       if(btnJogo) btnJogo.disabled = true;
   } 
 
-if (personagem === "Lara") {
-  img.src = "../img/lara_fala.png";
-} else if (personagem === "Ayla"){
-  img.src = "../img/ayla_fala.png";
-} else if (personagem === "Nia") {
-  img.src = "../img/nia_fala.png";
-} else if (personagem === "Sofia"){
-  img.src = "../img/sofia_fala.png";
-} else if (personagem === "Kaori"){
-  img.src = "../img/kaori_fala.png";
-} else if (personagem === "Maya"){
-  img.src = "../img/maya_fala.png";
-}
 
 const btnMat = document.getElementById("btn-mat");
 if (btnMat) {
@@ -148,7 +149,7 @@ if (btnVoltar && curso) {
        0 0 15px ${curso["cor-fundo"]}`;
   }
   if (curso["cor-borda"]) {
-    container.style.border = `4px solid ${curso["cor-borda"]}`;
+    btnVoltar.style.border = `4px solid ${curso["cor-borda"]}`;
     if (btnVoltar) {
       btnVoltar.style.backgroundColor = curso["cor-borda"];
     }
