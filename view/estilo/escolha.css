@@ -258,3 +258,9 @@ p{
     justify-content: center;
     align-items: center;
 }
+
+.logo {
+    width: 280px;
+    right: 6%; 
+    position: absolute;
+}
