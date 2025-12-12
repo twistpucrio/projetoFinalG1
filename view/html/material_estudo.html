@@ -8,12 +8,27 @@
     <script type="module" src="../../controller/controle-pagJogo.js"></script>
 </head>
 <body>
-    <header class="topo-conteudo">
-        <h1 class="logo-texto">elasCodam</h1>
-    </header>
-    <h1 id="titulo"></h1>
-    <div id="links"></div>
+    <aside class="barra-lateral">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rede.html">Rede de Apoio</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+        </ul>
+    </nav>
+    </aside>
 
-    <button onclick="history.back()" class="botao-principal" id="btn-voltar">Voltar</button>
+    <header class="topo-conteudo">
+            <a href="index.html">
+                <img class="logo" src="../img/logoelascodam.png">
+            </a>
+        </header>
+    <div id="container">
+        <div id="info">
+            <h1 id="titulo"></h1>
+            <div id="links"></div>
+        </div>
+        <button onclick="history.back()" class="botao-principal" id="btn-voltar">Voltar</button>
+    </div>
 </body>
 </html>

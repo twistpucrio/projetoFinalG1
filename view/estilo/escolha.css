@@ -119,6 +119,7 @@ body.curso-wd .container-botoes button:hover {
     text-decoration: none;
     color: #F5F5F5; 
     font-weight: 600;
+    font-family: 'principal';
     opacity: 0.8;
     transition: opacity 0.3s;
 }
@@ -249,6 +250,7 @@ p{
     flex-direction: row;
     gap: 50px;
     margin-top: 5%;
+    margin-left: 10px;
 }
 
 #container-info{
@@ -263,4 +265,68 @@ p{
     width: 280px;
     right: 6%; 
     position: absolute;
+}
+
+#interrog{
+    width: 45%;
+    margin-top: 35%;
+}
+
+#btn-instrucoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+}
+
+/* FUNDO ESCURO DO MODAL */
+.modal {
+    display: none; /* escondido por padrão */
+    position: fixed;
+    z-index: 1000;
+
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* CAIXA DO MODAL */
+.modal-content {
+    padding: 40px;
+    width: 70%;
+    max-width: 500px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    color: white;
+    line-height: 1.5;
+}
+
+h2{
+    font-family: 'principal';
+    margin-bottom: 15px;
+}
+
+#conteudo-modal{
+    color: white;
+    font-family: 'secundaria';
+    text-align: justify;
+}
+
+/* BOTÃO DE FECHAR */
+.close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.close:hover {
+    color: red;
 }

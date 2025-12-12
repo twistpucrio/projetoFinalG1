@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'principal';
+    src: url(../fonts/Momo_Trust_Display/MomoTrustDisplay-Regular.ttf)
+    format('truetype');
+}
+@font-face {
+    font-family: 'secundaria';
+    src: url(../fonts/Momo_Trust_Sans/MomoTrustSans-Regular.ttf)
+    format('truetype');
+}
+
 :root {
   --bg:  #F4A222;
   /* amarelo claro */
@@ -21,7 +32,6 @@
 
 body {
   margin: 0;
-  font-family: "Inter", Arial, Helvetica, sans-serif;
   background: var(--bg);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
@@ -35,13 +45,15 @@ body {
 
 .header h1 {
   margin: 0 0 8px;
-  font-size: 1.6rem
+  font-size: 1.6rem;
+  font-family: 'principal';
 }
 
 .header h2 {
   font-weight: 550;
   color: var(--muted);
-  font-size: 1.2rem
+  font-size: 1.2rem;
+  font-family: 'secundaria';
 }
 
 .container {
@@ -79,7 +91,7 @@ select {
 
 .field label {
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 15px;
   color: var(--muted);
   font-size: 0.92rem;
 }
@@ -109,6 +121,7 @@ button {
   color: #fff;
   cursor: pointer;
   font-weight: 600;
+  font-family: 'principal';
 }
 
 button.ghost {
@@ -146,6 +159,7 @@ button:hover {
 .bar-label {
   color: var(--muted);
   font-weight: 600;
+  font-family: 'secundaria';
 }
 
 .bar-track {
@@ -173,6 +187,7 @@ button:hover {
   border-collapse: collapse;
   margin-top: 10px;
   font-size: 0.95rem;
+  font-family: 'secundaria';
 }
 
 .summary th, .summary td {
@@ -188,6 +203,41 @@ button:hover {
 
 .summary tfoot td {
   font-weight: 700
+}
+
+h2{
+  font-family: 'principal';
+  color: black;
+}
+
+p, label, select{
+  font-family: 'secundaria';
+}
+
+label{
+  text-align: center;
+}
+
+#barHospedagemVal, #barAlimentacaoVal{
+  font-family: 'secundaria';
+}
+
+.bullets{
+  font-family: 'secundaria';
+}
+
+#btn-voltar{
+    width: 70px;
+    left: 20px;
+    top: 20px;
+    position: absolute;
+}
+
+#btn-home{
+    width: 70px;
+    left: 20px;
+    top: 90px;
+    position: absolute;
 }
 
 /* responsivo */
