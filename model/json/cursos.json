@@ -40,7 +40,29 @@
       "frase":"A mente humana inspira. A máquina aprende.",
       "cor-borda":"#143A64",
       "cor-fundo":"#4B6D97",
-      "cor-questao":"#597DA8"
+      "cor-questao":"#597DA8",
+      "links":[
+        {
+          "nome":"O que é Inteligência Artificial (IA)? - Google Cloud",
+          "url":"https://cloud.google.com/learn/what-is-artificial-intelligence?hl=pt-BR"
+        },
+        {
+          "nome":"O que é IA? Um guia rápido para iniciantes - DataCamp",
+          "url":"https://www.datacamp.com/pt/blog/what-is-ai-quick-start-guide-for-beginners"
+        },
+        {
+          "nome":"Agentes de IA Reativos Simples: onde eles ainda brilham? - Niteo Technologies",
+          "url":"https://niteo.com.br/blog/agentes-de-ia-reativos-simples/"
+        },
+        {
+          "nome":"7 Principais Funções de Trabalho em IA",
+          "url":"https://www.datacamp.com/pt/blog/jobs-in-ai-to-pursue"
+        },
+        {
+          "nome":"Tendências e o Futuro da Inteligência Artificial:",
+          "url":"https://blog.cubo.network/futuro-da-inteligencia-artificial"
+        }
+      ]
     },
     {
       "titulo": "Segurança Cibernética",
@@ -108,7 +130,25 @@
       "frase":"Se dá pra imaginar, dá pra publicar!",
       "cor-borda":"#DD6700",
       "cor-fundo":"#FC963D",
-      "cor-questao":"#F59949"
+      "cor-questao":"#F59949",
+      "links":[
+        {
+          "nome":"CRoadmap para Desenvolvedor Web em 2025",
+          "url":"https://www.rocketseat.com.br/blog/artigos/post/desenvolvimento-web-em-2025"
+        },
+        {
+          "nome":"Guia de Carreira em Desenvolvimento Web",
+          "url":"https://blog.anhanguera.com/desenvolvimento-web/"
+        },
+        {
+          "nome":"Passos para se Tornar um Desenvolvedor Web",
+          "url":"https://www.hostinger.com/br/tutoriais/como-ser-um-desenvolvedor-web"
+        },
+        {
+          "nome":"Cursos de Web Design Online",
+          "url":"https://kinsta.com/pt/blog/cursos-de-web-design/"
+        }
+      ]
     }
     ]
 }
