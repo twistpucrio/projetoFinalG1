@@ -285,7 +285,7 @@ export const scenes = {
                 "Você chegou ao fim da simulação!",
                 `Pontuação final: **${state.score} pontos**`,
                 avaliacao,
-                "Obrigado(a) por jogar e aprender sobre segurança cibernética! 🚀🛡️"
+                "Obrigado(a) por jogar e aprender sobre segurança cibernética! 🛡️"
             ];
         },
         options: [
