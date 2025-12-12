@@ -18,6 +18,10 @@ h1{
     font-size: 2.5rem;
 }
 
+.logo {
+    width: 300px;
+    margin-right: 60px; 
+}
 .botao-principal {
     padding: 10px 20px; 
     font-family: 'principal';
