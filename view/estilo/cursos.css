@@ -12,7 +12,7 @@
 #curso-container{
     border-radius: 1rem;
     text-align: center;
-    height: 90%;
+    height: 100%;
     margin: 50px 100px;
     color: white; 
 }
@@ -21,6 +21,13 @@
     font-size: 2.5rem; 
     padding: 2.7rem; 
     font-family: 'principal';
+}
+
+.logo {
+    width: 280px;
+    right: 6%; 
+    top: 8%;
+    position: absolute;
 }
 
 h2{

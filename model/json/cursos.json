@@ -25,7 +25,7 @@
           "url":"https://www.coursera.org/learn/python-pt"
         },
         {
-          "nome":"Desafio - Sanduíche de geleia e pasta de amendoim",
+          "nome":"Desafio - Sanduíche de geleia e pasta de amendoim (Quiz)",
           "url":"https://www.youtube.com/watch?v=FN2RM-CHkuI"
         }
       ]
@@ -74,7 +74,25 @@
       "frase":"Confie em mim — eu protejo o que importa.",
       "cor-borda":"#44651F",
       "cor-fundo":"#638B37",
-      "cor-questao":"#7CA64E"
+      "cor-questao":"#7CA64E",
+      "links":[
+        {
+          "nome":"Cybernews Brasil - Como se proteger de ataques cibernéticos e fraudes | Fique seguro on line!",
+          "url":"https://www.youtube.com/watch?v=heLeWXIyH_s"
+        },
+        {
+          "nome":"Amazon - O que é segurança cibernética?",
+          "url":"https://aws.amazon.com/pt/what-is/cybersecurity/s"
+        },
+        {
+          "nome":"IBM - O que é cibersegurança?",
+          "url":"https://www.ibm.com/br-pt/think/topics/cybersecurity"
+        },
+        {
+          "nome":"GOV.br - Fundamentos da Segurança Cibernética",
+          "url":"https://www.escolavirtual.gov.br/curso/1153"
+        }
+      ]
     },
     {
       "titulo": "Ciência de Dados",
