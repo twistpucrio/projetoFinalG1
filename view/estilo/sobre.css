@@ -69,6 +69,11 @@ body {
     padding: 20px 40px; 
 }
 
+.logo {
+    height: 100px;
+    width: 500px;
+    margin-right: 180px; 
+}
 
 
 .topo-conteudo {

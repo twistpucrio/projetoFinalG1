@@ -371,5 +371,4 @@ if(tit && curso["cor-fundo"]){
           modal.style.display = "none";
       }
   };
-
 }
