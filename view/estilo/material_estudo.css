@@ -1,8 +1,87 @@
-.logo-texto {
-    font-size: 30px;
-    font-weight: 700;
-    color:  #8C275E; 
-    margin-right: 190px; 
+@font-face {
+    font-family: 'principal';
+    src: url(../fonts/Momo_Trust_Display/MomoTrustDisplay-Regular.ttf)
+    format('truetype');
+}
+@font-face {
+    font-family: 'secundaria';
+    src: url(../fonts/Momo_Trust_Sans/MomoTrustSans-Regular.ttf)
+    format('truetype');
+}
+
+.logo {
+    width: 300px;
+    margin-right: 60px;
+}
+
+.topo-conteudo {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.barra-lateral {
+    width: 200px; 
+    background-color: #8C275E; 
+    color: #F5F5F5;
+    padding: 10px 0;
+    position: fixed;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+}
+
+.barra-lateral nav ul li a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #F5F5F5; 
+    font-weight: 600;
+    font-family: 'principal';
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.barra-lateral nav ul li a.active {
+    font-weight: 700; 
+}
+
+.barra-lateral nav ul li .asterisco {
+    display: block;
+    padding: 15px 25px;
+    font-size: 24px;
+    line-height: 0;
+    color: #F5F5F5;
+    opacity: 0.8;
+}
+
+.barra-lateral nav ul li a {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.barra-lateral nav ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #F5F5F5;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+    transform-origin: top;
+}
+
+.barra-lateral nav ul li a:hover::before {
+    transform: scaleY(1);
 }
 
 h1{
@@ -38,6 +117,9 @@ h1{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
     box-shadow: 0 8px 0 0 #5E1A3F, 
                 0 0 15px rgba(140, 39, 94, 0.8); 
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
 }
 
 .botao-principal:hover {
@@ -51,4 +133,18 @@ h1{
     box-shadow: 0 2px 0 0 #5E1A3F, 
                 0 0 10px rgba(140, 39, 94, 0.5); 
     background-color: #6C1C4A; 
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#info{
+    width: 50%;
+    border-radius: 10px;
+    color: white;
+    height: 500px;
 }

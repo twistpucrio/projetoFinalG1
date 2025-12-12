@@ -6,23 +6,27 @@
       "personagem-nome": "Lara",
       "personagem-img": "../../view/img/lara.png",
       "descricao": "Aprenda os conceitos essenciais da programação de forma leve e prática! Nesta fase, você descobre o que é um algoritmo, entende por que computadores precisam de instruções precisas e explora lógica básica com desafios interativos: do famoso “sanduíche lógico” aos primeiros passos em loops, condicionais e funções.",
-      "instrucoes": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
+      "instrucoes": "Siga cada desafio criando instruções claras e sem ambiguidades — exatamente como um computador precisa. Primeiro, você “programa” um robô para montar um sanduíche, usando passos simples e precisos. Depois, avança para desafios de lógica com blocos: loops, condicionais, variáveis e funções. Observe, pense com calma e teste suas ideias até que o robô execute tudo direitinho.",
       "frase":"Ensinar um computador é como ensinar um alien: cada passo conta!",
       "cor-borda":"#4C1753",
       "cor-fundo":"#825886",
       "cor-questao":"#B27BB8",
       "links":[
         {
-          "nome":"Curso de Lógica de Programação - Curso em Vídeo",
-          "url":"https://www.cursoemvideo.com/course/curso-de-logica-de-programacao/"
+          "nome":"Docusigm - O que é um algoritmo?",
+          "url":"https://www.docusign.com/pt-br/blog/o-que-e-algoritmo"
         },
         {
-          "nome":"Algoritmos: Lógica para Desenvolvimento de Programação de Computadores - Coursera",
-          "url":"https://www.coursera.org/learn/algoritmos-logica-programacao"
+          "nome":"codelearn - Condicionais, laços de repetição, variáveis ​​e funções",
+          "url":"https://codelearn.com/blog/conditionals-loops-variables-and-functions/"
         },
         {
-          "nome":"Lógica de Programação para Iniciantes - Udemy",
-          "url":"https://www.udemy.com/course/logica-de-programacao-para-iniciantes/"
+          "nome":"Coursera - Programação para todos (Conceitos básicos de Python)",
+          "url":"https://www.coursera.org/learn/python-pt"
+        },
+        {
+          "nome":"Coursera - Programação para todos (Conceitos básicos de Python)",
+          "url":"https://www.coursera.org/learn/python-pt"
         }
       ]
     },
@@ -32,7 +36,7 @@
       "personagem-nome": "Ayla",
       "personagem-img": "../../view/img/ayla.png",
       "descricao": "Este jogo é uma simulação de um Agente Aspirador Reativo Simples, um dos modelos fundamentais da Inteligência Artificial. O objetivo do jogo é demonstrar como o robô pode cumprir uma tarefa (limpar um ambiente) baseando-se apenas em um conjunto de regras SE/ENTÃO e na sua percepção imediata. O Ambiente de simulação consiste em uma grade linear de 9 células, onde cada posição está em um estado de sujo ou limpo. O agente, representado pelo robô, opera em um ciclo contínuo de Percepção → Decisão → Ação. O objetivo do robô é limpar todas as 12 células no ambiente e, em seguida, parar suas operações, utilizando apenas as três Percepções disponíveis (celula_atual_suja, celula_atual_limpa, todas_limpas) e as três Ações disponíveis (limpar, mover_aleatorio, parar).",
-      "instrucoes": "Seu desafio é criar a tabela de regras (combinando uma Percepção com uma Ação) de forma que o agente seja considerado racional, sempre fazendo a escolha que maximiza seu objetivo, lembrando que a ordem das regras é crucial para o sucesso do robô. Bom jogo!",
+      "instrucoes": "Seu desafio é criar a tabela de regras (combinando uma percepção com uma ação) de forma que o agente seja considerado racional, sempre fazendo a escolha que maximiza seu objetivo, lembrando que a ordem das regras é crucial para o sucesso do robô. Bom jogo!",
       "frase":"A mente humana inspira. A máquina aprende.",
       "cor-borda":"#143A64",
       "cor-fundo":"#4B6D97",
@@ -66,7 +70,7 @@
       "personagem-nome": "Nia",
       "personagem-img": "../../view/img/nia.png",
       "descricao": "Aprenda a proteger dados, sistemas e redes enquanto enfrenta ameaças reais do mundo digital. Nesta fase, você entende os principais tipos de ataques, explora boas práticas de segurança e toma decisões para defender uma empresa virtual de hackers: desde criar senhas fortes até identificar phishing e configurar firewalls.",
-      "instrucoes": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
+      "instrucoes": "Tome decisões rápidas para proteger sua empresa virtual de ataques cibernéticos. A cada situação, você escolherá entre duas ações — uma segura e outra arriscada. Suas escolhas afetam imediatamente o que acontece: um clique errado pode causar vazamento de dados, enquanto a decisão certa mantém seus sistemas protegidos. Preste atenção às pistas, pense como um profissional de segurança e tente manter sua startup segura até o fim!",
       "frase":"Confie em mim — eu protejo o que importa.",
       "cor-borda":"#44651F",
       "cor-fundo":"#638B37",

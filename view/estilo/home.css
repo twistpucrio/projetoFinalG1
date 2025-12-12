@@ -20,7 +20,6 @@ body {
     background-color: #F8F8F8; 
     display: flex; 
     background-color: #f8e1ee;
-
 }
 
 .barra-lateral {
@@ -39,6 +38,7 @@ body {
     text-decoration: none;
     color: #F5F5F5; 
     font-weight: 600;
+    font-family: 'principal';
     opacity: 0.8;
     transition: opacity 0.3s;
 }
